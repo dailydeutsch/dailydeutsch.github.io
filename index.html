@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#edeae3" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#23201b" />
+    <meta name="description" content="Täglich Wort: one German word a day, with its forms, examples in context and a short test." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Täglich Wort" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png" />
+    <title>Täglich Wort - The Daily German App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #edeae3;
+        --surface: #f7f4ee;
+        --surface-soft: #f1ede3;
+        --ink: #35322b;
+        --ink-soft: #6f695d;
+        --ink-faint: #a29a8b;
+        --line: #ddd7c9;
+        --accent: #8a7c64;
+        --accent-deep: #6f6350;
+        --good: #7d8b6a;
+        --good-bg: #eef0e6;
+        --bad: #b08a72;
+        --bad-bg: #f4ebe3;
+        --shadow: 0 10px 34px rgba(84, 74, 55, 0.07);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #23201b;
+          --surface: #2d2921;
+          --surface-soft: #28241d;
+          --ink: #eae5d9;
+          --ink-soft: #b3ab9b;
+          --ink-faint: #7f7768;
+          --line: #403a30;
+          --accent: #b3a586;
+          --accent-deep: #c9bc9f;
+          --good: #a3b18c;
+          --good-bg: #2e3226;
+          --bad: #cda58d;
+          --bad-bg: #382b23;
+          --shadow: 0 10px 34px rgba(0, 0, 0, 0.28);
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        min-height: 100dvh;
+      }
+      button, input { font: inherit; }
+      button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+      :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+      .page {
+        max-width: 660px;
+        margin: 0 auto;
+        padding:
+          calc(26px + env(safe-area-inset-top))
+          calc(22px + env(safe-area-inset-right))
+          calc(40px + env(safe-area-inset-bottom))
+          calc(22px + env(safe-area-inset-left));
+      }
+
+      header.top {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 8px;
+      }
+      .brand { font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em; }
+      .date { font-size: 0.9rem; color: var(--ink-faint); text-align: right; }
+
+      /* One gentle fade as the page arrives; content is never hidden */
+      .page { animation: pageIn 0.7s ease both; }
+      @keyframes pageIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+      /* ---------- Hero ---------- */
+      .hero { text-align: center; padding: 9vh 0 4vh; }
+      .word {
+        font-family: "Vollkorn", Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(4.2rem, 17vw, 7.6rem);
+        line-height: 1.02;
+        letter-spacing: 0.005em;
+        margin: 0;
+        overflow-wrap: break-word;
+      }
+      .word.long { font-size: clamp(2.6rem, 11vw, 4.6rem); }
+      .pron { margin-top: 14px; font-size: 1.02rem; color: var(--ink-faint); font-weight: 500; }
+      .meaning {
+        margin: 26px auto 0;
+        max-width: 30em;
+        font-size: clamp(1.25rem, 4.6vw, 1.5rem);
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--ink);
+      }
+      .kindline { margin-top: 12px; font-size: 0.95rem; color: var(--ink-soft); }
+      .listen {
+        margin-top: 30px;
+        min-height: 48px;
+        padding: 10px 26px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--ink-soft);
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+        touch-action: manipulation;
+      }
+      .listen:hover { border-color: var(--accent); color: var(--ink); }
+      .listen svg { width: 19px; height: 19px; }
+
+      /* ---------- Sections ---------- */
+      section.block { margin-top: 74px; }
+      section.block > h2 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin: 0 0 6px;
+        letter-spacing: 0.01em;
+      }
+      section.block > .sub { font-size: 0.94rem; color: var(--ink-soft); margin: 0 0 22px; max-width: 34em; }
+      .rule { height: 1px; background: var(--line); margin-bottom: 26px; }
+
+      .parts {
+        font-family: "Vollkorn", Georgia, serif;
+        font-size: 1.45rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 8px 0 4px;
+      }
+      .parts-note { text-align: center; font-size: 0.9rem; color: var(--ink-faint); margin-top: 2px; }
+
+      .forms-grid { display: grid; gap: 16px; margin-top: 24px; }
+      @media (min-width: 620px) { .forms-grid { grid-template-columns: 1fr 1fr; } .forms-grid .wide { grid-column: 1 / -1; } }
+      .form-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 20px 22px 14px;
+      }
+      .form-card h3 {
+        margin: 0 0 12px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--accent-deep);
+      }
+      .form-card table { width: 100%; border-collapse: collapse; }
+      .form-card td {
+        padding: 5px 0;
+        font-size: 1rem;
+        vertical-align: baseline;
+      }
+      .form-card td.p { color: var(--ink-faint); width: 6.9em; padding-right: 12px; font-size: 0.92rem; }
+      .form-card td.f { font-weight: 500; }
+      .form-list { list-style: none; margin: 0; padding: 0; }
+      .form-list li {
+        display: flex; justify-content: space-between; gap: 14px;
+        padding: 6px 0; font-size: 1rem;
+      }
+      .form-list .k { color: var(--ink-faint); font-size: 0.92rem; }
+      .form-list .v { font-weight: 500; text-align: right; }
+      .single-line {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 20px 22px;
+        font-size: 1.05rem;
+        text-align: center;
+      }
+
+      /* ---------- Examples ---------- */
+      .example-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 24px 24px 20px;
+        margin-bottom: 16px;
+      }
+      .example-card .de {
+        font-family: "Vollkorn", Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      .example-card .en { margin-top: 8px; font-size: 1.02rem; color: var(--ink); }
+      .example-card .ctx { margin-top: 10px; font-size: 0.94rem; color: var(--ink-soft); }
+
+      /* ---------- Test ---------- */
+      .score { font-size: 0.94rem; color: var(--ink-soft); margin-bottom: 20px; }
+      .score strong { color: var(--ink); font-weight: 600; }
+      .test-item {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 20px 22px;
+        margin-bottom: 14px;
+        transition: border-color 0.3s ease, background 0.3s ease;
+      }
+      .test-item .sentence { font-size: 1.12rem; line-height: 2; }
+      .test-item .hint { font-size: 0.9rem; color: var(--ink-faint); margin-top: 2px; }
+      .test-item .feedback { font-size: 0.92rem; font-weight: 500; min-height: 1.4em; margin-top: 6px; color: var(--ink-faint); transition: color 0.25s ease; }
+      .blank {
+        font: inherit;
+        font-weight: 600;
+        color: var(--ink);
+        background: var(--surface-soft);
+        border: none;
+        border-bottom: 2px solid var(--accent);
+        border-radius: 8px 8px 0 0;
+        padding: 2px 8px;
+        margin: 0 2px;
+        text-align: center;
+        transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+      }
+      .blank:focus { outline: none; background: var(--bg); border-bottom-color: var(--accent-deep); }
+      .test-item.correct { border-color: var(--good); background: var(--good-bg); }
+      .test-item.correct .blank { border-bottom-color: var(--good); background: transparent; color: var(--ink); }
+      .test-item.correct .feedback { color: var(--good); }
+      .test-item.revealed { border-color: var(--line); }
+      .test-item.revealed .blank { color: var(--accent-deep); border-bottom-color: var(--line); background: transparent; }
+      .test-actions { margin-top: 6px; }
+      .text-btn {
+        background: none; border: none; padding: 10px 4px; min-height: 44px;
+        color: var(--ink-soft); font-weight: 500; text-decoration: underline;
+        text-underline-offset: 3px; text-decoration-color: var(--line);
+        touch-action: manipulation;
+      }
+      .text-btn:hover { color: var(--ink); }
+
+      /* ---------- Reminder ---------- */
+      .reminder-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 20px 22px;
+      }
+      .reminder-row {
+        display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      }
+      .switch-btn {
+        min-height: 48px; min-width: 64px;
+        background: none; border: none; padding: 6px;
+        display: inline-flex; align-items: center;
+        touch-action: manipulation;
+      }
+      .switch-track {
+        width: 52px; height: 30px; border-radius: 999px;
+        background: var(--line);
+        position: relative;
+        transition: background 0.25s ease;
+        flex: none;
+      }
+      .switch-knob {
+        position: absolute; top: 3px; left: 3px;
+        width: 24px; height: 24px; border-radius: 50%;
+        background: var(--surface);
+        box-shadow: 0 1px 4px rgba(60, 50, 30, 0.25);
+        transition: transform 0.25s ease;
+      }
+      .switch-btn[aria-checked="true"] .switch-track { background: var(--accent); }
+      .switch-btn[aria-checked="true"] .switch-knob { transform: translateX(22px); }
+      .reminder-label { font-weight: 500; }
+      .time-wrap { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+      .time-wrap label { font-size: 0.92rem; color: var(--ink-soft); }
+      input[type="time"] {
+        min-height: 48px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface-soft);
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .reminder-status { margin-top: 12px; font-size: 0.92rem; color: var(--ink-soft); min-height: 1.4em; }
+
+      /* ---------- Install ---------- */
+      #installSection[hidden] { display: none !important; }
+      .install-steps[hidden], .install-note[hidden] { display: none !important; }
+      .install-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 22px 22px 18px;
+        position: relative;
+      }
+      .install-head {
+        display: flex; gap: 16px; align-items: flex-start;
+      }
+      .install-icon {
+        width: 52px; height: 52px; border-radius: 13px; flex: none;
+        border: 1px solid var(--line);
+        background: var(--surface-soft);
+        object-fit: cover;
+      }
+      .install-head-text { flex: 1; min-width: 0; padding-top: 2px; }
+      .install-title { font-weight: 600; font-size: 1.02rem; line-height: 1.3; margin: 0; }
+      .install-sub { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.5; margin: 5px 0 0; }
+      .install-dismiss {
+        background: none; border: none; color: var(--ink-faint);
+        width: 40px; height: 40px; margin: -6px -6px 0 0; flex: none;
+        display: inline-flex; align-items: center; justify-content: center;
+        border-radius: 50%; font-size: 1.25rem; line-height: 1;
+      }
+      .install-dismiss:hover { color: var(--ink); background: var(--surface-soft); }
+      .install-steps {
+        list-style: none; counter-reset: step;
+        margin: 20px 0 0; padding: 18px 0 0;
+        border-top: 1px solid var(--line);
+        display: grid; gap: 12px;
+      }
+      .install-steps li {
+        display: flex; gap: 12px; align-items: flex-start;
+        font-size: 0.97rem; line-height: 1.5; color: var(--ink);
+      }
+      .install-steps li::before {
+        counter-increment: step; content: counter(step);
+        width: 26px; height: 26px; border-radius: 50%; flex: none;
+        background: var(--surface-soft); border: 1px solid var(--line);
+        color: var(--accent-deep); font-size: 0.85rem; font-weight: 600;
+        display: inline-flex; align-items: center; justify-content: center;
+        margin-top: 1px;
+      }
+      .install-steps strong { font-weight: 600; }
+      .install-steps .share-glyph {
+        display: inline-flex; vertical-align: -3px; margin: 0 2px;
+        color: var(--accent-deep);
+      }
+      .install-steps .share-glyph svg { width: 17px; height: 17px; }
+      .install-actions {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+        margin-top: 20px;
+      }
+      .install-btn {
+        min-height: 48px; padding: 11px 22px; border-radius: 999px;
+        border: 1px solid var(--accent-deep); background: var(--accent-deep);
+        color: var(--surface); font-weight: 600; font-size: 0.97rem;
+        display: inline-flex; align-items: center; gap: 8px;
+        touch-action: manipulation;
+      }
+      .install-btn:hover { opacity: 0.92; }
+      .install-btn[hidden] { display: none !important; }
+      .install-note { font-size: 0.88rem; color: var(--ink-faint); line-height: 1.5; margin: 14px 0 2px; }
+
+      footer {
+        margin-top: 84px;
+        padding-top: 26px;
+        border-top: 1px solid var(--line);
+        font-size: 0.9rem;
+        color: var(--ink-faint);
+        line-height: 1.7;
+        text-align: center;
+      }
+      footer p { margin: 4px 0; }
+
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: calc(22px + env(safe-area-inset-bottom));
+        transform: translate(-50%, 14px);
+        background: var(--ink);
+        color: var(--bg);
+        font-weight: 500;
+        font-size: 0.94rem;
+        padding: 12px 22px;
+        border-radius: 999px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 30;
+        max-width: calc(100vw - 36px);
+        text-align: center;
+      }
+      .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+      @media (min-width: 768px) {
+        .page { padding-left: 30px; padding-right: 30px; }
+        .hero { padding-top: 12vh; }
+        section.block { margin-top: 92px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .page { animation: none; }
+        .toast, .switch-track, .switch-knob, .test-item, .blank, .listen { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="brand">Täglich Wort</div>
+        <div class="date" id="dateLine"></div>
+      </header>
+
+      <main>
+        <section class="hero rise">
+          <h1 class="word" id="wordText"></h1>
+          <div class="pron" id="pronText"></div>
+          <p class="meaning" id="meaningText"></p>
+          <p class="kindline" id="kindText"></p>
+          <button class="listen" id="speakBtn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+            Listen
+          </button>
+        </section>
+
+        <section class="block rise" id="formsSection">
+          <h2>Forms</h2>
+          <div class="rule"></div>
+          <div id="formsBody"></div>
+        </section>
+
+        <section class="block rise" id="examplesSection">
+          <h2>Examples</h2>
+          <div class="rule"></div>
+          <div id="examplesBody"></div>
+        </section>
+
+        <section class="block rise" id="testSection">
+          <h2>Test</h2>
+          <div class="rule"></div>
+          <p class="score" id="scoreLine"></p>
+          <div id="testBody"></div>
+          <div class="test-actions">
+            <button class="text-btn" id="showAnswersBtn" type="button">Show answers</button>
+          </div>
+        </section>
+
+        <section class="block rise" id="reminderSection">
+          <h2>Daily reminder</h2>
+          <div class="rule"></div>
+          <div class="reminder-card">
+            <div class="reminder-row">
+              <button class="switch-btn" id="reminderToggle" type="button" role="switch" aria-checked="false" aria-label="Daily reminder">
+                <span class="switch-track"><span class="switch-knob"></span></span>
+              </button>
+              <span class="reminder-label">Remind me about the new word</span>
+              <span class="time-wrap">
+                <label for="reminderTime">at</label>
+                <input type="time" id="reminderTime" value="08:00" />
+              </span>
+            </div>
+            <p class="reminder-status" id="reminderStatus">Off</p>
+          </div>
+        </section>
+
+        <section class="block" id="installSection" hidden aria-labelledby="installHeading">
+          <h2 id="installHeading">Install the app</h2>
+          <div class="rule"></div>
+          <p class="sub">Add Täglich Wort to your home screen for one-tap access, full-screen and just like a native app.</p>
+          <div class="install-card">
+            <div class="install-head">
+              <img class="install-icon" src="data:image/png;base64,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" alt="" width="52" height="52" loading="eager" decoding="sync" onerror="this.style.display='none'" />
+              <div class="install-head-text">
+                <p class="install-title">Täglich Wort</p>
+                <p class="install-sub" id="installIntro">Install it once, then today's word is always on your home screen.</p>
+              </div>
+              <button class="install-dismiss" id="installDismiss" type="button" aria-label="Dismiss install instructions">×</button>
+            </div>
+
+            <!-- Android / Chrome: native prompt when available -->
+            <div class="install-actions" id="installActions">
+              <button class="install-btn" id="installBtn" type="button" hidden>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                Install app
+              </button>
+            </div>
+
+            <!-- iOS Safari -->
+            <ol class="install-steps" id="installStepsIOS" hidden>
+              <li><span>Tap the <strong>Share</strong> button <span class="share-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13"/><path d="m7 7 5-5 5 5"/><path d="M5 13v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/></svg></span> at the bottom of Safari.</span></li>
+              <li><span>Scroll down and tap <strong>Add to Home Screen</strong>.</span></li>
+              <li><span>Tap <strong>Add</strong> in the top corner. Täglich Wort will appear on your home screen.</span></li>
+            </ol>
+
+            <!-- Android manual fallback -->
+            <ol class="install-steps" id="installStepsAndroid" hidden>
+              <li><span>Tap the <strong>⋮ menu</strong> in the top corner of Chrome.</span></li>
+              <li><span>Tap <strong>Install app</strong> or <strong>Add to Home screen</strong>.</span></li>
+              <li><span>Tap <strong>Install</strong> to confirm.</span></li>
+            </ol>
+
+            <!-- Desktop -->
+            <ol class="install-steps" id="installStepsDesktop" hidden>
+              <li><span>Look for the <strong>Install</strong> icon in the address bar, or open the browser menu.</span></li>
+              <li><span>Choose <strong>Install Täglich Wort</strong> and confirm.</span></li>
+            </ol>
+
+            <p class="install-note" id="installNote" hidden>Open this page in Safari to install on iPhone and iPad.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>One word a day. 365 words, a full year.</p>
+        <p>With a cooking set: ingredients, kitchen words and the verbs for making a meal.</p>
+      </footer>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script>
+      "use strict";
+
+      /* Day 1: taugen, with its full treatment. */
+      var TAUGEN = {
+        w: "taugen", pos: "verb", ipa: "ˈtaʊ̯ɡn̩",
+        en: "to be good for something, to be of use, to suit",
+        parts: "tauge · taugte · getaugt",
+        partsNote: "Principal parts: present, preterite, past participle",
+        rich: true,
+        formsPresent: [["ich", "tauge"], ["du", "taugst"], ["er / sie / es", "taugt"], ["wir", "taugen"], ["ihr", "taugt"], ["sie / Sie", "taugen"]],
+        formsPreterite: [["ich", "taugte"], ["du", "taugtest"], ["er / sie / es", "taugte"], ["wir", "taugten"], ["ihr", "taugtet"], ["sie / Sie", "taugten"]],
+        formsPerfect: [["ich", "habe getaugt"], ["du", "hast getaugt"], ["er / sie / es", "hat getaugt"], ["wir", "haben getaugt"], ["ihr", "habt getaugt"], ["sie / Sie", "haben getaugt"]],
+        formsMore: [["Infinitive", "taugen"], ["Infinitive with zu", "zu taugen"], ["Present participle", "taugend"], ["Past participle", "getaugt"], ["Imperative (du)", "tauge"], ["Imperative (ihr)", "taugt"], ["Imperative (Sie)", "taugen Sie"], ["Future", "ich werde taugen"], ["Subjunctive II", "ich würde taugen"]],
+        examples: [
+          {
+            de: "Ich tauge viel.",
+            en: "I am good for a great deal.",
+            ctx: "About a person. Viel means a lot, so the sentence says: I can be useful in many ways, I am capable of plenty."
+          },
+          {
+            de: "Das Bett taugt mir nichts.",
+            en: "The bed is no good for me.",
+            ctx: "With a dative like mir, taugen says whether something suits or serves a person. Taugt nichts is the common negative form: it is no good, it does not do the job. Taugen is used most often about things, and very often in the negative."
+          }
+        ],
+        test: [
+          { pre: "Das Bett ", post: " mir nichts.", answer: "taugt", hint: "The bed is no good for me." },
+          { pre: "Die beiden neuen Kollegen ", post: " zu dieser Arbeit.", answer: "taugen", hint: "The two new colleagues are suited to this work." },
+          { pre: "Früher ", post: " der alte Ofen noch gut.", answer: "taugte", hint: "In the old days, the old stove was still good." },
+          { pre: "Das hat gestern gar nichts ", post: ".", answer: "getaugt", hint: "That was good for nothing at all yesterday." },
+          { pre: "", post: " du zu dieser Aufgabe?", answer: "Taugst", hint: "Are you suited to this task?" },
+          { pre: "Nach dem Training ", post: " ihr viel mehr.", answer: "taugt", hint: "After the training, you (plural) are good for much more." }
+        ]
+      };
+
+      var WORDS = [
+        {w:"Apfel", a:"der", pos:"noun · masculine", ipa:"ˈapfl̩", en:"apple", pl:"Plural: die Äpfel", ex:"Ein Apfel am Tag hält den Doktor fern.", exEn:"An apple a day keeps the doctor away."},
+        {w:"Wasser", a:"das", pos:"noun · neuter", ipa:"ˈvasɐ", en:"water", pl:"No plural in everyday use", ex:"Ich trinke jeden Morgen ein Glas Wasser.", exEn:"I drink a glass of water every morning."},
+        {w:"Zeit", a:"die", pos:"noun · feminine", ipa:"t͡saɪ̯t", en:"time", pl:"Plural: die Zeiten", ex:"Die Zeit vergeht so schnell.", exEn:"Time passes so quickly."},
+        {w:"Weg", a:"der", pos:"noun · masculine", ipa:"veːk", en:"way, path", pl:"Plural: die Wege", ex:"Der Weg ist das Ziel.", exEn:"The journey is the destination."},
+        {w:"Haus", a:"das", pos:"noun · neuter", ipa:"haʊ̯s", en:"house", pl:"Plural: die Häuser", ex:"Unser Haus steht am Waldrand.", exEn:"Our house stands at the edge of the forest."},
+        {w:"Liebe", a:"die", pos:"noun · feminine", ipa:"ˈliːbə", en:"love", pl:"No plural in everyday use", ex:"Liebe kennt keine Grenzen.", exEn:"Love knows no borders."},
+        {w:"Freund", a:"der", pos:"noun · masculine", ipa:"fʁɔʏ̯nt", en:"friend (male)", pl:"Plural: die Freunde · female: die Freundin", ex:"Ein guter Freund hört immer zu.", exEn:"A good friend always listens."},
+        {w:"Buch", a:"das", pos:"noun · neuter", ipa:"buːx", en:"book", pl:"Plural: die Bücher", ex:"Dieses Buch habe ich in einer Nacht gelesen.", exEn:"I read this book in one night."},
+        {w:"Stadt", a:"die", pos:"noun · feminine", ipa:"ʃtat", en:"city", pl:"Plural: die Städte", ex:"Die Stadt schläft nie.", exEn:"The city never sleeps."},
+        {w:"Hund", a:"der", pos:"noun · masculine", ipa:"hʊnt", en:"dog", pl:"Plural: die Hunde", ex:"Der Hund wartet an der Tür.", exEn:"The dog is waiting at the door."},
+        {w:"Katze", a:"die", pos:"noun · feminine", ipa:"ˈkat͡sə", en:"cat", pl:"Plural: die Katzen", ex:"Die Katze schläft auf dem Sofa.", exEn:"The cat is sleeping on the sofa."},
+        {w:"Brot", a:"das", pos:"noun · neuter", ipa:"bʁoːt", en:"bread", pl:"Plural: die Brote", ex:"Frisches Brot riecht wunderbar.", exEn:"Fresh bread smells wonderful."},
+        {w:"Morgen", a:"der", pos:"noun · masculine", ipa:"ˈmɔʁɡn̩", en:"morning", pl:"Plural: die Morgen", ex:"Der Morgen beginnt mit Kaffee.", exEn:"The morning begins with coffee."},
+        {w:"Nacht", a:"die", pos:"noun · feminine", ipa:"naxt", en:"night", pl:"Plural: die Nächte", ex:"Die Nacht war sternenklar.", exEn:"The night was starry and clear."},
+        {w:"Herz", a:"das", pos:"noun · neuter", ipa:"hɛʁt͡s", en:"heart", pl:"Plural: die Herzen", ex:"Sie hat ein großes Herz.", exEn:"She has a big heart."},
+        {w:"Baum", a:"der", pos:"noun · masculine", ipa:"baʊ̯m", en:"tree", pl:"Plural: die Bäume", ex:"Der alte Baum spendet Schatten.", exEn:"The old tree provides shade."},
+        {w:"Blume", a:"die", pos:"noun · feminine", ipa:"ˈbluːmə", en:"flower", pl:"Plural: die Blumen", ex:"Jede Blume braucht Wasser und Licht.", exEn:"Every flower needs water and light."},
+        {w:"Meer", a:"das", pos:"noun · neuter", ipa:"meːɐ̯", en:"sea", pl:"Plural: die Meere", ex:"Im Sommer fahren wir ans Meer.", exEn:"In summer we go to the seaside."},
+        {w:"Berg", a:"der", pos:"noun · masculine", ipa:"bɛʁk", en:"mountain", pl:"Plural: die Berge", ex:"Von dem Berg hat man eine tolle Aussicht.", exEn:"From the mountain you have a great view."},
+        {w:"Sonne", a:"die", pos:"noun · feminine", ipa:"ˈzɔnə", en:"sun", pl:"Plural: die Sonnen", ex:"Die Sonne scheint heute den ganzen Tag.", exEn:"The sun is shining all day today."},
+        {w:"Mond", a:"der", pos:"noun · masculine", ipa:"moːnt", en:"moon", pl:"Plural: die Monde", ex:"Der Mond leuchtet über dem See.", exEn:"The moon is shining over the lake."},
+        {w:"Wetter", a:"das", pos:"noun · neuter", ipa:"ˈvɛtɐ", en:"weather", pl:"No plural in everyday use", ex:"Das Wetter ändert sich ständig.", exEn:"The weather is constantly changing."},
+        {w:"Regen", a:"der", pos:"noun · masculine", ipa:"ˈʁeːɡn̩", en:"rain", pl:"No plural in everyday use", ex:"Der Regen hört bald auf.", exEn:"The rain will stop soon."},
+        {w:"Tür", a:"die", pos:"noun · feminine", ipa:"tyːɐ̯", en:"door", pl:"Plural: die Türen", ex:"Bitte schließ die Tür.", exEn:"Please close the door."},
+        {w:"Fenster", a:"das", pos:"noun · neuter", ipa:"ˈfɛnstɐ", en:"window", pl:"Plural: die Fenster", ex:"Sie öffnet das Fenster jeden Morgen.", exEn:"She opens the window every morning."},
+        {w:"Tisch", a:"der", pos:"noun · masculine", ipa:"tɪʃ", en:"table", pl:"Plural: die Tische", ex:"Das Abendessen steht auf dem Tisch.", exEn:"Dinner is on the table."},
+        {w:"Schule", a:"die", pos:"noun · feminine", ipa:"ˈʃuːlə", en:"school", pl:"Plural: die Schulen", ex:"Die Schule beginnt um acht Uhr.", exEn:"School starts at eight o'clock."},
+        {w:"Geld", a:"das", pos:"noun · neuter", ipa:"ɡɛlt", en:"money", pl:"Plural: die Gelder (formal)", ex:"Geld allein macht nicht glücklich.", exEn:"Money alone doesn't make you happy."},
+        {w:"Arbeit", a:"die", pos:"noun · feminine", ipa:"ˈaʁbaɪ̯t", en:"work", pl:"Plural: die Arbeiten", ex:"Die Arbeit macht mir Spaß.", exEn:"I enjoy my work."},
+        {w:"Kaffee", a:"der", pos:"noun · masculine", ipa:"ˈkafeː", en:"coffee", pl:"Plural: die Kaffees", ex:"Ein Kaffee am Morgen weckt mich auf.", exEn:"A coffee in the morning wakes me up."},
+        {w:"Frühstück", a:"das", pos:"noun · neuter", ipa:"ˈfʁyːʃtʏk", en:"breakfast", pl:"Plural: die Frühstücke", ex:"Zum Frühstück gibt es Müsli und Obst.", exEn:"For breakfast there is muesli and fruit."},
+        {w:"Reise", a:"die", pos:"noun · feminine", ipa:"ˈʁaɪ̯zə", en:"journey, trip", pl:"Plural: die Reisen", ex:"Die Reise beginnt morgen früh.", exEn:"The journey begins tomorrow morning."},
+        {w:"Zug", a:"der", pos:"noun · masculine", ipa:"t͡suːk", en:"train", pl:"Plural: die Züge", ex:"Der Zug kommt pünktlich an.", exEn:"The train arrives on time."},
+        {w:"Auto", a:"das", pos:"noun · neuter", ipa:"ˈaʊ̯to", en:"car", pl:"Plural: die Autos", ex:"Das Auto braucht eine Reparatur.", exEn:"The car needs a repair."},
+        {w:"Straße", a:"die", pos:"noun · feminine", ipa:"ˈʃtʁaːsə", en:"street", pl:"Plural: die Straßen", ex:"Die Straße ist nachts ruhig.", exEn:"The street is quiet at night."},
+        {w:"Garten", a:"der", pos:"noun · masculine", ipa:"ˈɡaʁtn̩", en:"garden", pl:"Plural: die Gärten", ex:"Im Garten wachsen Tomaten.", exEn:"Tomatoes are growing in the garden."},
+        {w:"Kind", a:"das", pos:"noun · neuter", ipa:"kɪnt", en:"child", pl:"Plural: die Kinder", ex:"Jedes Kind liebt Geschichten.", exEn:"Every child loves stories."},
+        {w:"Musik", a:"die", pos:"noun · feminine", ipa:"muˈziːk", en:"music", pl:"No plural in everyday use", ex:"Musik macht alles leichter.", exEn:"Music makes everything easier."},
+        {w:"Lied", a:"das", pos:"noun · neuter", ipa:"liːt", en:"song", pl:"Plural: die Lieder", ex:"Dieses Lied höre ich jeden Tag.", exEn:"I listen to this song every day."},
+        {w:"Traum", a:"der", pos:"noun · masculine", ipa:"tʁaʊ̯m", en:"dream", pl:"Plural: die Träume", ex:"Verfolge deinen Traum.", exEn:"Follow your dream."},
+        {w:"Welt", a:"die", pos:"noun · feminine", ipa:"vɛlt", en:"world", pl:"Plural: die Welten", ex:"Die Welt ist voller Wunder.", exEn:"The world is full of wonders."},
+        {w:"Leben", a:"das", pos:"noun · neuter", ipa:"ˈleːbn̩", en:"life", pl:"Plural: die Leben", ex:"Das Leben ist ein Abenteuer.", exEn:"Life is an adventure."},
+        {w:"Sommer", a:"der", pos:"noun · masculine", ipa:"ˈzɔmɐ", en:"summer", pl:"Plural: die Sommer", ex:"Der Sommer ist meine Lieblingsjahreszeit.", exEn:"Summer is my favourite season."},
+        {w:"Winter", a:"der", pos:"noun · masculine", ipa:"ˈvɪntɐ", en:"winter", pl:"Plural: die Winter", ex:"Im Winter fällt oft Schnee.", exEn:"In winter it often snows."},
+        {w:"Frage", a:"die", pos:"noun · feminine", ipa:"ˈfʁaːɡə", en:"question", pl:"Plural: die Fragen", ex:"Ich habe eine Frage an dich.", exEn:"I have a question for you."},
+        {w:"Antwort", a:"die", pos:"noun · feminine", ipa:"ˈantvɔʁt", en:"answer", pl:"Plural: die Antworten", ex:"Die Antwort ist ganz einfach.", exEn:"The answer is quite simple."},
+        {w:"Glück", a:"das", pos:"noun · neuter", ipa:"ɡlʏk", en:"happiness, luck", pl:"No plural", ex:"Glück kann man nicht kaufen.", exEn:"You can't buy happiness.", note:"<strong>Glück</strong> covers both happiness and luck: context tells you which one is meant."},
+        {w:"Geduld", a:"die", pos:"noun · feminine", ipa:"ɡəˈdʊlt", en:"patience", pl:"No plural", ex:"Geduld ist eine Tugend.", exEn:"Patience is a virtue."},
+        {w:"Mut", a:"der", pos:"noun · masculine", ipa:"muːt", en:"courage", pl:"No plural", ex:"Mut bedeutet, es trotzdem zu tun.", exEn:"Courage means doing it anyway."},
+        {w:"Hoffnung", a:"die", pos:"noun · feminine", ipa:"ˈhɔfnʊŋ", en:"hope", pl:"Plural: die Hoffnungen", ex:"Die Hoffnung stirbt zuletzt.", exEn:"Hope dies last."}
+      ];
+
+      WORDS.push(
+        {w:"lernen", pos:"verb", ipa:"ˈlɛʁnən", en:"to learn", pl:"lernt · lernte · hat gelernt", ex:"Ich lerne jeden Tag ein neues Wort.", exEn:"I learn a new word every day."},
+        {w:"sprechen", pos:"verb", ipa:"ˈʃpʁɛçn̩", en:"to speak", pl:"spricht · sprach · hat gesprochen", ex:"Sie spricht drei Sprachen fließend.", exEn:"She speaks three languages fluently."},
+        {w:"hören", pos:"verb", ipa:"ˈhøːʁən", en:"to hear, to listen", pl:"hört · hörte · hat gehört", ex:"Ich höre gern Musik am Abend.", exEn:"I like listening to music in the evening."},
+        {w:"sehen", pos:"verb", ipa:"ˈzeːən", en:"to see", pl:"sieht · sah · hat gesehen", ex:"Kannst du den Berg sehen?", exEn:"Can you see the mountain?"},
+        {w:"gehen", pos:"verb", ipa:"ˈɡeːən", en:"to go, to walk", pl:"geht · ging · ist gegangen", ex:"Wir gehen zu Fuß zur Arbeit.", exEn:"We walk to work."},
+        {w:"kommen", pos:"verb", ipa:"ˈkɔmən", en:"to come", pl:"kommt · kam · ist gekommen", ex:"Wann kommst du nach Hause?", exEn:"When are you coming home?"},
+        {w:"machen", pos:"verb", ipa:"ˈmaxn̩", en:"to do, to make", pl:"macht · machte · hat gemacht", ex:"Was machst du am Wochenende?", exEn:"What are you doing this weekend?"},
+        {w:"sagen", pos:"verb", ipa:"ˈzaːɡn̩", en:"to say", pl:"sagt · sagte · hat gesagt", ex:"Er sagt immer die Wahrheit.", exEn:"He always tells the truth."},
+        {w:"wissen", pos:"verb", ipa:"ˈvɪsn̩", en:"to know (a fact)", pl:"weiß · wusste · hat gewusst", ex:"Ich weiß es noch nicht.", exEn:"I don't know yet."},
+        {w:"denken", pos:"verb", ipa:"ˈdɛŋkn̩", en:"to think", pl:"denkt · dachte · hat gedacht", ex:"Ich denke oft an dich.", exEn:"I often think of you."},
+        {w:"finden", pos:"verb", ipa:"ˈfɪndn̩", en:"to find", pl:"findet · fand · hat gefunden", ex:"Ich kann meine Schlüssel nicht finden.", exEn:"I can't find my keys."},
+        {w:"geben", pos:"verb", ipa:"ˈɡeːbn̩", en:"to give", pl:"gibt · gab · hat gegeben", ex:"Gib mir bitte das Salz.", exEn:"Please pass me the salt."},
+        {w:"nehmen", pos:"verb", ipa:"ˈneːmən", en:"to take", pl:"nimmt · nahm · hat genommen", ex:"Nimm dir Zeit.", exEn:"Take your time."},
+        {w:"arbeiten", pos:"verb", ipa:"ˈaʁbaɪ̯tn̩", en:"to work", pl:"arbeitet · arbeitete · hat gearbeitet", ex:"Sie arbeitet in einem Krankenhaus.", exEn:"She works in a hospital."},
+        {w:"leben", pos:"verb", ipa:"ˈleːbn̩", en:"to live", pl:"lebt · lebte · hat gelebt", ex:"Er lebt in einer kleinen Stadt.", exEn:"He lives in a small town."},
+        {w:"lieben", pos:"verb", ipa:"ˈliːbn̩", en:"to love", pl:"liebt · liebte · hat geliebt", ex:"Ich liebe den Frühling.", exEn:"I love spring."},
+        {w:"glauben", pos:"verb", ipa:"ˈɡlaʊ̯bn̩", en:"to believe", pl:"glaubt · glaubte · hat geglaubt", ex:"Ich glaube dir.", exEn:"I believe you."},
+        {w:"helfen", pos:"verb", ipa:"ˈhɛlfn̩", en:"to help", pl:"hilft · half · hat geholfen", ex:"Kannst du mir helfen?", exEn:"Can you help me?"},
+        {w:"spielen", pos:"verb", ipa:"ˈʃpiːlən", en:"to play", pl:"spielt · spielte · hat gespielt", ex:"Die Kinder spielen im Garten.", exEn:"The children are playing in the garden."},
+        {w:"kaufen", pos:"verb", ipa:"ˈkaʊ̯fn̩", en:"to buy", pl:"kauft · kaufte · hat gekauft", ex:"Wir kaufen frisches Gemüse auf dem Markt.", exEn:"We buy fresh vegetables at the market."},
+        {w:"essen", pos:"verb", ipa:"ˈɛsn̩", en:"to eat", pl:"isst · aß · hat gegessen", ex:"Wir essen heute Abend zusammen.", exEn:"We're eating together tonight."},
+        {w:"trinken", pos:"verb", ipa:"ˈtʁɪŋkn̩", en:"to drink", pl:"trinkt · trank · hat getrunken", ex:"Er trinkt keinen Kaffee.", exEn:"He doesn't drink coffee."},
+        {w:"schlafen", pos:"verb", ipa:"ˈʃlaːfn̩", en:"to sleep", pl:"schläft · schlief · hat geschlafen", ex:"Babys schlafen viel.", exEn:"Babies sleep a lot."},
+        {w:"lachen", pos:"verb", ipa:"ˈlaxn̩", en:"to laugh", pl:"lacht · lachte · hat gelacht", ex:"Sie lacht den ganzen Tag.", exEn:"She laughs all day long."},
+        {w:"reisen", pos:"verb", ipa:"ˈʁaɪ̯zn̩", en:"to travel", pl:"reist · reiste · ist gereist", ex:"Wir reisen im Sommer nach Italien.", exEn:"We're travelling to Italy in the summer."},
+        {w:"schön", pos:"adjective", ipa:"ʃøːn", en:"beautiful, lovely", ex:"Was für ein schöner Tag!", exEn:"What a beautiful day!"},
+        {w:"wichtig", pos:"adjective", ipa:"ˈvɪçtɪç", en:"important", ex:"Gesundheit ist wichtiger als Geld.", exEn:"Health is more important than money."},
+        {w:"gemütlich", pos:"adjective", ipa:"ɡəˈmyːtlɪç", en:"cosy, comfortable", ex:"Das Café ist klein und gemütlich.", exEn:"The café is small and cosy.", note:"<strong>Gemütlich</strong> is a beloved German idea: warm, cosy and unhurried: a café, an evening, even a pace of life can be gemütlich."},
+        {w:"schnell", pos:"adjective / adverb", ipa:"ʃnɛl", en:"fast, quickly", ex:"Der Zug ist sehr schnell.", exEn:"The train is very fast."},
+        {w:"langsam", pos:"adjective / adverb", ipa:"ˈlaŋzaːm", en:"slow, slowly", ex:"Sprich bitte langsam.", exEn:"Please speak slowly."},
+        {w:"glücklich", pos:"adjective", ipa:"ˈɡlʏklɪç", en:"happy", ex:"Sie ist heute besonders glücklich.", exEn:"She is especially happy today."},
+        {w:"bereit", pos:"adjective", ipa:"bəˈʁaɪ̯t", en:"ready", ex:"Bist du bereit?", exEn:"Are you ready?"},
+        {w:"vielleicht", pos:"adverb", ipa:"fiˈlaɪ̯çt", en:"maybe, perhaps", ex:"Vielleicht regnet es morgen.", exEn:"Maybe it will rain tomorrow."},
+        {w:"immer", pos:"adverb", ipa:"ˈɪmɐ", en:"always", ex:"Ich stehe immer früh auf.", exEn:"I always get up early."},
+        {w:"heute", pos:"adverb", ipa:"ˈhɔʏ̯tə", en:"today", ex:"Heute ist ein guter Tag.", exEn:"Today is a good day."},
+        {w:"Fernweh", a:"das", pos:"noun · neuter", ipa:"ˈfɛʁnˌveː", en:"longing for faraway places", pl:"No plural", ex:"Im Winter bekomme ich Fernweh.", exEn:"In winter I get a longing for faraway places.", note:"<strong>Fernweh</strong> is the opposite of Heimweh (homesickness): an ache to be somewhere far away. English has no single word for it."},
+        {w:"Heimweh", a:"das", pos:"noun · neuter", ipa:"ˈhaɪ̯mˌveː", en:"homesickness", pl:"No plural", ex:"Nach zwei Wochen hatte er Heimweh.", exEn:"After two weeks he was homesick."},
+        {w:"Schadenfreude", a:"die", pos:"noun · feminine", ipa:"ˈʃaːdn̩ˌfʁɔʏ̯də", en:"joy at someone else's misfortune", pl:"No plural", ex:"Ein bisschen Schadenfreude ist menschlich.", exEn:"A little schadenfreude is human.", note:"<strong>Schadenfreude</strong> (Schaden = harm, Freude = joy) is so precise that English borrowed it unchanged."},
+        {w:"Feierabend", a:"der", pos:"noun · masculine", ipa:"ˈfaɪ̯ɐˌʔaːbn̩t", en:"the end of the working day", pl:"Plural: die Feierabende", ex:"Nach dem Feierabend gehen wir spazieren.", exEn:"After work we go for a walk.", note:"<strong>Feierabend</strong> is sacred in Germany: the moment work ends and the evening is yours. People wish each other “Schönen Feierabend!”"},
+        {w:"Gemütlichkeit", a:"die", pos:"noun · feminine", ipa:"ɡəˈmyːtlɪçkaɪ̯t", en:"cosiness, warm comfort", pl:"No plural", ex:"Bei Kerzenlicht herrscht Gemütlichkeit.", exEn:"By candlelight there is a feeling of cosiness."},
+        {w:"Augenblick", a:"der", pos:"noun · masculine", ipa:"ˈaʊ̯ɡn̩ˌblɪk", en:"a moment, the blink of an eye", pl:"Plural: die Augenblicke", ex:"Warte einen Augenblick!", exEn:"Wait a moment!"},
+        {w:"Wanderlust", a:"die", pos:"noun · feminine", ipa:"ˈvandɐˌlʊst", en:"the urge to wander and travel", pl:"No plural", ex:"Ihre Wanderlust führte sie um die Welt.", exEn:"Her wanderlust took her around the world."},
+        {w:"Kummerspeck", a:"der", pos:"noun · masculine", ipa:"ˈkʊmɐˌʃpɛk", en:"weight gained from emotional eating", pl:"No plural", ex:"Nach der Trennung kam der Kummerspeck.", exEn:"After the breakup came the comfort-eating weight.", note:"<strong>Kummerspeck</strong> literally means “grief bacon”: the extra kilos that arrive when you eat your feelings."},
+        {w:"Vorfreude", a:"die", pos:"noun · feminine", ipa:"ˈfoːɐ̯ˌfʁɔʏ̯də", en:"joyful anticipation", pl:"No plural", ex:"Die Vorfreude auf den Urlaub ist groß.", exEn:"The anticipation of the holiday is great.", note:"A German saying goes: <strong>“Vorfreude ist die schönste Freude”</strong>: anticipation is the greatest joy."},
+        {w:"Bauchgefühl", a:"das", pos:"noun · neuter", ipa:"ˈbaʊ̯xɡəˌfyːl", en:"gut feeling, intuition", pl:"Plural: die Bauchgefühle", ex:"Hör auf dein Bauchgefühl.", exEn:"Listen to your gut feeling."},
+        {w:"Zeitgeist", a:"der", pos:"noun · masculine", ipa:"ˈt͡saɪ̯tˌɡaɪ̯st", en:"the spirit of the times", pl:"No plural in everyday use", ex:"Der Film trifft den Zeitgeist.", exEn:"The film captures the spirit of the times."},
+        {w:"Ohrwurm", a:"der", pos:"noun · masculine", ipa:"ˈoːɐ̯ˌvʊʁm", en:"a catchy tune stuck in your head", pl:"Plural: die Ohrwürmer", ex:"Ich habe seit Tagen einen Ohrwurm.", exEn:"I've had a song stuck in my head for days.", note:"An <strong>Ohrwurm</strong> is literally an “ear worm”: a song that crawls in and won't leave. English borrowed the idea as “earworm.”"},
+        {w:"Fingerspitzengefühl", a:"das", pos:"noun · neuter", ipa:"ˈfɪŋɐˌʃpɪt͡sn̩ɡəˌfyːl", en:"tact, fingertip intuition", pl:"No plural", ex:"Dafür braucht man Fingerspitzengefühl.", exEn:"That requires real tact and intuition.", note:"Literally “fingertip feeling”: the delicate touch you need for sensitive situations. Also a fine example of a German compound noun."},
+        {w:"Sehnsucht", a:"die", pos:"noun · feminine", ipa:"ˈzeːnˌzʊxt", en:"deep longing, yearning", pl:"Plural: die Sehnsüchte", ex:"Sehnsucht ist ein starkes Gefühl.", exEn:"Longing is a powerful feeling."},
+        {w:"Weltschmerz", a:"der", pos:"noun · masculine", ipa:"ˈvɛltˌʃmɛʁt͡s", en:"world-weariness, sorrow over the state of the world", pl:"No plural", ex:"Manchmal überkommt mich Weltschmerz.", exEn:"Sometimes a world-weariness comes over me.", note:"<strong>Weltschmerz</strong> (Welt = world, Schmerz = pain) names the sadness you feel because the world is not as it should be."}
+      );
+
+      var COOKING = [
+        {w:"kochen", pos:"verb", ipa:"ˈkɔxn̩", en:"to cook", pl:"kocht · kochte · hat gekocht", cat:"cooking", ex:"Am Sonntag kochen wir zusammen.", exEn:"On Sunday we cook together."},
+        {w:"Küche", a:"die", pos:"noun · feminine", ipa:"ˈkʏçə", en:"kitchen", pl:"Plural: die Küchen", cat:"cooking", ex:"Die Küche riecht nach frischem Brot.", exEn:"The kitchen smells of fresh bread."},
+        {w:"Rezept", a:"das", pos:"noun · neuter", ipa:"ʁeˈt͡sɛpt", en:"recipe", pl:"Plural: die Rezepte", cat:"cooking", ex:"Das Rezept ist ganz einfach.", exEn:"The recipe is very simple."},
+        {w:"Zwiebel", a:"die", pos:"noun · feminine", ipa:"ˈt͡sviːbl̩", en:"onion", pl:"Plural: die Zwiebeln", cat:"cooking", ex:"Schneide die Zwiebel in kleine Stücke.", exEn:"Cut the onion into small pieces."},
+        {w:"Knoblauch", a:"der", pos:"noun · masculine", ipa:"ˈknoːblaʊ̯x", en:"garlic", pl:"No plural in everyday use", cat:"cooking", ex:"Knoblauch gibt dem Gericht Geschmack.", exEn:"Garlic gives the dish flavour."},
+        {w:"Kartoffel", a:"die", pos:"noun · feminine", ipa:"kaʁˈtɔfl̩", en:"potato", pl:"Plural: die Kartoffeln", cat:"cooking", ex:"Kartoffeln müssen geschält werden.", exEn:"Potatoes need to be peeled."},
+        {w:"Tomate", a:"die", pos:"noun · feminine", ipa:"toˈmaːtə", en:"tomato", pl:"Plural: die Tomaten", cat:"cooking", ex:"Die Tomate ist reif und rot.", exEn:"The tomato is ripe and red."},
+        {w:"Karotte", a:"die", pos:"noun · feminine", ipa:"kaˈʁɔtə", en:"carrot", pl:"Plural: die Karotten", cat:"cooking", ex:"Karotten sind gut für die Augen.", exEn:"Carrots are good for your eyes."},
+        {w:"Gemüse", a:"das", pos:"noun · neuter", ipa:"ɡəˈmyːzə", en:"vegetables", pl:"Plural: die Gemüse", cat:"cooking", ex:"Frisches Gemüse ist gesund.", exEn:"Fresh vegetables are healthy."},
+        {w:"Obst", a:"das", pos:"noun · neuter", ipa:"oːpst", en:"fruit", pl:"No plural in everyday use", cat:"cooking", ex:"Zum Nachtisch gibt es Obst.", exEn:"For dessert there is fruit."},
+        {w:"Salz", a:"das", pos:"noun · neuter", ipa:"zalt͡s", en:"salt", pl:"Plural: die Salze", cat:"cooking", ex:"Gib noch etwas Salz dazu.", exEn:"Add a little more salt."},
+        {w:"Pfeffer", a:"der", pos:"noun · masculine", ipa:"ˈpfɛfɐ", en:"pepper", pl:"Plural: die Pfeffer", cat:"cooking", ex:"Pfeffer macht das Essen würziger.", exEn:"Pepper makes food more seasoned."},
+        {w:"Zucker", a:"der", pos:"noun · masculine", ipa:"ˈt͡sʊkɐ", en:"sugar", pl:"Plural: die Zucker", cat:"cooking", ex:"Wie viel Zucker nimmst du in den Tee?", exEn:"How much sugar do you take in your tea?"},
+        {w:"Mehl", a:"das", pos:"noun · neuter", ipa:"meːl", en:"flour", pl:"Plural: die Mehle", cat:"cooking", ex:"Für den Kuchen brauchen wir Mehl.", exEn:"For the cake we need flour."},
+        {w:"Butter", a:"die", pos:"noun · feminine", ipa:"ˈbʊtɐ", en:"butter", pl:"No plural in everyday use", cat:"cooking", ex:"Lass die Butter in der Pfanne schmelzen.", exEn:"Let the butter melt in the pan."},
+        {w:"Öl", a:"das", pos:"noun · neuter", ipa:"øːl", en:"oil", pl:"Plural: die Öle", cat:"cooking", ex:"Erhitze das Öl in der Pfanne.", exEn:"Heat the oil in the pan."},
+        {w:"Milch", a:"die", pos:"noun · feminine", ipa:"mɪlç", en:"milk", pl:"No plural in everyday use", cat:"cooking", ex:"Milch gehört in den Kühlschrank.", exEn:"Milk belongs in the fridge."},
+        {w:"Käse", a:"der", pos:"noun · masculine", ipa:"ˈkɛːzə", en:"cheese", pl:"Plural: die Käse", cat:"cooking", ex:"Der Käse schmilzt auf der Pizza.", exEn:"The cheese melts on the pizza."},
+        {w:"Ei", a:"das", pos:"noun · neuter", ipa:"aɪ̯", en:"egg", pl:"Plural: die Eier", cat:"cooking", ex:"Ein Ei zum Frühstück.", exEn:"An egg for breakfast."},
+        {w:"Fleisch", a:"das", pos:"noun · neuter", ipa:"flaɪ̯ʃ", en:"meat", pl:"No plural in everyday use", cat:"cooking", ex:"Das Fleisch muss gut durch sein.", exEn:"The meat needs to be cooked through well."},
+        {w:"Fisch", a:"der", pos:"noun · masculine", ipa:"fɪʃ", en:"fish", pl:"Plural: die Fische", cat:"cooking", ex:"Frischer Fisch riecht nach Meer.", exEn:"Fresh fish smells of the sea."},
+        {w:"Hühnchen", a:"das", pos:"noun · neuter", ipa:"ˈhyːnçən", en:"chicken (food)", pl:"Plural: die Hühnchen", cat:"cooking", ex:"Das Hühnchen brät im Ofen.", exEn:"The chicken is roasting in the oven."},
+        {w:"Reis", a:"der", pos:"noun · masculine", ipa:"ʁaɪ̯s", en:"rice", pl:"Plural: die Reissorten", cat:"cooking", ex:"Reis passt gut zu Gemüse.", exEn:"Rice goes well with vegetables."},
+        {w:"Nudeln", a:"die", pos:"noun · feminine plural", ipa:"ˈnuːdl̩n", en:"pasta, noodles", pl:"Plural in everyday use", cat:"cooking", ex:"Nudeln brauchen zehn Minuten.", exEn:"Pasta needs ten minutes."},
+        {w:"Suppe", a:"die", pos:"noun · feminine", ipa:"ˈzʊpə", en:"soup", pl:"Plural: die Suppen", cat:"cooking", ex:"Die Suppe ist noch zu heiß.", exEn:"The soup is still too hot."},
+        {w:"Pfanne", a:"die", pos:"noun · feminine", ipa:"ˈpfanə", en:"frying pan", pl:"Plural: die Pfannen", cat:"cooking", ex:"Stell die Pfanne auf den Herd.", exEn:"Put the pan on the stove."},
+        {w:"Topf", a:"der", pos:"noun · masculine", ipa:"tɔpf", en:"pot", pl:"Plural: die Töpfe", cat:"cooking", ex:"Der Topf steht auf dem Herd.", exEn:"The pot is on the stove."},
+        {w:"Ofen", a:"der", pos:"noun · masculine", ipa:"ˈoːfn̩", en:"oven", pl:"Plural: die Öfen", cat:"cooking", ex:"Heize den Ofen auf 180 Grad vor.", exEn:"Preheat the oven to 180 degrees."},
+        {w:"Messer", a:"das", pos:"noun · neuter", ipa:"ˈmɛsɐ", en:"knife", pl:"Plural: die Messer", cat:"cooking", ex:"Das Messer ist sehr scharf.", exEn:"The knife is very sharp."},
+        {w:"Löffel", a:"der", pos:"noun · masculine", ipa:"ˈlœfl̩", en:"spoon", pl:"Plural: die Löffel", cat:"cooking", ex:"Rühr die Suppe mit dem Löffel um.", exEn:"Stir the soup with the spoon."},
+        {w:"Gabel", a:"die", pos:"noun · feminine", ipa:"ˈɡaːbl̩", en:"fork", pl:"Plural: die Gabeln", cat:"cooking", ex:"Messer und Gabel liegen neben dem Teller.", exEn:"Knife and fork lie next to the plate."},
+        {w:"Schüssel", a:"die", pos:"noun · feminine", ipa:"ˈʃʏsl̩", en:"bowl", pl:"Plural: die Schüsseln", cat:"cooking", ex:"Gib den Salat in eine große Schüssel.", exEn:"Put the salad in a large bowl."},
+        {w:"Teller", a:"der", pos:"noun · masculine", ipa:"ˈtɛlɐ", en:"plate", pl:"Plural: die Teller", cat:"cooking", ex:"Stell die Teller auf den Tisch.", exEn:"Put the plates on the table."},
+        {w:"schneiden", pos:"verb", ipa:"ˈʃnaɪ̯dn̩", en:"to cut", pl:"schneidet · schnitt · hat geschnitten", cat:"cooking", ex:"Schneide das Brot in Scheiben.", exEn:"Cut the bread into slices."},
+        {w:"schälen", pos:"verb", ipa:"ˈʃɛːlən", en:"to peel", pl:"schält · schälte · hat geschält", cat:"cooking", ex:"Schäl bitte die Kartoffeln.", exEn:"Please peel the potatoes."},
+        {w:"rühren", pos:"verb", ipa:"ˈʁyːʁən", en:"to stir", pl:"rührt · rührte · hat gerührt", cat:"cooking", ex:"Rühr die Soße langsam um.", exEn:"Stir the sauce slowly."},
+        {w:"braten", pos:"verb", ipa:"ˈbʁaːtn̩", en:"to fry, to roast", pl:"brät · briet · hat gebraten", cat:"cooking", ex:"Brate das Fleisch in Öl.", exEn:"Fry the meat in oil."},
+        {w:"backen", pos:"verb", ipa:"ˈbakn̩", en:"to bake", pl:"bäckt · backte · hat gebacken", cat:"cooking", ex:"Wir backen heute einen Kuchen.", exEn:"We are baking a cake today."},
+        {w:"würzen", pos:"verb", ipa:"ˈvʏʁt͡sn̩", en:"to season, to spice", pl:"würzt · würzte · hat gewürzt", cat:"cooking", ex:"Würze die Suppe mit Salz und Pfeffer.", exEn:"Season the soup with salt and pepper."},
+        {w:"probieren", pos:"verb", ipa:"pʁoˈbiːʁən", en:"to taste, to try", pl:"probiert · probierte · hat probiert", cat:"cooking", ex:"Probier mal, ob es genug Salz hat.", exEn:"Taste it and see if it has enough salt."},
+        {w:"lecker", pos:"adjective", ipa:"ˈlɛkɐ", en:"tasty, delicious", cat:"cooking", ex:"Das Essen ist wirklich lecker.", exEn:"The food is really tasty."},
+        {w:"scharf", pos:"adjective", ipa:"ʃaʁf", en:"spicy, sharp", cat:"cooking", ex:"Die Soße ist mir zu scharf.", exEn:"The sauce is too spicy for me."}
+      ];
+
+      var EXTRA = [
+        {w:"doch", pos:"particle", ipa:"dɔx", en:"yes it is / but of course (contradicts a no)", ex:"Das stimmt doch!", exEn:"But that is true!", note:"Doch answers a negative question with a yes, and in statements it insists: you know it is so."},
+        {w:"halt", pos:"particle", ipa:"halt", en:"just, simply (that is how it is)", ex:"Das ist halt so.", exEn:"That is just how it is.", note:"Halt shrugs: nothing to be done, accept it."},
+        {w:"eben", pos:"particle", ipa:"ˈeːbn̩", en:"exactly / just (that is how it is)", ex:"Das habe ich eben gesagt.", exEn:"That is exactly what I said."},
+        {w:"mal", pos:"particle", ipa:"maːl", en:"just, for a moment (softens a request)", ex:"Schau mal her!", exEn:"Just take a look here!", note:"Mal makes commands friendly: Komm mal her is softer than Komm her."},
+        {w:"schon", pos:"particle / adverb", ipa:"ʃoːn", en:"already; admittedly; go ahead", ex:"Das wird schon klappen.", exEn:"That will work out, you will see."},
+        {w:"denn", pos:"particle", ipa:"dɛn", en:"then (in questions, adds interest)", ex:"Was machst du denn heute?", exEn:"So what are you doing today?", note:"In questions denn is not because: it makes the question warmer and more curious."},
+        {w:"eigentlich", pos:"adverb", ipa:"ˈaɪ̯ɡn̩tlɪç", en:"actually, really", ex:"Eigentlich wollte ich früher gehen.", exEn:"Actually I wanted to leave earlier."},
+        {w:"überhaupt", pos:"adverb", ipa:"yːbɐˈhaʊ̯pt", en:"at all; in general", ex:"Das stimmt überhaupt nicht.", exEn:"That is not true at all."},
+        {w:"sowieso", pos:"adverb", ipa:"ˈzoːvizoː", en:"anyway, in any case", ex:"Ich komme sowieso zu spät.", exEn:"I will be late anyway."},
+        {w:"egal", pos:"adjective / adverb", ipa:"eˈɡaːl", en:"does not matter, all the same", ex:"Mir ist das egal.", exEn:"I do not mind, it makes no difference to me."},
+        {w:"Quatsch", a:"der", pos:"noun · masculine", ipa:"kvatʃ", en:"nonsense, rubbish", pl:"No plural", ex:"Das ist doch Quatsch!", exEn:"That is nonsense!"},
+        {w:"Mist", a:"der", pos:"noun · masculine", ipa:"mɪst", en:"damn!; dung, rubbish", pl:"No plural", ex:"Mist, ich habe den Zug verpasst!", exEn:"Damn, I missed the train!"},
+        {w:"genau", pos:"adverb / adjective", ipa:"ɡəˈnaʊ̯", en:"exactly, precisely", ex:"Genau das meine ich.", exEn:"That is exactly what I mean."},
+        {w:"vorhin", pos:"adverb", ipa:"foːɐ̯ˈhɪn", en:"a moment ago, earlier", ex:"Vorhin war er noch hier.", exEn:"He was still here a moment ago."},
+        {w:"nachher", pos:"adverb", ipa:"ˈnaːxheːɐ̯", en:"later, afterwards (today)", ex:"Das machen wir nachher.", exEn:"We will do that later."},
+        {w:"zwischendurch", pos:"adverb", ipa:"t͡svɪʃn̩ˈdʊʁç", en:"in between, now and then", ex:"Zwischendurch brauche ich eine Pause.", exEn:"In between I need a break."},
+        {w:"demnächst", pos:"adverb", ipa:"deːmˈnɛːçst", en:"soon, in the near future", ex:"Wir sehen uns demnächst.", exEn:"We will see each other soon."},
+        {w:"ruhig", pos:"adverb / adjective", ipa:"ˈʁuːɪç", en:"calmly; feel free to", ex:"Du kannst ruhig fragen.", exEn:"Feel free to ask.", note:"As a particle ruhig gives permission: Nimm ruhig noch ein Stück, go ahead and take another piece."},
+        {w:"klappen", pos:"verb", ipa:"ˈklapn̩", en:"to work out, to succeed", pl:"klappt · klappte · hat geklappt", ex:"Hoffentlich klappt alles morgen.", exEn:"Hopefully everything works out tomorrow."},
+        {w:"hinkriegen", pos:"verb", ipa:"ˈhɪnˌkʁiːɡn̩", en:"to manage, to get something sorted", pl:"kriegt hin · kriegte hin · hat hingekriegt", ex:"Wir kriegen das schon hin.", exEn:"We will manage it, do not worry."},
+        {w:"ausmachen", pos:"verb", ipa:"ˈaʊ̯sˌmaxn̩", en:"to matter, to bother; to turn off", pl:"macht aus · machte aus · hat ausgemacht", ex:"Macht es dir etwas aus?", exEn:"Does it bother you? Do you mind?"},
+        {w:"stimmen", pos:"verb", ipa:"ˈʃtɪmən", en:"to be right, to be correct", pl:"stimmt · stimmte · hat gestimmt", ex:"Das stimmt nicht ganz.", exEn:"That is not quite right."},
+        {w:"passen", pos:"verb", ipa:"ˈpasn̩", en:"to fit, to suit, to work for someone", pl:"passt · passte · hat gepasst", ex:"Passt dir Freitag?", exEn:"Does Friday work for you?"},
+        {w:"erledigen", pos:"verb", ipa:"ɛɐ̯ˈleːdɪɡn̩", en:"to get done, to take care of", pl:"erledigt · erledigte · hat erledigt", ex:"Ich muss noch Einkäufe erledigen.", exEn:"I still have to do the shopping."},
+        {w:"gönnen", pos:"verb", ipa:"ˈɡœnən", en:"to treat yourself; to not begrudge", pl:"gönnt · gönnte · hat gegönnt", ex:"Gönn dir eine Pause.", exEn:"Treat yourself to a break."},
+        {w:"quatschen", pos:"verb", ipa:"ˈkvatʃn̩", en:"to chat, to natter", pl:"quatscht · quatschte · hat gequatscht", ex:"Wir haben stundenlang gequatscht.", exEn:"We chatted for hours."},
+        {w:"meckern", pos:"verb", ipa:"ˈmɛkɐn", en:"to moan, to complain", pl:"meckert · meckerte · hat gemeckert", ex:"Hör auf zu meckern!", exEn:"Stop moaning!"},
+        {w:"jammern", pos:"verb", ipa:"ˈjamɐn", en:"to whine, to lament", pl:"jammert · jammerte · hat gejammert", ex:"Er jammert über das Wetter.", exEn:"He is whining about the weather."},
+        {w:"aufpassen", pos:"verb", ipa:"ˈaʊ̯fˌpasn̩", en:"to watch out, to pay attention", pl:"passt auf · passte auf · hat aufgepasst", ex:"Pass auf die Stufe auf!", exEn:"Watch out for the step!"},
+        {w:"zocken", pos:"verb", ipa:"ˈt͡sɔkn̩", en:"to play games, to gamble", pl:"zockt · zockte · hat gezockt", ex:"Die Jungs zocken den ganzen Abend.", exEn:"The lads are gaming all evening."},
+        {w:"abhängen", pos:"verb", ipa:"ˈapˌhɛŋən", en:"to hang out; to depend on", pl:"hängt ab · hing ab · hat abgehangen", ex:"Wir hängen am See ab.", exEn:"We are hanging out at the lake."},
+        {w:"schaffen", pos:"verb", ipa:"ˈʃafn̩", en:"to manage, to accomplish", pl:"schafft · schaffte · hat geschafft", ex:"Du schaffst das!", exEn:"You can do it! You will manage it!"},
+        {w:"überlegen", pos:"verb", ipa:"yːbɐˈleːɡn̩", en:"to think over, to consider", pl:"überlegt · überlegte · hat überlegt", ex:"Ich muss mir das noch überlegen.", exEn:"I still need to think that over."},
+        {w:"anrufen", pos:"verb", ipa:"ˈanˌʁuːfn̩", en:"to phone, to call", pl:"ruft an · rief an · hat angerufen", ex:"Ruf mich bitte später an.", exEn:"Please call me later."},
+        {w:"abholen", pos:"verb", ipa:"ˈapˌhoːlən", en:"to pick up, to collect", pl:"holt ab · holte ab · hat abgeholt", ex:"Ich hole dich am Bahnhof ab.", exEn:"I will pick you up at the station."},
+        {w:"mitbringen", pos:"verb", ipa:"ˈmɪtˌbʁɪŋən", en:"to bring along", pl:"bringt mit · brachte mit · hat mitgebracht", ex:"Bring bitte Brot mit.", exEn:"Please bring bread with you."},
+        {w:"Bescheid", a:"der", pos:"noun · masculine", ipa:"bəˈʃaɪ̯t", en:"notice, word (in: Bescheid geben, let someone know)", pl:"Plural: die Bescheide", ex:"Gib mir bitte Bescheid.", exEn:"Please let me know."},
+        {w:"warten", pos:"verb", ipa:"ˈvaʁtn̩", en:"to wait", pl:"wartet · wartete · hat gewartet", ex:"Wir warten auf den Bus.", exEn:"We are waiting for the bus."},
+        {w:"suchen", pos:"verb", ipa:"ˈzuːxn̩", en:"to look for, to search", pl:"sucht · suchte · hat gesucht", ex:"Ich suche meine Brille.", exEn:"I am looking for my glasses."},
+        {w:"anstrengend", pos:"adjective", ipa:"ˈanˌʃtʁɛŋənt", en:"tiring, exhausting", ex:"Der Tag war wirklich anstrengend.", exEn:"The day was really tiring."},
+        {w:"nervig", pos:"adjective", ipa:"ˈnɛʁvɪç", en:"annoying", ex:"Das Geräusch ist total nervig.", exEn:"That noise is really annoying."},
+        {w:"peinlich", pos:"adjective", ipa:"ˈpaɪ̯nlɪç", en:"embarrassing", ex:"Das war mir richtig peinlich.", exEn:"That was really embarrassing for me."},
+        {w:"ordentlich", pos:"adjective / adverb", ipa:"ˈɔʁdn̩tlɪç", en:"tidy; proper, a decent amount", ex:"Iss mal ordentlich!", exEn:"Eat properly, have a decent amount!"},
+        {w:"krass", pos:"adjective", ipa:"kʁas", en:"intense, extreme, wow", ex:"Das ist ja krass!", exEn:"That is intense! Wow!"}
+      ];
+
+      EXTRA.push(
+        {w:"Familie", a:"die", pos:"noun · feminine", ipa:"faˈmiːli̯ə", en:"family", pl:"Plural: die Familien", ex:"Meine Familie lebt in Berlin.", exEn:"My family lives in Berlin."},
+        {w:"Mutter", a:"die", pos:"noun · feminine", ipa:"ˈmʊtɐ", en:"mother", pl:"Plural: die Mütter", ex:"Meine Mutter kocht sehr gut.", exEn:"My mother cooks very well."},
+        {w:"Vater", a:"der", pos:"noun · masculine", ipa:"ˈfaːtɐ", en:"father", pl:"Plural: die Väter", ex:"Sein Vater arbeitet als Lehrer.", exEn:"His father works as a teacher."},
+        {w:"Bruder", a:"der", pos:"noun · masculine", ipa:"ˈbʁuːdɐ", en:"brother", pl:"Plural: die Brüder", ex:"Mein Bruder ist zwei Jahre jünger.", exEn:"My brother is two years younger."},
+        {w:"Schwester", a:"die", pos:"noun · feminine", ipa:"ˈʃvɛstɐ", en:"sister", pl:"Plural: die Schwestern", ex:"Ihre Schwester wohnt in Hamburg.", exEn:"Her sister lives in Hamburg."},
+        {w:"Frau", a:"die", pos:"noun · feminine", ipa:"fʁaʊ̯", en:"woman; wife; Mrs", pl:"Plural: die Frauen", ex:"Die Frau an der Kasse lächelt.", exEn:"The woman at the checkout smiles."},
+        {w:"Mann", a:"der", pos:"noun · masculine", ipa:"man", en:"man; husband", pl:"Plural: die Männer", ex:"Der Mann wartet draußen.", exEn:"The man is waiting outside."},
+        {w:"Mädchen", a:"das", pos:"noun · neuter", ipa:"ˈmɛːtçən", en:"girl", pl:"Plural: die Mädchen", ex:"Das Mädchen liest ein Buch.", exEn:"The girl is reading a book."},
+        {w:"Junge", a:"der", pos:"noun · masculine", ipa:"ˈjʊŋə", en:"boy", pl:"Plural: die Jungen", ex:"Der Junge spielt Fußball.", exEn:"The boy is playing football."},
+        {w:"Freundin", a:"die", pos:"noun · feminine", ipa:"ˈfʁɔʏ̯ndɪn", en:"friend (female); girlfriend", pl:"Plural: die Freundinnen", ex:"Meine Freundin kommt morgen.", exEn:"My friend is coming tomorrow."},
+        {w:"Nachbar", a:"der", pos:"noun · masculine", ipa:"ˈnaxbaːɐ̯", en:"neighbour (male)", pl:"Plural: die Nachbarn", ex:"Unser Nachbar ist sehr freundlich.", exEn:"Our neighbour is very friendly."},
+        {w:"Lehrer", a:"der", pos:"noun · masculine", ipa:"ˈleːʁɐ", en:"teacher (male)", pl:"Plural: die Lehrer", ex:"Der Lehrer erklärt es noch einmal.", exEn:"The teacher explains it again."},
+        {w:"Arzt", a:"der", pos:"noun · masculine", ipa:"aːɐ̯t͡st", en:"doctor (male)", pl:"Plural: die Ärzte", ex:"Der Arzt sagt, ich soll mich ausruhen.", exEn:"The doctor says I should rest."},
+        {w:"Krankenhaus", a:"das", pos:"noun · neuter", ipa:"ˈkʁaŋkn̩ˌhaʊ̯s", en:"hospital", pl:"Plural: die Krankenhäuser", ex:"Das Krankenhaus ist nicht weit.", exEn:"The hospital is not far."},
+        {w:"Geschäft", a:"das", pos:"noun · neuter", ipa:"ɡəˈʃɛft", en:"shop; business", pl:"Plural: die Geschäfte", ex:"Das Geschäft schließt um acht.", exEn:"The shop closes at eight."},
+        {w:"Markt", a:"der", pos:"noun · masculine", ipa:"maʁkt", en:"market", pl:"Plural: die Märkte", ex:"Samstags ist Markt auf dem Platz.", exEn:"On Saturdays there is a market on the square."},
+        {w:"Wohnung", a:"die", pos:"noun · feminine", ipa:"ˈvoːnʊŋ", en:"flat, apartment", pl:"Plural: die Wohnungen", ex:"Die Wohnung hat drei Zimmer.", exEn:"The flat has three rooms."},
+        {w:"Zimmer", a:"das", pos:"noun · neuter", ipa:"ˈt͡sɪmɐ", en:"room", pl:"Plural: die Zimmer", ex:"Dein Zimmer ist schön hell.", exEn:"Your room is nice and bright."},
+        {w:"Bett", a:"das", pos:"noun · neuter", ipa:"bɛt", en:"bed", pl:"Plural: die Betten", ex:"Ich gehe früh ins Bett.", exEn:"I go to bed early."},
+        {w:"Stuhl", a:"der", pos:"noun · masculine", ipa:"ʃtuːl", en:"chair", pl:"Plural: die Stühle", ex:"Stell den Stuhl an den Tisch.", exEn:"Put the chair at the table."},
+        {w:"Uhr", a:"die", pos:"noun · feminine", ipa:"uːɐ̯", en:"clock; watch; o'clock", pl:"Plural: die Uhren", ex:"Es ist schon drei Uhr.", exEn:"It is already three o'clock."},
+        {w:"Handy", a:"das", pos:"noun · neuter", ipa:"ˈhɛndi", en:"mobile phone", pl:"Plural: die Handys", ex:"Mein Handy ist fast leer.", exEn:"My phone is almost out of battery."},
+        {w:"Computer", a:"der", pos:"noun · masculine", ipa:"kɔmˈpjuːtɐ", en:"computer", pl:"Plural: die Computer", ex:"Der Computer ist neu.", exEn:"The computer is new."},
+        {w:"Zeitung", a:"die", pos:"noun · feminine", ipa:"ˈt͡saɪ̯tʊŋ", en:"newspaper", pl:"Plural: die Zeitungen", ex:"Er liest jeden Morgen die Zeitung.", exEn:"He reads the newspaper every morning."},
+        {w:"Brief", a:"der", pos:"noun · masculine", ipa:"bʁiːf", en:"letter", pl:"Plural: die Briefe", ex:"Der Brief kam heute an.", exEn:"The letter arrived today."},
+        {w:"Schlüssel", a:"der", pos:"noun · masculine", ipa:"ˈʃlʏsl̩", en:"key", pl:"Plural: die Schlüssel", ex:"Wo ist mein Schlüssel?", exEn:"Where is my key?"},
+        {w:"Tasche", a:"die", pos:"noun · feminine", ipa:"ˈtaʃə", en:"bag; pocket", pl:"Plural: die Taschen", ex:"Die Tasche ist schwer.", exEn:"The bag is heavy."},
+        {w:"Hose", a:"die", pos:"noun · feminine", ipa:"ˈhoːzə", en:"trousers", pl:"Plural: die Hosen", ex:"Die Hose passt perfekt.", exEn:"The trousers fit perfectly."},
+        {w:"Jacke", a:"die", pos:"noun · feminine", ipa:"ˈjakə", en:"jacket", pl:"Plural: die Jacken", ex:"Nimm eine Jacke mit, es ist kalt.", exEn:"Take a jacket, it is cold."},
+        {w:"Schuh", a:"der", pos:"noun · masculine", ipa:"ʃuː", en:"shoe", pl:"Plural: die Schuhe", ex:"Die Schuhe sind bequem.", exEn:"The shoes are comfortable."},
+        {w:"Brille", a:"die", pos:"noun · feminine", ipa:"ˈbʁɪlə", en:"glasses", pl:"Plural: die Brillen", ex:"Ohne Brille sehe ich nichts.", exEn:"Without glasses I cannot see anything."},
+        {w:"Auge", a:"das", pos:"noun · neuter", ipa:"ˈaʊ̯ɡə", en:"eye", pl:"Plural: die Augen", ex:"Sie hat blaue Augen.", exEn:"She has blue eyes."},
+        {w:"Hand", a:"die", pos:"noun · feminine", ipa:"hant", en:"hand", pl:"Plural: die Hände", ex:"Wasch dir die Hände.", exEn:"Wash your hands."},
+        {w:"Fuß", a:"der", pos:"noun · masculine", ipa:"fuːs", en:"foot", pl:"Plural: die Füße", ex:"Mein Fuß tut weh.", exEn:"My foot hurts."},
+        {w:"Kopf", a:"der", pos:"noun · masculine", ipa:"kɔpf", en:"head", pl:"Plural: die Köpfe", ex:"Mir tut der Kopf weh.", exEn:"I have a headache."},
+        {w:"Gesicht", a:"das", pos:"noun · neuter", ipa:"ɡəˈzɪçt", en:"face", pl:"Plural: die Gesichter", ex:"Sie hat ein freundliches Gesicht.", exEn:"She has a friendly face."},
+        {w:"Dorf", a:"das", pos:"noun · neuter", ipa:"dɔʁf", en:"village", pl:"Plural: die Dörfer", ex:"Das Dorf ist klein und ruhig.", exEn:"The village is small and quiet."},
+        {w:"Land", a:"das", pos:"noun · neuter", ipa:"lant", en:"country; land", pl:"Plural: die Länder", ex:"Deutschland ist ein großes Land.", exEn:"Germany is a large country."},
+        {w:"Fluss", a:"der", pos:"noun · masculine", ipa:"flʊs", en:"river", pl:"Plural: die Flüsse", ex:"Der Fluss fließt durch die Stadt.", exEn:"The river flows through the city."},
+        {w:"See", a:"der", pos:"noun · masculine", ipa:"zeː", en:"lake", pl:"Plural: die Seen", ex:"Im Sommer schwimmen wir im See.", exEn:"In summer we swim in the lake."},
+        {w:"Wald", a:"der", pos:"noun · masculine", ipa:"valt", en:"forest", pl:"Plural: die Wälder", ex:"Im Wald ist es kühl.", exEn:"It is cool in the forest."},
+        {w:"Himmel", a:"der", pos:"noun · masculine", ipa:"ˈhɪml̩", en:"sky; heaven", pl:"Plural: die Himmel", ex:"Der Himmel ist heute blau.", exEn:"The sky is blue today."},
+        {w:"Stern", a:"der", pos:"noun · masculine", ipa:"ʃtɛʁn", en:"star", pl:"Plural: die Sterne", ex:"Man sieht die Sterne klar.", exEn:"You can see the stars clearly."},
+        {w:"Wolke", a:"die", pos:"noun · feminine", ipa:"ˈvɔlkə", en:"cloud", pl:"Plural: die Wolken", ex:"Keine Wolke am Himmel.", exEn:"Not a cloud in the sky."},
+        {w:"Telefon", a:"das", pos:"noun · neuter", ipa:"ˈteːləfoːn", en:"telephone", pl:"Plural: die Telefone", ex:"Das Telefon klingelt.", exEn:"The telephone is ringing."},
+        {w:"Fernseher", a:"der", pos:"noun · masculine", ipa:"ˈfɛʁnˌzeːɐ", en:"television set", pl:"Plural: die Fernseher", ex:"Der Fernseher ist aus.", exEn:"The TV is off."},
+        {w:"Kleidung", a:"die", pos:"noun · feminine", ipa:"ˈklaɪ̯dʊŋ", en:"clothing", pl:"No plural in everyday use", ex:"Warme Kleidung ist wichtig im Winter.", exEn:"Warm clothing is important in winter."},
+        {w:"Haar", a:"das", pos:"noun · neuter", ipa:"haːɐ̯", en:"hair", pl:"Plural: die Haare", ex:"Sie hat lange Haare.", exEn:"She has long hair."},
+        {w:"Körper", a:"der", pos:"noun · masculine", ipa:"ˈkœʁpɐ", en:"body", pl:"Plural: die Körper", ex:"Bewegung ist gut für den Körper.", exEn:"Exercise is good for the body."},
+        {w:"Lampe", a:"die", pos:"noun · feminine", ipa:"ˈlampə", en:"lamp", pl:"Plural: die Lampen", ex:"Mach bitte die Lampe an.", exEn:"Please turn the lamp on."}
+      );
+
+      EXTRA.push(
+        {w:"putzen", pos:"verb", ipa:"ˈpʊt͡sn̩", en:"to clean", pl:"putzt · putzte · hat geputzt", ex:"Samstags putzen wir die Wohnung.", exEn:"On Saturdays we clean the flat."},
+        {w:"waschen", pos:"verb", ipa:"ˈvaʃn̩", en:"to wash", pl:"wäscht · wusch · hat gewaschen", ex:"Wasch das Gemüse gut.", exEn:"Wash the vegetables well."},
+        {w:"fahren", pos:"verb", ipa:"ˈfaːʁən", en:"to drive, to ride", pl:"fährt · fuhr · ist gefahren", ex:"Wir fahren mit dem Zug.", exEn:"We are travelling by train."},
+        {w:"fliegen", pos:"verb", ipa:"ˈfliːɡn̩", en:"to fly", pl:"fliegt · flog · ist geflogen", ex:"Die Vögel fliegen nach Süden.", exEn:"The birds fly south."},
+        {w:"schwimmen", pos:"verb", ipa:"ˈʃvɪmən", en:"to swim", pl:"schwimmt · schwamm · ist geschwommen", ex:"Im Sommer schwimmen wir oft.", exEn:"In summer we swim often."},
+        {w:"laufen", pos:"verb", ipa:"ˈlaʊ̯fn̩", en:"to run, to walk", pl:"läuft · lief · ist gelaufen", ex:"Er läuft jeden Morgen.", exEn:"He runs every morning."},
+        {w:"tanzen", pos:"verb", ipa:"ˈtant͡sn̩", en:"to dance", pl:"tanzt · tanzte · hat getanzt", ex:"Sie tanzen die ganze Nacht.", exEn:"They dance all night."},
+        {w:"singen", pos:"verb", ipa:"ˈzɪŋən", en:"to sing", pl:"singt · sang · hat gesungen", ex:"Die Kinder singen ein Lied.", exEn:"The children sing a song."},
+        {w:"lesen", pos:"verb", ipa:"ˈleːzn̩", en:"to read", pl:"liest · las · hat gelesen", ex:"Ich lese jeden Abend im Bett.", exEn:"I read in bed every evening."},
+        {w:"schreiben", pos:"verb", ipa:"ˈʃʁaɪ̯bn̩", en:"to write", pl:"schreibt · schrieb · hat geschrieben", ex:"Schreib mir bald zurück.", exEn:"Write back to me soon."},
+        {w:"öffnen", pos:"verb", ipa:"ˈœfnən", en:"to open", pl:"öffnet · öffnete · hat geöffnet", ex:"Öffne bitte das Fenster.", exEn:"Please open the window."},
+        {w:"schließen", pos:"verb", ipa:"ˈʃliːsn̩", en:"to close", pl:"schließt · schloss · hat geschlossen", ex:"Die Tür schließt leise.", exEn:"The door closes quietly."},
+        {w:"beginnen", pos:"verb", ipa:"bəˈɡɪnən", en:"to begin", pl:"beginnt · begann · hat begonnen", ex:"Der Kurs beginnt im Oktober.", exEn:"The course begins in October."},
+        {w:"aufhören", pos:"verb", ipa:"ˈaʊ̯fˌhøːʁən", en:"to stop", pl:"hört auf · hörte auf · hat aufgehört", ex:"Es hört bald auf zu regnen.", exEn:"It will soon stop raining."},
+        {w:"gewinnen", pos:"verb", ipa:"ɡəˈvɪnən", en:"to win", pl:"gewinnt · gewann · hat gewonnen", ex:"Unsere Mannschaft gewinnt oft.", exEn:"Our team often wins."},
+        {w:"verlieren", pos:"verb", ipa:"fɛɐ̯ˈliːʁən", en:"to lose", pl:"verliert · verlor · hat verloren", ex:"Verlier den Schlüssel nicht!", exEn:"Do not lose the key!"},
+        {w:"vergessen", pos:"verb", ipa:"fɛɐ̯ˈɡɛsn̩", en:"to forget", pl:"vergisst · vergaß · hat vergessen", ex:"Ich habe den Termin vergessen.", exEn:"I forgot the appointment."},
+        {w:"hoffen", pos:"verb", ipa:"ˈhɔfn̩", en:"to hope", pl:"hofft · hoffte · hat gehofft", ex:"Wir hoffen auf gutes Wetter.", exEn:"We hope for good weather."},
+        {w:"wünschen", pos:"verb", ipa:"ˈvʏnʃn̩", en:"to wish", pl:"wünscht · wünschte · hat gewünscht", ex:"Ich wünsche dir alles Gute.", exEn:"I wish you all the best."},
+        {w:"brauchen", pos:"verb", ipa:"ˈbʁaʊ̯xn̩", en:"to need", pl:"braucht · brauchte · hat gebraucht", ex:"Ich brauche mehr Zeit.", exEn:"I need more time."},
+        {w:"wollen", pos:"verb", ipa:"ˈvɔlən", en:"to want", pl:"will · wollte · hat gewollt", ex:"Was willst du essen?", exEn:"What do you want to eat?"},
+        {w:"können", pos:"verb", ipa:"ˈkœnən", en:"to be able to, can", pl:"kann · konnte · hat gekonnt", ex:"Kannst du mir helfen?", exEn:"Can you help me?"},
+        {w:"müssen", pos:"verb", ipa:"ˈmʏsn̩", en:"to have to, must", pl:"muss · musste · hat gemusst", ex:"Ich muss morgen früh aufstehen.", exEn:"I have to get up early tomorrow."},
+        {w:"dürfen", pos:"verb", ipa:"ˈdʏʁfn̩", en:"to be allowed to, may", pl:"darf · durfte · hat gedurft", ex:"Darf ich hier sitzen?", exEn:"May I sit here?"},
+        {w:"mögen", pos:"verb", ipa:"ˈmøːɡn̩", en:"to like", pl:"mag · mochte · hat gemocht", ex:"Ich mag diesen Film sehr.", exEn:"I like this film a lot."},
+        {w:"bleiben", pos:"verb", ipa:"ˈblaɪ̯bn̩", en:"to stay, to remain", pl:"bleibt · blieb · ist geblieben", ex:"Bleib bitte noch ein bisschen.", exEn:"Please stay a little longer."},
+        {w:"werden", pos:"verb", ipa:"ˈveːɐ̯dn̩", en:"to become; will (future)", pl:"wird · wurde · ist geworden", ex:"Es wird langsam dunkel.", exEn:"It is slowly getting dark."},
+        {w:"heißen", pos:"verb", ipa:"ˈhaɪ̯sn̩", en:"to be called, to be named", pl:"heißt · hieß · hat geheißen", ex:"Wie heißt du?", exEn:"What is your name?"},
+        {w:"wohnen", pos:"verb", ipa:"ˈvoːnən", en:"to live, to reside", pl:"wohnt · wohnte · hat gewohnt", ex:"Wo wohnst du?", exEn:"Where do you live?"},
+        {w:"studieren", pos:"verb", ipa:"ʃtuˈdiːʁən", en:"to study (at university)", pl:"studiert · studierte · hat studiert", ex:"Sie studiert Medizin.", exEn:"She studies medicine."},
+        {w:"verdienen", pos:"verb", ipa:"fɛɐ̯ˈdiːnən", en:"to earn", pl:"verdient · verdiente · hat verdient", ex:"Er verdient gut in seinem Beruf.", exEn:"He earns well in his job."},
+        {w:"bezahlen", pos:"verb", ipa:"bəˈt͡saːlən", en:"to pay", pl:"bezahlt · bezahlte · hat bezahlt", ex:"Ich bezahle an der Kasse.", exEn:"I pay at the checkout."},
+        {w:"kosten", pos:"verb", ipa:"ˈkɔstn̩", en:"to cost; to taste", pl:"kostet · kostete · hat gekostet", ex:"Wie viel kostet das?", exEn:"How much does that cost?"},
+        {w:"bestellen", pos:"verb", ipa:"bəˈʃtɛlən", en:"to order", pl:"bestellt · bestellte · hat bestellt", ex:"Wir bestellen Pizza heute Abend.", exEn:"We are ordering pizza tonight."},
+        {w:"einladen", pos:"verb", ipa:"ˈaɪ̯nˌlaːdn̩", en:"to invite", pl:"lädt ein · lud ein · hat eingeladen", ex:"Ich lade euch zum Essen ein.", exEn:"I invite you to dinner."},
+        {w:"besuchen", pos:"verb", ipa:"bəˈzuːxn̩", en:"to visit", pl:"besucht · besuchte · hat besucht", ex:"Wir besuchen unsere Großeltern.", exEn:"We visit our grandparents."},
+        {w:"treffen", pos:"verb", ipa:"ˈtʁɛfn̩", en:"to meet", pl:"trifft · traf · hat getroffen", ex:"Wir treffen uns um fünf.", exEn:"We meet at five."},
+        {w:"heiraten", pos:"verb", ipa:"ˈhaɪ̯ʁaːtn̩", en:"to marry", pl:"heiratet · heiratete · hat geheiratet", ex:"Sie heiraten im Sommer.", exEn:"They are getting married in summer."},
+        {w:"wachsen", pos:"verb", ipa:"ˈvaksn̩", en:"to grow", pl:"wächst · wuchs · ist gewachsen", ex:"Kinder wachsen schnell.", exEn:"Children grow quickly."},
+        {w:"fallen", pos:"verb", ipa:"ˈfalən", en:"to fall", pl:"fällt · fiel · ist gefallen", ex:"Die Blätter fallen im Herbst.", exEn:"The leaves fall in autumn."},
+        {w:"sitzen", pos:"verb", ipa:"ˈzɪt͡sn̩", en:"to sit", pl:"sitzt · saß · hat gesessen", ex:"Sie sitzt am Fenster.", exEn:"She sits at the window."},
+        {w:"stehen", pos:"verb", ipa:"ˈʃteːən", en:"to stand", pl:"steht · stand · hat gestanden", ex:"Er steht an der Tür.", exEn:"He stands at the door."},
+        {w:"liegen", pos:"verb", ipa:"ˈliːɡn̩", en:"to lie, to be lying", pl:"liegt · lag · hat gelegen", ex:"Das Buch liegt auf dem Tisch.", exEn:"The book lies on the table."},
+        {w:"zeichnen", pos:"verb", ipa:"ˈt͡saɪ̯çnən", en:"to draw", pl:"zeichnet · zeichnete · hat gezeichnet", ex:"Sie zeichnet ein Bild vom Haus.", exEn:"She draws a picture of the house."},
+        {w:"erinnern", pos:"verb", ipa:"ɛɐ̯ˈʔɪnɐn", en:"to remind; sich erinnern, to remember", pl:"erinnert · erinnerte · hat erinnert", ex:"Ich erinnere mich gut daran.", exEn:"I remember it well."},
+        {w:"freuen", pos:"verb", ipa:"ˈfʁɔʏ̯ən", en:"to be pleased; sich freuen, to look forward", pl:"freut · freute · hat gefreut", ex:"Ich freue mich auf den Urlaub.", exEn:"I am looking forward to the holiday."},
+        {w:"kennenlernen", pos:"verb", ipa:"ˈkɛnənˌlɛʁnən", en:"to get to know, to meet for the first time", pl:"lernt kennen · lernte kennen · hat kennengelernt", ex:"Freut mich, dich kennenzulernen.", exEn:"Pleased to meet you."},
+        {w:"reservieren", pos:"verb", ipa:"ʁezɛʁˈviːʁən", en:"to reserve, to book", pl:"reserviert · reservierte · hat reserviert", ex:"Wir reservieren einen Tisch für zwei.", exEn:"We reserve a table for two."},
+        {w:"sollen", pos:"verb", ipa:"ˈzɔlən", en:"to be supposed to, should", pl:"soll · sollte · hat gesollt", ex:"Du sollst mehr schlafen.", exEn:"You should sleep more."},
+        {w:"steigen", pos:"verb", ipa:"ˈʃtaɪ̯ɡn̩", en:"to rise, to climb", pl:"steigt · stieg · ist gestiegen", ex:"Die Preise steigen weiter.", exEn:"Prices keep rising."}
+      );
+
+      EXTRA.push(
+        {w:"groß", pos:"adjective", ipa:"ɡʁoːs", en:"big, tall, great", ex:"Die Stadt ist sehr groß.", exEn:"The city is very big."},
+        {w:"klein", pos:"adjective", ipa:"klaɪ̯n", en:"small, little", ex:"Das Zimmer ist klein, aber gemütlich.", exEn:"The room is small but cosy."},
+        {w:"alt", pos:"adjective", ipa:"alt", en:"old", ex:"Das Haus ist über hundert Jahre alt.", exEn:"The house is over a hundred years old."},
+        {w:"jung", pos:"adjective", ipa:"jʊŋ", en:"young", ex:"Sie ist noch jung.", exEn:"She is still young."},
+        {w:"neu", pos:"adjective", ipa:"nɔʏ̯", en:"new", ex:"Das Auto ist ganz neu.", exEn:"The car is brand new."},
+        {w:"gut", pos:"adjective / adverb", ipa:"ɡuːt", en:"good, well", ex:"Das hast du gut gemacht.", exEn:"You did that well."},
+        {w:"schlecht", pos:"adjective / adverb", ipa:"ʃlɛçt", en:"bad, badly", ex:"Das Wetter ist heute schlecht.", exEn:"The weather is bad today."},
+        {w:"heiß", pos:"adjective", ipa:"haɪ̯s", en:"hot", ex:"Die Suppe ist noch heiß.", exEn:"The soup is still hot."},
+        {w:"kalt", pos:"adjective", ipa:"kalt", en:"cold", ex:"Im Winter ist es kalt.", exEn:"In winter it is cold."},
+        {w:"warm", pos:"adjective", ipa:"vaʁm", en:"warm", ex:"Heute ist es angenehm warm.", exEn:"Today it is pleasantly warm."},
+        {w:"leicht", pos:"adjective", ipa:"laɪ̯çt", en:"light; easy", ex:"Die Aufgabe war ganz leicht.", exEn:"The task was quite easy."},
+        {w:"schwer", pos:"adjective", ipa:"ʃveːɐ̯", en:"heavy; difficult", ex:"Die Tasche ist zu schwer.", exEn:"The bag is too heavy."},
+        {w:"teuer", pos:"adjective", ipa:"ˈtɔʏ̯ɐ", en:"expensive", ex:"Das Hotel war zu teuer.", exEn:"The hotel was too expensive."},
+        {w:"günstig", pos:"adjective", ipa:"ˈɡʏnstɪç", en:"good value, cheap in a good way", ex:"Das Angebot ist sehr günstig.", exEn:"That offer is very good value."},
+        {w:"laut", pos:"adjective / adverb", ipa:"laʊ̯t", en:"loud, loudly", ex:"Die Musik ist zu laut.", exEn:"The music is too loud."},
+        {w:"leise", pos:"adjective / adverb", ipa:"ˈlaɪ̯zə", en:"quiet, quietly", ex:"Sprich bitte leise.", exEn:"Please speak quietly."},
+        {w:"hell", pos:"adjective", ipa:"hɛl", en:"bright, light", ex:"Im Sommer wird es früh hell.", exEn:"In summer it gets light early."},
+        {w:"dunkel", pos:"adjective", ipa:"ˈdʊŋkl̩", en:"dark", ex:"Im Winter wird es früh dunkel.", exEn:"In winter it gets dark early."},
+        {w:"voll", pos:"adjective", ipa:"fɔl", en:"full", ex:"Der Zug war komplett voll.", exEn:"The train was completely full."},
+        {w:"leer", pos:"adjective", ipa:"leːɐ̯", en:"empty", ex:"Die Straße war leer.", exEn:"The street was empty."},
+        {w:"müde", pos:"adjective", ipa:"ˈmyːdə", en:"tired", ex:"Nach der Arbeit bin ich müde.", exEn:"After work I am tired."},
+        {w:"hungrig", pos:"adjective", ipa:"ˈhʊŋʁɪç", en:"hungry", ex:"Die Kinder sind hungrig.", exEn:"The children are hungry."},
+        {w:"krank", pos:"adjective", ipa:"kʁaŋk", en:"ill, sick", ex:"Er ist heute krank zu Hause.", exEn:"He is at home ill today."},
+        {w:"gesund", pos:"adjective", ipa:"ɡəˈzʊnt", en:"healthy", ex:"Gemüse ist gesund.", exEn:"Vegetables are healthy."},
+        {w:"traurig", pos:"adjective", ipa:"ˈtʁaʊ̯ʁɪç", en:"sad", ex:"Der Film war traurig.", exEn:"The film was sad."},
+        {w:"wütend", pos:"adjective", ipa:"ˈvyːtn̩t", en:"angry, furious", ex:"Sie war wütend über den Fehler.", exEn:"She was angry about the mistake."},
+        {w:"stolz", pos:"adjective", ipa:"ʃtɔlt͡s", en:"proud", ex:"Ich bin stolz auf dich.", exEn:"I am proud of you."},
+        {w:"freundlich", pos:"adjective", ipa:"ˈfʁɔʏ̯ntlɪç", en:"friendly", ex:"Alle hier sind sehr freundlich.", exEn:"Everyone here is very friendly."},
+        {w:"interessant", pos:"adjective", ipa:"ɪntəʁɛˈsant", en:"interesting", ex:"Das Buch ist wirklich interessant.", exEn:"The book is really interesting."},
+        {w:"langweilig", pos:"adjective", ipa:"ˈlaŋˌvaɪ̯lɪç", en:"boring", ex:"Der Vortrag war langweilig.", exEn:"The lecture was boring."},
+        {w:"gefährlich", pos:"adjective", ipa:"ɡəˈfɛːɐ̯lɪç", en:"dangerous", ex:"Die Straße ist bei Eis gefährlich.", exEn:"The road is dangerous in ice."},
+        {w:"sicher", pos:"adjective / adverb", ipa:"ˈzɪçɐ", en:"safe; certain, certainly", ex:"Bist du dir sicher?", exEn:"Are you sure?"},
+        {w:"möglich", pos:"adjective", ipa:"ˈmøːklɪç", en:"possible", ex:"Alles ist möglich.", exEn:"Everything is possible."},
+        {w:"fertig", pos:"adjective", ipa:"ˈfɛʁtɪç", en:"finished, ready, done", ex:"Das Essen ist fertig.", exEn:"The food is ready."},
+        {w:"allein", pos:"adjective / adverb", ipa:"aˈlaɪ̯n", en:"alone", ex:"Sie wohnt allein.", exEn:"She lives alone."},
+        {w:"gestern", pos:"adverb", ipa:"ˈɡɛstɐn", en:"yesterday", ex:"Gestern war es sonnig.", exEn:"Yesterday it was sunny."},
+        {w:"Abend", a:"der", pos:"noun · masculine", ipa:"ˈaːbn̩t", en:"evening", pl:"Plural: die Abende", ex:"Am Abend lesen wir zusammen.", exEn:"In the evening we read together."},
+        {w:"Woche", a:"die", pos:"noun · feminine", ipa:"ˈvɔxə", en:"week", pl:"Plural: die Wochen", ex:"Nächste Woche habe ich Urlaub.", exEn:"Next week I am on holiday."},
+        {w:"Monat", a:"der", pos:"noun · masculine", ipa:"ˈmoːnat", en:"month", pl:"Plural: die Monate", ex:"Der Monat vergeht schnell.", exEn:"The month passes quickly."},
+        {w:"Jahr", a:"das", pos:"noun · neuter", ipa:"jaːɐ̯", en:"year", pl:"Plural: die Jahre", ex:"Ein Jahr hat zwölf Monate.", exEn:"A year has twelve months."},
+        {w:"Tag", a:"der", pos:"noun · masculine", ipa:"taːk", en:"day", pl:"Plural: die Tage", ex:"Jeder Tag bringt etwas Neues.", exEn:"Every day brings something new."},
+        {w:"Stunde", a:"die", pos:"noun · feminine", ipa:"ˈʃtʊndə", en:"hour", pl:"Plural: die Stunden", ex:"Wir warten schon eine Stunde.", exEn:"We have been waiting an hour already."},
+        {w:"Frühling", a:"der", pos:"noun · masculine", ipa:"ˈfʁyːlɪŋ", en:"spring", pl:"Plural: die Frühlinge", ex:"Im Frühling blühen die Blumen.", exEn:"In spring the flowers bloom."},
+        {w:"Herbst", a:"der", pos:"noun · masculine", ipa:"hɛʁpst", en:"autumn, fall", pl:"Plural: die Herbste", ex:"Im Herbst fallen die Blätter.", exEn:"In autumn the leaves fall."},
+        {w:"Geburtstag", a:"der", pos:"noun · masculine", ipa:"ɡəˈbuːɐ̯t͡sˌtaːk", en:"birthday", pl:"Plural: die Geburtstage", ex:"Alles Gute zum Geburtstag!", exEn:"Happy birthday!"},
+        {w:"Urlaub", a:"der", pos:"noun · masculine", ipa:"ˈuːɐ̯laʊ̯p", en:"holiday, vacation", pl:"Plural: die Urlaube", ex:"Im Urlaub fahren wir ans Meer.", exEn:"On holiday we go to the seaside."},
+        {w:"Wochenende", a:"das", pos:"noun · neuter", ipa:"ˈvɔxn̩ˌʔɛndə", en:"weekend", pl:"Plural: die Wochenenden", ex:"Schönes Wochenende!", exEn:"Have a nice weekend!"},
+        {w:"Beruf", a:"der", pos:"noun · masculine", ipa:"bəˈʁuːf", en:"profession, job", pl:"Plural: die Berufe", ex:"Was bist du von Beruf?", exEn:"What do you do for a living?"},
+        {w:"Büro", a:"das", pos:"noun · neuter", ipa:"byˈʁoː", en:"office", pl:"Plural: die Büros", ex:"Das Büro ist im zweiten Stock.", exEn:"The office is on the second floor."},
+        {w:"Termin", a:"der", pos:"noun · masculine", ipa:"tɛʁˈmiːn", en:"appointment; deadline", pl:"Plural: die Termine", ex:"Ich habe morgen einen Termin beim Arzt.", exEn:"I have a doctor appointment tomorrow."}
+      );
+
+      EXTRA.push(
+        {w:"Pause", a:"die", pos:"noun · feminine", ipa:"ˈpaʊ̯zə", en:"break, pause", pl:"Plural: die Pausen", ex:"Mach mal eine Pause.", exEn:"Take a break."},
+        {w:"Schnee", a:"der", pos:"noun · masculine", ipa:"ʃneː", en:"snow", pl:"No plural in everyday use", ex:"Im Winter liegt Schnee auf den Bergen.", exEn:"In winter there is snow on the mountains."},
+        {w:"Wind", a:"der", pos:"noun · masculine", ipa:"vɪnt", en:"wind", pl:"Plural: die Winde", ex:"Der Wind ist heute stark.", exEn:"The wind is strong today."},
+        {w:"Eis", a:"das", pos:"noun · neuter", ipa:"aɪ̯s", en:"ice; ice cream", pl:"Plural: die Eissorten", ex:"Im Sommer essen wir Eis.", exEn:"In summer we eat ice cream."},
+        {w:"Feuer", a:"das", pos:"noun · neuter", ipa:"ˈfɔʏ̯ɐ", en:"fire", pl:"Plural: die Feuer", ex:"Das Feuer im Kamin ist warm.", exEn:"The fire in the fireplace is warm."},
+        {w:"Licht", a:"das", pos:"noun · neuter", ipa:"lɪçt", en:"light", pl:"Plural: die Lichter", ex:"Mach bitte das Licht aus.", exEn:"Please turn the light off."},
+        {w:"Farbe", a:"die", pos:"noun · feminine", ipa:"ˈfaʁbə", en:"colour; paint", pl:"Plural: die Farben", ex:"Welche Farbe magst du am liebsten?", exEn:"Which colour do you like best?"},
+        {w:"Sprache", a:"die", pos:"noun · feminine", ipa:"ˈʃpʁaːxə", en:"language", pl:"Plural: die Sprachen", ex:"Deutsch ist eine schöne Sprache.", exEn:"German is a beautiful language."},
+        {w:"Wort", a:"das", pos:"noun · neuter", ipa:"vɔʁt", en:"word", pl:"Plural: die Wörter / Worte", ex:"Jeden Tag ein neues Wort.", exEn:"A new word every day."},
+        {w:"Geschichte", a:"die", pos:"noun · feminine", ipa:"ɡəˈʃɪçtə", en:"story; history", pl:"Plural: die Geschichten", ex:"Erzähl mir eine Geschichte.", exEn:"Tell me a story."},
+        {w:"Hunger", a:"der", pos:"noun · masculine", ipa:"ˈhʊŋɐ", en:"hunger", pl:"No plural", cat:"cooking", ex:"Ich habe großen Hunger.", exEn:"I am very hungry."},
+        {w:"Durst", a:"der", pos:"noun · masculine", ipa:"dʊʁst", en:"thirst", pl:"No plural", cat:"cooking", ex:"Nach dem Laufen habe ich Durst.", exEn:"After running I am thirsty."},
+        {w:"Mittagessen", a:"das", pos:"noun · neuter", ipa:"ˈmɪtaːkˌʔɛsn̩", en:"lunch", pl:"Plural: die Mittagessen", cat:"cooking", ex:"Zum Mittagessen gibt es Suppe.", exEn:"For lunch there is soup."},
+        {w:"Abendessen", a:"das", pos:"noun · neuter", ipa:"ˈaːbn̩tˌʔɛsn̩", en:"dinner, evening meal", pl:"Plural: die Abendessen", cat:"cooking", ex:"Das Abendessen ist um sieben fertig.", exEn:"Dinner is ready at seven."},
+        {w:"Kuchen", a:"der", pos:"noun · masculine", ipa:"ˈkuːxn̩", en:"cake", pl:"Plural: die Kuchen", cat:"cooking", ex:"Der Kuchen schmeckt nach Zitrone.", exEn:"The cake tastes of lemon."},
+        {w:"Salat", a:"der", pos:"noun · masculine", ipa:"zaˈlaːt", en:"salad; lettuce", pl:"Plural: die Salate", cat:"cooking", ex:"Ein frischer Salat passt dazu.", exEn:"A fresh salad goes well with it."},
+        {w:"Soße", a:"die", pos:"noun · feminine", ipa:"ˈzoːsə", en:"sauce", pl:"Plural: die Soßen", cat:"cooking", ex:"Die Soße braucht noch Salz.", exEn:"The sauce needs more salt."},
+        {w:"Herd", a:"der", pos:"noun · masculine", ipa:"heːɐ̯t", en:"stove, cooker", pl:"Plural: die Herde", cat:"cooking", ex:"Stell den Topf auf den Herd.", exEn:"Put the pot on the stove."},
+        {w:"Kühlschrank", a:"der", pos:"noun · masculine", ipa:"ˈkyːlˌʃʁaŋk", en:"fridge, refrigerator", pl:"Plural: die Kühlschränke", cat:"cooking", ex:"Die Milch steht im Kühlschrank.", exEn:"The milk is in the fridge."},
+        {w:"schmecken", pos:"verb", ipa:"ˈʃmɛkn̩", en:"to taste (good)", pl:"schmeckt · schmeckte · hat geschmeckt", cat:"cooking", ex:"Das Essen schmeckt wunderbar.", exEn:"The food tastes wonderful."},
+        {w:"süß", pos:"adjective", ipa:"zyːs", en:"sweet", cat:"cooking", ex:"Der Kuchen ist mir zu süß.", exEn:"The cake is too sweet for me."},
+        {w:"sauer", pos:"adjective", ipa:"ˈzaʊ̯ɐ", en:"sour; annoyed", cat:"cooking", ex:"Die Zitrone ist sauer.", exEn:"The lemon is sour."},
+        {w:"salzig", pos:"adjective", ipa:"ˈzalt͡sɪç", en:"salty", cat:"cooking", ex:"Die Suppe ist zu salzig.", exEn:"The soup is too salty."},
+        {w:"Wahnsinn", a:"der", pos:"noun · masculine", ipa:"ˈvaːnˌzɪn", en:"madness; unbelievable (as an exclamation)", pl:"No plural", ex:"Wahnsinn, das ist ja unglaublich!", exEn:"Unbelievable, that is incredible!"},
+        {w:"lästig", pos:"adjective", ipa:"ˈlɛstɪç", en:"annoying, a nuisance", ex:"Die Fliegen sind lästig.", exEn:"The flies are a nuisance."},
+        {w:"bloß", pos:"particle / adverb", ipa:"bloːs", en:"only; whatever you do (in warnings)", ex:"Fass das bloß nicht an!", exEn:"Whatever you do, do not touch that!"},
+        {w:"wohl", pos:"particle / adverb", ipa:"voːl", en:"probably; well", ex:"Er kommt wohl später.", exEn:"He will probably come later."},
+        {w:"ja", pos:"particle", ipa:"jaː", en:"yes; as you know (as a particle)", ex:"Das weißt du ja.", exEn:"You know that, as you know."}
+      );
+
+      var SEQUENCE = [TAUGEN].concat(COOKING, WORDS, EXTRA);
+
+      var MS_DAY = 86400000;
+      function dayNumber(date) {
+        return Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / MS_DAY);
+      }
+      var START_DAY = dayNumber(new Date(2026, 10, 21)); /* Day 1: 21 November 2026 */
+      var today = new Date();
+      function entryForDate(date) {
+        var n = SEQUENCE.length;
+        var idx = (((dayNumber(date) - START_DAY) % n) + n) % n;
+        return SEQUENCE[idx];
+      }
+      function displayWord(entry) {
+        return (entry.a ? entry.a + " " : "") + entry.w;
+      }
+
+      var entry = entryForDate(today);
+      var $ = function (id) { return document.getElementById(id); };
+
+      /* ---------- Hero ---------- */
+      var dayIndex365 = (((dayNumber(today) - START_DAY) % SEQUENCE.length) + SEQUENCE.length) % SEQUENCE.length;
+      $("dateLine").textContent = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long" }).format(today) + " · Day " + (dayIndex365 + 1) + " of 365";
+      var wordEl = $("wordText");
+      wordEl.textContent = entry.w;
+      if (entry.w.length > 12) wordEl.classList.add("long");
+      $("pronText").textContent = "/" + entry.ipa + "/";
+      $("meaningText").textContent = entry.en;
+      var kindBits = [];
+      if (entry.a) kindBits.push("noun");
+      else kindBits.push(entry.pos);
+      if (entry.a) kindBits.push({ der: "masculine", die: "feminine", das: "neuter" }[entry.a]);
+      if (entry.cat) kindBits.push(entry.cat);
+      $("kindText").textContent = kindBits.join(" · ");
+
+      /* ---------- Forms ---------- */
+      function formTable(rows) {
+        var t = document.createElement("table");
+        rows.forEach(function (r) {
+          var tr = document.createElement("tr");
+          var tdP = document.createElement("td"); tdP.className = "p"; tdP.textContent = r[0];
+          var tdF = document.createElement("td"); tdF.className = "f"; tdF.textContent = r[1];
+          tr.appendChild(tdP); tr.appendChild(tdF); t.appendChild(tr);
+        });
+        return t;
+      }
+      function formCard(title, node, wide) {
+        var card = document.createElement("div");
+        card.className = "form-card" + (wide ? " wide" : "");
+        var h = document.createElement("h3"); h.textContent = title;
+        card.appendChild(h); card.appendChild(node);
+        return card;
+      }
+      (function renderForms() {
+        var body = $("formsBody");
+        if (entry.rich) {
+          var parts = document.createElement("div");
+          parts.className = "parts"; parts.textContent = entry.parts;
+          var note = document.createElement("div");
+          note.className = "parts-note"; note.textContent = entry.partsNote;
+          body.appendChild(parts); body.appendChild(note);
+          var grid = document.createElement("div"); grid.className = "forms-grid";
+          grid.appendChild(formCard("Present · Präsens", formTable(entry.formsPresent)));
+          grid.appendChild(formCard("Preterite · Präteritum", formTable(entry.formsPreterite)));
+          grid.appendChild(formCard("Perfect · Perfekt", formTable(entry.formsPerfect)));
+          var ul = document.createElement("ul"); ul.className = "form-list";
+          entry.formsMore.forEach(function (r) {
+            var li = document.createElement("li");
+            var k = document.createElement("span"); k.className = "k"; k.textContent = r[0];
+            var v = document.createElement("span"); v.className = "v"; v.textContent = r[1];
+            li.appendChild(k); li.appendChild(v); ul.appendChild(li);
+          });
+          grid.appendChild(formCard("More forms", ul, true));
+          body.appendChild(grid);
+        } else if (entry.pl || entry.parts) {
+          var line = document.createElement("div");
+          line.className = "single-line";
+          line.textContent = entry.parts || entry.pl;
+          body.appendChild(line);
+        } else {
+          $("formsSection").hidden = true;
+        }
+      })();
+
+      /* ---------- Examples ---------- */
+      (function renderExamples() {
+        var body = $("examplesBody");
+        var list = entry.rich ? entry.examples : [{ de: entry.ex, en: entry.exEn, ctx: entry.note ? entry.note.replace(/<[^>]+>/g, "") : null }];
+        list.forEach(function (ex) {
+          var card = document.createElement("div"); card.className = "example-card";
+          var de = document.createElement("div"); de.className = "de"; de.textContent = "„" + ex.de + "“";
+          var en = document.createElement("div"); en.className = "en"; en.textContent = ex.en;
+          card.appendChild(de); card.appendChild(en);
+          if (ex.ctx) {
+            var ctx = document.createElement("div"); ctx.className = "ctx"; ctx.textContent = ex.ctx;
+            card.appendChild(ctx);
+          }
+          body.appendChild(card);
+        });
+      })();
+
+      /* ---------- Test ---------- */
+      var testState = { total: 0, correct: 0, solved: {} };
+      function normalise(s) { return s.replace(/\s+/g, " ").trim().toLowerCase(); }
+      function updateScore() {
+        $("scoreLine").innerHTML = "Fill in the missing form. <strong>" + testState.correct + " of " + testState.total + "</strong> correct.";
+      }
+      function buildTestItem(cfg, idx) {
+        var wrap = document.createElement("div"); wrap.className = "test-item";
+        var sentence = document.createElement("div"); sentence.className = "sentence";
+        var input = document.createElement("input");
+        input.className = "blank";
+        input.type = "text";
+        input.autocomplete = "off"; input.autocapitalize = "off"; input.spellcheck = false;
+        input.setAttribute("aria-label", "Missing word, question " + (idx + 1));
+        var answerLen = cfg.answer.length;
+        input.size = Math.max(answerLen + 1, 6);
+        input.style.width = "calc(" + Math.max(answerLen + 1, 6) + "ch + 18px)";
+        sentence.appendChild(document.createTextNode(cfg.pre));
+        sentence.appendChild(input);
+        sentence.appendChild(document.createTextNode(cfg.post));
+        var hint = document.createElement("div"); hint.className = "hint"; hint.textContent = cfg.hint;
+        var feedback = document.createElement("div"); feedback.className = "feedback";
+        wrap.appendChild(sentence); wrap.appendChild(hint); wrap.appendChild(feedback);
+
+        var accepted = (cfg.accept || [cfg.answer]).map(normalise);
+        input.addEventListener("input", function () {
+          var done = wrap.classList.contains("correct") || wrap.classList.contains("revealed");
+          if (accepted.indexOf(normalise(input.value)) !== -1) {
+            if (!wrap.classList.contains("correct")) {
+              wrap.classList.add("correct"); wrap.classList.remove("revealed");
+              input.disabled = true;
+              feedback.textContent = "Richtig. Correct.";
+              if (!testState.solved[idx]) { testState.solved[idx] = true; testState.correct++; }
+              updateScore();
+            }
+          } else if (!done) {
+            feedback.textContent = input.value.trim() ? "" : "";
+          }
+        });
+        input.addEventListener("blur", function () {
+          if (wrap.classList.contains("correct") || wrap.classList.contains("revealed")) return;
+          if (input.value.trim() && accepted.indexOf(normalise(input.value)) === -1) {
+            feedback.textContent = "Not quite. Try again.";
+            feedback.style.color = "var(--bad)";
+          } else {
+            feedback.style.color = "";
+          }
+        });
+        input.addEventListener("focus", function () {
+          if (!wrap.classList.contains("correct")) { feedback.textContent = ""; feedback.style.color = ""; }
+        });
+        wrap._answer = cfg.answer;
+        wrap._input = input;
+        wrap._feedback = feedback;
+        return wrap;
+      }
+      (function renderTest() {
+        var body = $("testBody");
+        var items;
+        if (entry.rich) {
+          items = entry.test;
+        } else {
+          var promptText = entry.a ? ("How do you say it in German, with its article?") : ("How do you say it in German?");
+          items = [{
+            pre: "", post: "",
+            answer: displayWord(entry),
+            accept: entry.a ? [displayWord(entry), entry.w] : [entry.w],
+            hint: promptText + " The English is: " + entry.en + "."
+          }];
+          var lead = document.createElement("p");
+          lead.className = "score";
+          lead.textContent = "Write today's word from memory.";
+          body.appendChild(lead);
+        }
+        testState.total = items.length;
+        items.forEach(function (cfg, i) { body.appendChild(buildTestItem(cfg, i)); });
+        updateScore();
+        $("showAnswersBtn").addEventListener("click", function () {
+          var wraps = body.querySelectorAll(".test-item");
+          wraps.forEach(function (wrap) {
+            if (!wrap.classList.contains("correct")) {
+              wrap.classList.add("revealed");
+              wrap._input.value = wrap._answer;
+              wrap._input.disabled = true;
+              wrap._feedback.textContent = "";
+            }
+          });
+        });
+      })();
+
+      /* ---------- Listen ---------- */
+      var toastTimer = null;
+      function toast(msg) {
+        var t = $("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2400);
+      }
+      $("speakBtn").addEventListener("click", function () {
+        if (!("speechSynthesis" in window)) {
+          toast("Audio is not available in this browser. Pronunciation: /" + entry.ipa + "/");
+          return;
+        }
+        try {
+          window.speechSynthesis.cancel();
+          var first = entry.rich ? entry.examples[0].de : entry.ex;
+          var u1 = new SpeechSynthesisUtterance(displayWord(entry));
+          u1.lang = "de-DE"; u1.rate = 0.85;
+          var u2 = new SpeechSynthesisUtterance(first);
+          u2.lang = "de-DE"; u2.rate = 0.92;
+          var voices = window.speechSynthesis.getVoices();
+          for (var i = 0; i < voices.length; i++) {
+            if (voices[i].lang && voices[i].lang.toLowerCase().indexOf("de") === 0) { u1.voice = voices[i]; u2.voice = voices[i]; break; }
+          }
+          window.speechSynthesis.speak(u1);
+          window.speechSynthesis.speak(u2);
+        } catch (e) {
+          toast("Audio could not play. Pronunciation: /" + entry.ipa + "/");
+        }
+      });
+
+      /* ---------- Daily reminder ---------- */
+      var reminder = { on: false, time: "08:00", timer: null };
+      var toggle = $("reminderToggle"), timeInput = $("reminderTime"), statusEl = $("reminderStatus");
+      function setStatus(msg) { statusEl.textContent = msg; }
+      function msUntilNext(timeStr) {
+        var parts = timeStr.split(":");
+        var now = new Date();
+        var next = new Date(now.getFullYear(), now.getMonth(), now.getDate(), parseInt(parts[0], 10), parseInt(parts[1], 10), 0, 0);
+        if (next <= now) next.setDate(next.getDate() + 1);
+        return next - now;
+      }
+      function scheduleReminder() {
+        if (reminder.timer) clearTimeout(reminder.timer);
+        if (!reminder.on) return;
+        var delay = msUntilNext(reminder.time);
+        if (delay > 2147483647) delay = 2147483647;
+        reminder.timer = setTimeout(fireReminder, delay);
+      }
+      function fireReminder() {
+        try {
+          new Notification("Täglich Wort", {
+            body: "Today's word is " + displayWord(entryForDate(new Date())) + ".",
+            icon: "data:image/png;base64,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",
+            tag: "taeglich-wort-daily"
+          });
+        } catch (e) { /* notifications need an installed app on some phones; stay silent */ }
+        scheduleReminder();
+      }
+      function enableReminder() {
+        reminder.on = true;
+        toggle.setAttribute("aria-checked", "true");
+        scheduleReminder();
+        setStatus("On. Every day at " + reminder.time + ".");
+      }
+      function disableReminder() {
+        reminder.on = false;
+        toggle.setAttribute("aria-checked", "false");
+        if (reminder.timer) clearTimeout(reminder.timer);
+        setStatus("Off");
+      }
+      toggle.addEventListener("click", function () {
+        if (reminder.on) { disableReminder(); return; }
+        if (!("Notification" in window)) {
+          setStatus("Notifications are not supported in this browser.");
+          return;
+        }
+        if (Notification.permission === "granted") { enableReminder(); return; }
+        if (Notification.permission === "denied") {
+          setStatus("Notifications are blocked. You can allow them in your browser settings.");
+          return;
+        }
+        setStatus("Allow notifications in the browser prompt to turn the reminder on.");
+        Notification.requestPermission().then(function (p) {
+          if (p === "granted") enableReminder();
+          else setStatus("Permission was not granted, so the reminder stays off.");
+        }).catch(function () {
+          setStatus("Permission could not be requested in this browser.");
+        });
+      });
+      timeInput.addEventListener("change", function () {
+        reminder.time = timeInput.value || "08:00";
+        if (reminder.on) { scheduleReminder(); setStatus("On. Every day at " + reminder.time + "."); }
+      });
+
+      /* ---------- Install instructions (only when not installed) ---------- */
+      (function initInstall() {
+        var section = $("installSection");
+        if (!section) return;
+        var dismissed = false;
+        var deferredPrompt = null;
+
+        function isInstalled() {
+          try {
+            if (window.matchMedia("(display-mode: standalone)").matches) return true;
+            if (window.matchMedia("(display-mode: fullscreen)").matches) return true;
+            if (window.matchMedia("(display-mode: minimal-ui)").matches) return true;
+          } catch (e) {}
+          if (window.navigator && window.navigator.standalone === true) return true; /* iOS */
+          return false;
+        }
+
+        var ua = (navigator.userAgent || "").toLowerCase();
+        var isIOS = /iphone|ipad|ipod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+        var isAndroid = /android/.test(ua);
+        var isSafari = isIOS && /safari/.test(ua) && !/crios|fxios|edgios|opios/.test(ua);
+        var isMobile = isIOS || isAndroid || /mobile/.test(ua);
+
+        function showAppropriateSteps() {
+          var iosSteps = $("installStepsIOS");
+          var androidSteps = $("installStepsAndroid");
+          var desktopSteps = $("installStepsDesktop");
+          var note = $("installNote");
+          var btn = $("installBtn");
+          iosSteps.hidden = true; androidSteps.hidden = true; desktopSteps.hidden = true;
+          note.hidden = true;
+
+          if (isIOS) {
+            iosSteps.hidden = false;
+            if (!isSafari) note.hidden = false;
+            /* iOS has no beforeinstallprompt, button stays hidden */
+            btn.hidden = true;
+            $("installActions").style.display = "none";
+          } else if (isAndroid) {
+            if (deferredPrompt) {
+              btn.hidden = false;
+              $("installActions").style.display = "";
+              androidSteps.hidden = false;
+            } else {
+              btn.hidden = true;
+              $("installActions").style.display = "none";
+              androidSteps.hidden = false;
+            }
+          } else if (isMobile) {
+            androidSteps.hidden = false;
+            $("installActions").style.display = deferredPrompt ? "" : "none";
+            btn.hidden = !deferredPrompt;
+          } else {
+            desktopSteps.hidden = false;
+            $("installActions").style.display = deferredPrompt ? "" : "none";
+            btn.hidden = !deferredPrompt;
+          }
+        }
+
+        function updateVisibility() {
+          if (dismissed || isInstalled()) {
+            section.hidden = true;
+            return;
+          }
+          showAppropriateSteps();
+          section.hidden = false;
+        }
+
+        /* Listen early for the native prompt */
+        window.addEventListener("beforeinstallprompt", function (e) {
+          e.preventDefault();
+          deferredPrompt = e;
+          updateVisibility();
+        });
+
+        window.addEventListener("appinstalled", function () {
+          deferredPrompt = null;
+          section.hidden = true;
+          toast("Täglich Wort installed. Find it on your home screen.");
+        });
+
+        try {
+          var mq = window.matchMedia("(display-mode: standalone)");
+          if (mq && mq.addEventListener) mq.addEventListener("change", updateVisibility);
+          else if (mq && mq.addListener) mq.addListener(updateVisibility);
+        } catch (e) {}
+
+        $("installDismiss").addEventListener("click", function () {
+          dismissed = true;
+          section.hidden = true;
+        });
+
+        $("installBtn").addEventListener("click", function () {
+          if (!deferredPrompt) return;
+          var promptEvent = deferredPrompt;
+          deferredPrompt = null;
+          $("installBtn").hidden = true;
+          try {
+            /* Native install UI via the BeforeInstallPrompt event (not a JS dialog) */
+            promptEvent["prompt"]();
+            if (promptEvent.userChoice) {
+              promptEvent.userChoice.then(function (choice) {
+                if (choice && choice.outcome === "accepted") {
+                  section.hidden = true;
+                } else {
+                  updateVisibility();
+                }
+              }).catch(function () { updateVisibility(); });
+            }
+          } catch (err) {
+            updateVisibility();
+          }
+        });
+
+        updateVisibility();
+      })();
+
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('./sw.js').catch(function () {});
+        });
+      }
+    </script>
+  </body>
+</html>

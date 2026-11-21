@@ -1,0 +1,37 @@
+{
+  "name": "Täglich Wort - The Daily German App",
+  "short_name": "Täglich Wort",
+  "description": "One German word a day, with its forms, examples in context and a short test.",
+  "lang": "en",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#edeae3",
+  "theme_color": "#edeae3",
+  "icons": [
+    {
+      "src": "dailydeutsch-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "dailydeutsch-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "dailydeutsch-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "dailydeutsch-logo-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
