@@ -292,6 +292,7 @@
         overflow-wrap: break-word;
       }
       .word.long { font-size: clamp(2.6rem, 11vw, 4.6rem); }
+      .word.xlong { font-size: clamp(1.7rem, 7.2vw, 3rem); }
       .pron { margin-top: 14px; font-size: 1.02rem; color: var(--ink-faint); font-weight: 500; }
       .meaning {
         margin: 26px auto 0;
@@ -1344,7 +1345,8 @@
       function renderHero(e) {
         var wordEl = $("wordText");
         wordEl.textContent = e.w;
-        wordEl.classList.toggle("long", e.w.length > 12);
+        wordEl.classList.toggle("long", e.w.length > 8 && e.w.length <= 12);
+        wordEl.classList.toggle("xlong", e.w.length > 12);
         $("pronText").textContent = e.ipa ? "/" + e.ipa + "/" : "";
         $("meaningText").textContent = e.en;
         var kindBits = [];
