@@ -7,8 +7,8 @@
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#edeae3",
-  "theme_color": "#edeae3",
+  "background_color": "#F3F0EB",
+  "theme_color": "#F3F0EB",
   "icons": [
     {
       "src": "dailydeutsch-logo-192.png",

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taeglich-wort-v3';
+const CACHE_NAME = 'taeglich-wort-v4';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -11,7 +11,9 @@ const CORE_ASSETS = [
   './dailydeutsch-logo-512.png',
   './dailydeutsch-logo-1024.png',
   './apple-touch-icon.png',
-  './favicon-64.png'
+  './favicon-64.png',
+  './level3.js',
+  './assets/photos/photos.js'
 ];
 
 self.addEventListener('install', function (event) {
