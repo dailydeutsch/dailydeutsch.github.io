@@ -213,7 +213,7 @@
       .profile-name { font-size: 1.2rem; font-weight: 600; margin: 0; overflow-wrap: break-word; }
       .profile-sub { font-size: 0.9rem; color: var(--ink-soft); margin: 3px 0 0; }
       .stats-grid {
-        display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
         margin-top: 20px;
       }
       .stat {
@@ -628,10 +628,10 @@
         <h1 class="visually-hidden">Täglich Wort</h1>
         <img class="brand-logo" src="./dailydeutsch-logo-192.png" alt="Täglich Wort" width="34" height="34" />
         <div class="date" id="dateLine"></div>
-        <button class="avatar-btn" id="profileBtn" type="button" aria-label="Open your profile"><span id="avatarInitials">?</span></button>
+        <button class="avatar-btn" id="profileBtn" type="button" aria-label="Open your profile and settings"><span id="avatarInitials">?</span></button>
       </header>
 
-      <section id="profileSection" hidden aria-label="Your profile">
+      <section id="profileSection" hidden aria-label="Your profile and settings">
         <div class="profile-card">
           <div class="profile-head">
             <span class="avatar-big" id="avatarBig">?</span>
@@ -644,11 +644,19 @@
             <div class="stat"><div class="num" id="statStreak">0</div><div class="lbl">day streak</div></div>
             <div class="stat"><div class="num" id="statViewed">0</div><div class="lbl">words viewed</div></div>
             <div class="stat"><div class="num" id="statFavs">0</div><div class="lbl">favorites</div></div>
+            <div class="stat"><div class="num" id="statQuizzed">0</div><div class="lbl">tests finished</div></div>
           </div>
           <div class="name-edit">
             <input type="text" id="nameInput" maxlength="40" placeholder="Your display name" aria-label="Display name" />
             <button class="btn" id="saveNameBtn" type="button">Save name</button>
           </div>
+          <div class="setting-row" style="margin-top: 20px;">
+            <p class="setting-label">Background</p>
+            <p class="setting-hint">Warm Grey is calm and plain. Photo Daily shows a real photo of Germany, a different one each day.</p>
+            <div class="seg" id="themeSeg" role="group" aria-label="Background theme">
+              <button type="button" data-theme="warm" aria-pressed="true">Warm Grey</button>
+              <button type="button" data-theme="photo" aria-pressed="false">Photo Daily</button>
+            </div>
           <div class="setting-row" style="margin-top: 20px;">
             <p class="setting-label">Sophistication level</p>
             <p class="setting-hint">The daily word and the word list follow your level.</p>
@@ -657,6 +665,29 @@
               <button type="button" data-level="2" aria-pressed="false">Level 2 · Advanced</button>
               <button type="button" data-level="3" aria-pressed="false">Level 3 · Expert</button>
             </div>
+          </div>
+          <div class="setting-row" style="margin-top: 20px;">
+            <p class="setting-label">Daily reminder</p>
+          <div class="reminder-card">
+            <div class="reminder-row">
+              <button class="switch-btn" id="reminderToggle" type="button" role="switch" aria-checked="false" aria-label="Daily reminder">
+                <span class="switch-track"><span class="switch-knob"></span></span>
+              </button>
+              <span class="reminder-label">Remind me about the new word</span>
+              <span class="time-wrap">
+                <label for="reminderTime">at</label>
+                <input type="time" id="reminderTime" value="08:00" />
+              </span>
+            </div>
+            <p class="reminder-status" id="reminderStatus">Off</p>
+          </div>
+          </div>
+          <div id="browseWrap">
+            <p class="setting-label" style="margin-top: 20px;">Browse words</p>
+            <p class="setting-hint">A word appears here once you have finished its test. Tap one to open it again.</p>
+            <p class="browse-count" id="browseCount"></p>
+            <input class="browse-filter" id="browseFilter" type="search" placeholder="Filter words" aria-label="Filter words" />
+            <ul class="browse-list" id="browseList"></ul>
           </div>
           <div id="favWrap">
             <p class="setting-label" style="margin-top: 20px;">Your favorites</p>
@@ -755,58 +786,6 @@
           </div>
         </section>
 
-        <section class="block rise" id="reminderSection">
-          <h2>Daily reminder</h2>
-          <div class="rule"></div>
-          <div class="reminder-card">
-            <div class="reminder-row">
-              <button class="switch-btn" id="reminderToggle" type="button" role="switch" aria-checked="false" aria-label="Daily reminder">
-                <span class="switch-track"><span class="switch-knob"></span></span>
-              </button>
-              <span class="reminder-label">Remind me about the new word</span>
-              <span class="time-wrap">
-                <label for="reminderTime">at</label>
-                <input type="time" id="reminderTime" value="08:00" />
-              </span>
-            </div>
-            <p class="reminder-status" id="reminderStatus">Off</p>
-          </div>
-        </section>
-
-        <section class="block rise" id="settingsSection">
-          <h2>Settings</h2>
-          <div class="rule"></div>
-          <div class="settings-card">
-            <div class="setting-row">
-              <p class="setting-label">Background</p>
-              <p class="setting-hint">Warm Grey is calm and plain. Photo Daily shows a real photo of Germany, a different one each day.</p>
-              <div class="seg" id="themeSeg" role="group" aria-label="Background theme">
-                <button type="button" data-theme="warm" aria-pressed="true">Warm Grey</button>
-                <button type="button" data-theme="photo" aria-pressed="false">Photo Daily</button>
-              </div>
-            </div>
-            <div class="setting-row">
-              <p class="setting-label">Sophistication level</p>
-              <p class="setting-hint">Level 1: everyday words. Level 2: advanced words. Level 3: expert words, specialist terms unique to German and super old words.</p>
-              <div class="seg" id="levelSeg" role="group" aria-label="Sophistication level">
-                <button type="button" data-level="1" aria-pressed="false">Level 1 · Everyday</button>
-                <button type="button" data-level="2" aria-pressed="false">Level 2 · Advanced</button>
-                <button type="button" data-level="3" aria-pressed="false">Level 3 · Expert</button>
-              </div>
-            </div>
-            <div class="setting-row">
-              <button class="btn ghost" id="openProfileBtn" type="button">Open your profile</button>
-            </div>
-          </div>
-        </section>
-
-        <section class="block rise" id="browseSection">
-          <h2>Browse words</h2>
-          <div class="rule"></div>
-          <p class="browse-count" id="browseCount"></p>
-          <input class="browse-filter" id="browseFilter" type="search" placeholder="Filter words" aria-label="Filter words" />
-          <ul class="browse-list" id="browseList"></ul>
-        </section>
 
       </main>
 
@@ -1265,7 +1244,7 @@
       /* ---------- Profile (local only, localStorage) ---------- */
       var PROFILE_KEY = "taeglich-wort-profile-v1";
       function defaultProfile() {
-        return { name: "", level: 1, theme: "warm", favorites: [], viewedDays: [], viewedWords: [] };
+        return { name: "", level: 1, theme: "warm", favorites: [], viewedDays: [], viewedWords: [], quizzed: [] };
       }
       function loadProfile() {
         try {
@@ -1279,6 +1258,7 @@
           if (Array.isArray(p.favorites)) d.favorites = p.favorites.filter(function (w) { return typeof w === "string"; }).slice(0, 500);
           if (Array.isArray(p.viewedDays)) d.viewedDays = p.viewedDays.filter(function (x) { return typeof x === "string"; }).slice(-400);
           if (Array.isArray(p.viewedWords)) d.viewedWords = p.viewedWords.filter(function (w) { return typeof w === "string"; }).slice(0, 1000);
+          if (Array.isArray(p.quizzed)) d.quizzed = p.quizzed.filter(function (w) { return typeof w === "string"; }).slice(0, 1000);
           return d;
         } catch (e) { return defaultProfile(); }
       }
@@ -1498,6 +1478,7 @@
               feedback.textContent = "Richtig. Correct.";
               if (!testState.solved[idx]) { testState.solved[idx] = true; testState.correct++; }
               updateScore();
+              if (testState.total > 0 && testState.correct === testState.total) markQuizzed(entry.w);
             }
           } else if (!done) {
             feedback.textContent = input.value.trim() ? "" : "";
@@ -1640,6 +1621,16 @@
       bindLevelSeg("levelSeg");
       bindLevelSeg("levelSegProfile");
 
+      /* ---------- Finishing a test unlocks the word in Browse ---------- */
+      function markQuizzed(w) {
+        if (!profile.quizzed) profile.quizzed = [];
+        if (profile.quizzed.indexOf(w) !== -1) return;
+        profile.quizzed.push(w);
+        saveProfile();
+        renderBrowse();
+        toast("Test finished. " + w + " is now unlocked under Browse words on your profile page.");
+      }
+
       /* ---------- Browse words at the current level ---------- */
       function findWord(w) {
         for (var i = 0; i < ALLWORDS.length; i++) {
@@ -1654,6 +1645,7 @@
         list.innerHTML = "";
         var shown = 0;
         pool.forEach(function (e) {
+          if (!profile.quizzed || profile.quizzed.indexOf(e.w) === -1) return;
           if (q && e.w.toLowerCase().indexOf(q) === -1 && (e.en || "").toLowerCase().indexOf(q) === -1) return;
           shown++;
           var li = document.createElement("li");
@@ -1666,11 +1658,14 @@
           g.className = "gloss";
           g.textContent = e.en;
           b.appendChild(w); b.appendChild(g);
-          b.addEventListener("click", function () { showWord(e); });
+          b.addEventListener("click", function () { closeProfile(); showWord(e); });
           li.appendChild(b);
           list.appendChild(li);
         });
-        $("browseCount").textContent = shown + " of " + pool.length + " words at " + levelLabel(profile.level) + ". Tap one to open it.";
+        var unlockedCount = pool.filter(function (e) { return profile.quizzed && profile.quizzed.indexOf(e.w) !== -1; }).length;
+        $("browseCount").textContent = unlockedCount === 0
+          ? "No words unlocked at " + levelLabel(profile.level) + " yet. Finish a word's test and it will appear here."
+          : shown + " of " + unlockedCount + " unlocked words at " + levelLabel(profile.level) + ". Tap one to open it.";
       }
       $("browseFilter").addEventListener("input", renderBrowse);
 
@@ -1707,6 +1702,7 @@
         $("statStreak").textContent = streakDays();
         $("statViewed").textContent = profile.viewedWords.length;
         $("statFavs").textContent = profile.favorites.length;
+        $("statQuizzed").textContent = (profile.quizzed || []).length;
         var list = $("favList");
         list.innerHTML = "";
         $("favEmpty").hidden = profile.favorites.length > 0;
@@ -1747,7 +1743,7 @@
         window.scrollTo(0, 0);
       }
       $("profileBtn").addEventListener("click", openProfile);
-      $("openProfileBtn").addEventListener("click", openProfile);
+      var openProfileBtnEl = $("openProfileBtn"); if (openProfileBtnEl) openProfileBtnEl.addEventListener("click", openProfile);
       $("profileBackBtn").addEventListener("click", closeProfile);
       $("saveNameBtn").addEventListener("click", function () {
         profile.name = ($("nameInput").value || "").trim().slice(0, 40);
@@ -1756,7 +1752,7 @@
         toast("Name saved.");
       });
       $("resetProfileBtn").addEventListener("click", function () {
-        if (!window.confirm("Reset your profile? This clears your name, level, favorites and stats on this device.")) return;
+        if (!window.confirm("Reset your profile? This clears your name, level, favorites, unlocked words and stats on this device.")) return;
         try { localStorage.removeItem(PROFILE_KEY); } catch (e) {}
         profile = defaultProfile();
         saveProfile();
