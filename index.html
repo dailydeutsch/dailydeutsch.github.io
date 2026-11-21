@@ -134,6 +134,17 @@
         touch-action: manipulation;
       }
       .avatar-btn:hover { border-color: var(--accent); }
+      .pretzel-btn {
+        width: 38px; height: 38px; flex: none;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        display: inline-flex; align-items: center; justify-content: center;
+        touch-action: manipulation;
+        padding: 0;
+      }
+      .pretzel-btn img { width: 23px; height: 23px; display: block; }
+      .pretzel-btn:hover { border-color: var(--accent); }
       .visually-hidden {
         position: absolute; width: 1px; height: 1px;
         margin: -1px; padding: 0; border: 0;
@@ -628,6 +639,7 @@
         <h1 class="visually-hidden">Täglich Wort</h1>
         <img class="brand-logo" src="./dailydeutsch-logo-192.png" alt="Täglich Wort" width="34" height="34" />
         <div class="date" id="dateLine"></div>
+        <button class="pretzel-btn" id="pretzelBtn" type="button" aria-label="Open settings"><img src="./assets/pretzel-dark.svg" alt="" width="23" height="23" /></button>
         <button class="avatar-btn" id="profileBtn" type="button" aria-label="Open your profile and settings"><span id="avatarInitials">?</span></button>
       </header>
 
@@ -1743,6 +1755,7 @@
         window.scrollTo(0, 0);
       }
       $("profileBtn").addEventListener("click", openProfile);
+      $("pretzelBtn").addEventListener("click", openProfile);
       var openProfileBtnEl = $("openProfileBtn"); if (openProfileBtnEl) openProfileBtnEl.addEventListener("click", openProfile);
       $("profileBackBtn").addEventListener("click", closeProfile);
       $("saveNameBtn").addEventListener("click", function () {

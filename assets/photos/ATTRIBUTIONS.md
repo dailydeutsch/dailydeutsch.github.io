@@ -138,3 +138,9 @@ app caption. CC0 and public domain photos need no attribution but are credited a
 - Source: https://commons.wikimedia.org/wiki/File:Enigma-IMG_0487-black.jpg
 - Author: Rama
 - License: CC BY-SA 2.0 fr
+
+## Icons
+
+- File: `assets/pretzel-dark.svg` (settings button, header)
+- Source: Twemoji pretzel emoji (U+1F968), (c) Twitter, Inc and other contributors, recolored darker by Daily Deutsch
+- License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)

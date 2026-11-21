@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taeglich-wort-v5';
+const CACHE_NAME = 'taeglich-wort-v6';
 const CORE_ASSETS = [
   './',
   './index.html',
