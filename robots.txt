@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dailydeutsch.github.io/sitemap.xml

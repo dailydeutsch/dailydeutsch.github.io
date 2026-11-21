@@ -1,8 +1,9 @@
 {
   "name": "Täglich Wort - The Daily German App",
   "short_name": "Täglich Wort",
-  "description": "One German word a day, with its forms, examples in context and a short test.",
+  "description": "One German word a day (Wort des Tages), with pronunciation, forms, examples in context and a short test. Learn German vocabulary, one word daily.",
   "lang": "en",
+  "categories": ["education"],
   "start_url": ".",
   "scope": ".",
   "display": "standalone",

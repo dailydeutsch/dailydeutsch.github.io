@@ -1,8 +1,12 @@
-const CACHE_NAME = 'taeglich-wort-v2';
+const CACHE_NAME = 'taeglich-wort-v3';
 const CORE_ASSETS = [
   './',
   './index.html',
+  './404.html',
   './manifest.webmanifest',
+  './robots.txt',
+  './sitemap.xml',
+  './og-image.png',
   './dailydeutsch-logo-192.png',
   './dailydeutsch-logo-512.png',
   './dailydeutsch-logo-1024.png',

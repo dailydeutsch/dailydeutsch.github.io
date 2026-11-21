@@ -6,15 +6,45 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#edeae3" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#23201b" />
-    <meta name="description" content="Täglich Wort: one German word a day, with its forms, examples in context and a short test." />
-    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Täglich Wort - German Word of the Day | Daily Deutsch</title>
+    <meta name="description" content="Täglich Wort by Daily Deutsch: one German word a day (Wort des Tages), with pronunciation, forms, examples in context and a short test. Learn German vocabulary, one word daily." />
+    <link rel="canonical" href="https://dailydeutsch.github.io/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Daily Deutsch" />
+    <meta property="og:title" content="Täglich Wort - German Word of the Day" />
+    <meta property="og:description" content="One German word a day (Wort des Tages), with pronunciation, forms, examples in context and a short test." />
+    <meta property="og:url" content="https://dailydeutsch.github.io/" />
+    <meta property="og:image" content="https://dailydeutsch.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Täglich Wort - German Word of the Day" />
+    <meta name="twitter:description" content="One German word a day (Wort des Tages), with pronunciation, forms, examples in context and a short test." />
+    <meta name="twitter:image" content="https://dailydeutsch.github.io/og-image.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Täglich Wort",
+      "alternateName": "Täglich Wort - The Daily German App",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "url": "https://dailydeutsch.github.io/",
+      "description": "One German word a day (Wort des Tages), with pronunciation, forms, examples in context and a short test. Learn German vocabulary, one word daily.",
+      "inLanguage": ["en", "de"],
+      "author": { "@type": "Organization", "name": "Daily Deutsch", "url": "https://github.com/dailydeutsch" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Täglich Wort" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png" />
-    <title>Täglich Wort - The Daily German App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -390,6 +420,7 @@
         text-align: center;
       }
       footer p { margin: 4px 0; }
+      footer a { color: inherit; }
 
       .toast {
         position: fixed;
@@ -475,7 +506,7 @@
           </div>
         </section>
         <section class="hero rise">
-          <h1 class="word" id="wordText"></h1>
+          <h1 class="word" id="wordText" lang="de">taugen</h1>
           <div class="pron" id="pronText"></div>
           <p class="meaning" id="meaningText"></p>
           <p class="kindline" id="kindText"></p>
@@ -527,9 +558,14 @@
 
       </main>
 
+      <noscript>
+        <p>Täglich Wort is the German word of the day (Wort des Tages) from Daily Deutsch. One German word a day, with pronunciation, meaning, forms, examples in context and a short test. Learn German vocabulary, one word daily. This app needs JavaScript to show today's word.</p>
+      </noscript>
+
       <footer>
         <p>One word a day. 365 words, a full year.</p>
         <p>With a cooking set: ingredients, kitchen words and the verbs for making a meal.</p>
+        <p>Täglich Wort is the German word of the day (Wort des Tages) by <a href="https://github.com/dailydeutsch">Daily Deutsch</a>. Learn German vocabulary, one word daily.</p>
       </footer>
     </div>
 
@@ -999,8 +1035,8 @@
         var t = document.createElement("table");
         rows.forEach(function (r) {
           var tr = document.createElement("tr");
-          var tdP = document.createElement("td"); tdP.className = "p"; tdP.textContent = r[0];
-          var tdF = document.createElement("td"); tdF.className = "f"; tdF.textContent = r[1];
+          var tdP = document.createElement("td"); tdP.className = "p"; tdP.lang = "de"; tdP.textContent = r[0];
+          var tdF = document.createElement("td"); tdF.className = "f"; tdF.lang = "de"; tdF.textContent = r[1];
           tr.appendChild(tdP); tr.appendChild(tdF); t.appendChild(tr);
         });
         return t;
@@ -1016,7 +1052,7 @@
         var body = $("formsBody");
         if (entry.rich) {
           var parts = document.createElement("div");
-          parts.className = "parts"; parts.textContent = entry.parts;
+          parts.className = "parts"; parts.lang = "de"; parts.textContent = entry.parts;
           var note = document.createElement("div");
           note.className = "parts-note"; note.textContent = entry.partsNote;
           body.appendChild(parts); body.appendChild(note);
@@ -1028,7 +1064,7 @@
           entry.formsMore.forEach(function (r) {
             var li = document.createElement("li");
             var k = document.createElement("span"); k.className = "k"; k.textContent = r[0];
-            var v = document.createElement("span"); v.className = "v"; v.textContent = r[1];
+            var v = document.createElement("span"); v.className = "v"; v.lang = "de"; v.textContent = r[1];
             li.appendChild(k); li.appendChild(v); ul.appendChild(li);
           });
           grid.appendChild(formCard("More forms", ul, true));
@@ -1036,6 +1072,7 @@
         } else if (entry.pl || entry.parts) {
           var line = document.createElement("div");
           line.className = "single-line";
+          line.lang = "de";
           line.textContent = entry.parts || entry.pl;
           body.appendChild(line);
         } else {
@@ -1049,7 +1086,7 @@
         var list = entry.rich ? entry.examples : [{ de: entry.ex, en: entry.exEn, ctx: entry.note ? entry.note.replace(/<[^>]+>/g, "") : null }];
         list.forEach(function (ex) {
           var card = document.createElement("div"); card.className = "example-card";
-          var de = document.createElement("div"); de.className = "de"; de.textContent = "„" + ex.de + "“";
+          var de = document.createElement("div"); de.className = "de"; de.lang = "de"; de.textContent = "„" + ex.de + "“";
           var en = document.createElement("div"); en.className = "en"; en.textContent = ex.en;
           card.appendChild(de); card.appendChild(en);
           if (ex.ctx) {
@@ -1068,7 +1105,7 @@
       }
       function buildTestItem(cfg, idx) {
         var wrap = document.createElement("div"); wrap.className = "test-item";
-        var sentence = document.createElement("div"); sentence.className = "sentence";
+        var sentence = document.createElement("div"); sentence.className = "sentence"; sentence.lang = "de";
         var input = document.createElement("input");
         input.className = "blank";
         input.type = "text";
