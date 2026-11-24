@@ -805,9 +805,7 @@
       </noscript>
 
       <footer>
-        <p id="footerCounts">One word a day. 365 words, a full year.</p>
-        <p>With a cooking set: ingredients, kitchen words and the verbs for making a meal.</p>
-        <p>Täglich Wort is the German word of the day (Wort des Tages) by <a href="https://github.com/dailydeutsch">Daily Deutsch</a>. Learn German vocabulary, one word daily.</p>
+        <p><a href="https://github.com/dailydeutsch">About</a></p>
       </footer>
     </div>
 
@@ -1355,17 +1353,12 @@
         var pool = POOLS[profile.level] && POOLS[profile.level].length ? POOLS[profile.level] : POOLS[1];
         $("dateLine").textContent = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long" }).format(today) + " · Day " + (poolDayIndex(today, profile.level) + 1) + " of " + pool.length;
       }
-      function renderFooterCounts() {
-        var l3 = POOLS[3].length;
-        $("footerCounts").textContent = "One word a day. " + SEQUENCE.length + " words at Levels 1 and 2" + (l3 ? ", plus " + l3 + " expert words at Level 3" : "") + ".";
-      }
       function renderAll(e) {
         renderHero(e);
         renderForms(e);
         renderExamples(e);
         renderTest(e);
         renderDateLine();
-        renderFooterCounts();
         renderBrowse();
         recordView(e.w);
       }
