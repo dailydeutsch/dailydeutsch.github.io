@@ -456,6 +456,11 @@
       }
       .blank:focus { outline: none; background: var(--bg); border-bottom-color: var(--accent-deep); }
       .test-item.correct { border-color: var(--good); background: var(--good-bg); }
+      .prost { margin-top: 18px; text-align: center; }
+      .prost[hidden] { display: none; }
+      .prost-anim { width: 132px; height: 132px; margin: 0 auto; background: #f7f4ee; border-radius: 20px; overflow: hidden; }
+      .prost-text { font-family: "Vollkorn", serif; font-size: 1.3rem; font-weight: 700; margin: 10px 0 0; }
+      .prost-sub { color: var(--ink-soft); font-size: 0.9rem; margin: 2px 0 0; }
       .test-item.correct .blank { border-bottom-color: var(--good); background: transparent; color: var(--ink); }
       .test-item.correct .feedback { color: var(--good); }
       .test-item.revealed { border-color: var(--line); }
@@ -823,6 +828,11 @@
           <div class="rule"></div>
           <p class="score" id="scoreLine"></p>
           <div id="testBody"></div>
+          <div class="prost" id="prostBox" hidden>
+            <div class="prost-anim" id="prostAnim" aria-hidden="true"></div>
+            <p class="prost-text" lang="de">Prost!</p>
+            <p class="prost-sub">All correct. Test finished.</p>
+          </div>
           <div class="test-actions">
             <button class="text-btn" id="showAnswersBtn" type="button">Show answers</button>
           </div>
@@ -1514,7 +1524,7 @@
               feedback.textContent = "Richtig. Correct.";
               if (!testState.solved[idx]) { testState.solved[idx] = true; testState.correct++; }
               updateScore();
-              if (testState.total > 0 && testState.correct === testState.total) markQuizzed(entry.w);
+              if (testState.total > 0 && testState.correct === testState.total) { markQuizzed(entry.w); showProst(); }
             }
           } else if (!done) {
             feedback.textContent = input.value.trim() ? "" : "";
@@ -1537,9 +1547,29 @@
         wrap._feedback = feedback;
         return wrap;
       }
+      var prostStarted = false;
+      function showProst() {
+        var box = $("prostBox");
+        box.hidden = false;
+        if (prostStarted) return;
+        prostStarted = true;
+        function start() {
+          if (!window.lottie) return;
+          var anim = lottie.loadAnimation({ container: $("prostAnim"), renderer: "svg", loop: true, autoplay: true, path: "./assets/bierkrug.json" });
+          if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) anim.goToAndStop(0, true);
+        }
+        if (window.lottie) { start(); }
+        else {
+          var s = document.createElement("script");
+          s.src = "./assets/lottie.min.js";
+          s.onload = start;
+          document.head.appendChild(s);
+        }
+      }
       function renderTest(entry) {
         var body = $("testBody");
         body.innerHTML = "";
+        $("prostBox").hidden = true;
         testState = { total: 0, correct: 0, solved: {} };
         var items;
         if (entry.rich) {
