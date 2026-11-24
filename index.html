@@ -640,7 +640,6 @@
         <img class="brand-logo" src="./dailydeutsch-logo-192.png" alt="Täglich Wort" width="34" height="34" />
         <div class="date" id="dateLine"></div>
         <button class="pretzel-btn" id="pretzelBtn" type="button" aria-label="Open settings"><img src="./assets/pretzel-dark.svg" alt="" width="23" height="23" /></button>
-        <button class="avatar-btn" id="profileBtn" type="button" aria-label="Open your profile and settings"><span id="avatarInitials">?</span></button>
       </header>
 
       <section id="profileSection" hidden aria-label="Your profile and settings">
@@ -1710,7 +1709,6 @@
         var name = (profile.name || "").trim();
         $("profileName").textContent = name || "Your profile";
         $("avatarBig").textContent = initialsFor(profile.name);
-        $("avatarInitials").textContent = initialsFor(profile.name);
         $("statStreak").textContent = streakDays();
         $("statViewed").textContent = profile.viewedWords.length;
         $("statFavs").textContent = profile.favorites.length;
@@ -1754,7 +1752,6 @@
         if (browsing) $("browseBar").hidden = false;
         window.scrollTo(0, 0);
       }
-      $("profileBtn").addEventListener("click", openProfile);
       $("pretzelBtn").addEventListener("click", openProfile);
       var openProfileBtnEl = $("openProfileBtn"); if (openProfileBtnEl) openProfileBtnEl.addEventListener("click", openProfile);
       $("profileBackBtn").addEventListener("click", closeProfile);

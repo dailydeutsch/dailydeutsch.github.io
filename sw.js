@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taeglich-wort-v6';
+const CACHE_NAME = 'taeglich-wort-v7';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -13,6 +13,7 @@ const CORE_ASSETS = [
   './apple-touch-icon.png',
   './favicon-64.png',
   './level3.js',
+  './assets/pretzel-dark.svg',
   './assets/photos/photos.js'
 ];
 
