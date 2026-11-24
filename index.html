@@ -644,6 +644,9 @@
 
       <section id="profileSection" hidden aria-label="Your profile and settings">
         <div class="profile-card">
+          <div class="profile-actions" style="margin: 0 0 20px;">
+            <button class="btn ghost" id="profileBackTopBtn" type="button">Back to today's word</button>
+          </div>
           <div class="profile-head">
             <span class="avatar-big" id="avatarBig">?</span>
             <div>
@@ -1748,6 +1751,7 @@
       $("pretzelBtn").addEventListener("click", openProfile);
       var openProfileBtnEl = $("openProfileBtn"); if (openProfileBtnEl) openProfileBtnEl.addEventListener("click", openProfile);
       $("profileBackBtn").addEventListener("click", closeProfile);
+      $("profileBackTopBtn").addEventListener("click", closeProfile);
       $("saveNameBtn").addEventListener("click", function () {
         profile.name = ($("nameInput").value || "").trim().slice(0, 40);
         saveProfile();
