@@ -220,7 +220,10 @@
         background: var(--accent-deep); color: var(--surface);
         display: inline-flex; align-items: center; justify-content: center;
         font-size: 1.4rem; font-weight: 700;
+        overflow: hidden;
       }
+      .avatar-big img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .avatar-big img[hidden] { display: none !important; }
       .profile-name { font-size: 1.2rem; font-weight: 600; margin: 0; overflow-wrap: break-word; }
       .profile-sub { font-size: 0.9rem; color: var(--ink-soft); margin: 3px 0 0; }
       .stats-grid {
@@ -648,7 +651,7 @@
             <button class="btn ghost" id="profileBackTopBtn" type="button">Back to today's word</button>
           </div>
           <div class="profile-head">
-            <span class="avatar-big" id="avatarBig">?</span>
+            <span class="avatar-big" id="avatarBig"><span id="avatarBigText">?</span><img id="avatarImg" alt="" hidden /></span>
             <div>
               <p class="profile-name" id="profileName">Your profile</p>
               <p class="profile-sub" id="profileSub">Stored only on this device. No account, no sign-in.</p>
@@ -663,6 +666,11 @@
           <div class="name-edit">
             <input type="text" id="nameInput" maxlength="40" placeholder="Your display name" aria-label="Display name" />
             <button class="btn" id="saveNameBtn" type="button">Save name</button>
+          </div>
+          <div class="profile-actions">
+            <button class="btn ghost" id="uploadPicBtn" type="button">Upload profile picture</button>
+            <button class="btn ghost" id="removePicBtn" type="button" hidden>Remove picture</button>
+            <input type="file" id="picInput" accept="image/*" hidden />
           </div>
           <div class="setting-row" style="margin-top: 20px;">
             <p class="setting-label">Background</p>
@@ -1256,7 +1264,7 @@
       /* ---------- Profile (local only, localStorage) ---------- */
       var PROFILE_KEY = "taeglich-wort-profile-v1";
       function defaultProfile() {
-        return { name: "", level: 1, theme: "warm", favorites: [], viewedDays: [], viewedWords: [], quizzed: [] };
+        return { name: "", pic: "", level: 1, theme: "warm", favorites: [], viewedDays: [], viewedWords: [], quizzed: [] };
       }
       function loadProfile() {
         try {
@@ -1265,6 +1273,7 @@
           var p = JSON.parse(raw);
           var d = defaultProfile();
           if (typeof p.name === "string") d.name = p.name.slice(0, 40);
+          if (typeof p.pic === "string" && p.pic.indexOf("data:image/") === 0 && p.pic.length <= 400000) d.pic = p.pic;
           if (p.level === 1 || p.level === 2 || p.level === 3) d.level = p.level;
           if (p.theme === "warm" || p.theme === "photo") d.theme = p.theme;
           if (Array.isArray(p.favorites)) d.favorites = p.favorites.filter(function (w) { return typeof w === "string"; }).slice(0, 500);
@@ -1704,7 +1713,12 @@
       function renderProfile() {
         var name = (profile.name || "").trim();
         $("profileName").textContent = name || "Your profile";
-        $("avatarBig").textContent = initialsFor(profile.name);
+        $("avatarBigText").textContent = initialsFor(profile.name);
+        var hasPic = !!(profile.pic && profile.pic.length);
+        $("avatarImg").hidden = !hasPic;
+        if (hasPic) $("avatarImg").src = profile.pic;
+        $("avatarBigText").hidden = hasPic;
+        $("removePicBtn").hidden = !hasPic;
         $("statStreak").textContent = streakDays();
         $("statViewed").textContent = profile.viewedWords.length;
         $("statFavs").textContent = profile.favorites.length;
@@ -1758,8 +1772,47 @@
         renderProfile();
         toast("Name saved.");
       });
+      $("uploadPicBtn").addEventListener("click", function () {
+        $("picInput").click();
+      });
+      $("removePicBtn").addEventListener("click", function () {
+        profile.pic = "";
+        saveProfile();
+        renderProfile();
+        toast("Profile picture removed.");
+      });
+      $("picInput").addEventListener("change", function () {
+        var file = $("picInput").files && $("picInput").files[0];
+        $("picInput").value = "";
+        if (!file) return;
+        if (file.type.indexOf("image/") !== 0) { toast("Please choose an image."); return; }
+        var url = URL.createObjectURL(file);
+        var img = new Image();
+        img.onload = function () {
+          try {
+            var size = 256;
+            var canvas = document.createElement("canvas");
+            canvas.width = size; canvas.height = size;
+            var ctx = canvas.getContext("2d");
+            var side = Math.min(img.naturalWidth, img.naturalHeight);
+            var sx = (img.naturalWidth - side) / 2;
+            var sy = (img.naturalHeight - side) / 2;
+            ctx.drawImage(img, sx, sy, side, side, 0, 0, size, size);
+            URL.revokeObjectURL(url);
+            profile.pic = canvas.toDataURL("image/jpeg", 0.85);
+            saveProfile();
+            renderProfile();
+            toast("Profile picture saved.");
+          } catch (e) { toast("That picture could not be saved."); }
+        };
+        img.onerror = function () {
+          URL.revokeObjectURL(url);
+          toast("That picture could not be loaded.");
+        };
+        img.src = url;
+      });
       $("resetProfileBtn").addEventListener("click", function () {
-        if (!window.confirm("Reset your profile? This clears your name, level, favorites, unlocked words and stats on this device.")) return;
+        if (!window.confirm("Reset your profile? This clears your name, picture, level, favorites, unlocked words and stats on this device.")) return;
         try { localStorage.removeItem(PROFILE_KEY); } catch (e) {}
         profile = defaultProfile();
         saveProfile();
