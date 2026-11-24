@@ -226,18 +226,31 @@
       .avatar-big img[hidden] { display: none !important; }
       .profile-name { font-size: 1.2rem; font-weight: 600; margin: 0; overflow-wrap: break-word; }
       .profile-sub { font-size: 0.9rem; color: var(--ink-soft); margin: 3px 0 0; }
-      .stats-grid {
-        display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
-        margin-top: 20px;
+      .stats-hero {
+        margin-top: 20px; background: var(--accent-deep); color: var(--surface);
+        border-radius: 16px; padding: 18px 20px;
+        display: flex; align-items: center; gap: 16px;
+      }
+      .stats-hero .num { font-family: "Vollkorn", serif; font-size: 3.4rem; font-weight: 800; line-height: 1; }
+      .stats-hero .lab { font-weight: 600; font-size: 0.95rem; }
+      .stats-hero .sub { font-size: 0.8rem; opacity: 0.85; margin-top: 2px; }
+      .stats-chip {
+        margin-left: auto; background: var(--surface); color: var(--accent-deep);
+        font-size: 0.75rem; font-weight: 700; padding: 7px 12px;
+        border-radius: 999px; white-space: nowrap;
+      }
+      .stats-chip.open { background: transparent; color: var(--surface); box-shadow: inset 0 0 0 1.5px var(--surface); }
+      .stats-mini {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+        margin-top: 10px;
       }
       .stat {
         background: var(--surface-soft);
-        border: 1px solid var(--line);
         border-radius: 14px;
-        padding: 12px 10px; text-align: center;
+        padding: 12px 8px; text-align: center;
       }
-      .stat .num { font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
-      .stat .lbl { font-size: 0.82rem; color: var(--ink-soft); margin-top: 2px; }
+      .stat .num { font-family: "Vollkorn", serif; font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
+      .stat .lbl { font-size: 0.72rem; color: var(--ink-soft); margin-top: 2px; }
       .name-edit { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
       .name-edit input {
         flex: 1; min-width: 140px; min-height: 48px;
@@ -657,8 +670,15 @@
               <p class="profile-sub" id="profileSub">Stored only on this device. No account, no sign-in.</p>
             </div>
           </div>
-          <div class="stats-grid">
-            <div class="stat"><div class="num" id="statStreak">0</div><div class="lbl">day streak</div></div>
+          <div class="stats-hero">
+            <div class="num" id="statStreak">0</div>
+            <div>
+              <div class="lab">day streak</div>
+              <div class="sub" id="statStreakSub">Come back tomorrow to keep it</div>
+            </div>
+            <div class="stats-chip" id="statTodayChip">Today done</div>
+          </div>
+          <div class="stats-mini">
             <div class="stat"><div class="num" id="statViewed">0</div><div class="lbl">words viewed</div></div>
             <div class="stat"><div class="num" id="statFavs">0</div><div class="lbl">favorites</div></div>
             <div class="stat"><div class="num" id="statQuizzed">0</div><div class="lbl">tests finished</div></div>
@@ -1720,6 +1740,10 @@
         $("avatarBigText").hidden = hasPic;
         $("removePicBtn").hidden = !hasPic;
         $("statStreak").textContent = streakDays();
+        var doneToday = profile.viewedDays.indexOf(isoDate(today)) !== -1;
+        $("statTodayChip").textContent = doneToday ? "Today done" : "Today open";
+        $("statTodayChip").classList.toggle("open", !doneToday);
+        $("statStreakSub").textContent = doneToday ? "Come back tomorrow to keep it" : "Open today's word to count today";
         $("statViewed").textContent = profile.viewedWords.length;
         $("statFavs").textContent = profile.favorites.length;
         $("statQuizzed").textContent = (profile.quizzed || []).length;
