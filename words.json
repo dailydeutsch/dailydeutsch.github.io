@@ -1,0 +1,4512 @@
+{
+ "generated": "2026-11-25",
+ "startDay": "2026-11-21",
+ "pools": {
+  "1": [
+   {
+    "w": "kochen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkɔxn̩",
+    "en": "to cook",
+    "ex": "Am Sonntag kochen wir zusammen.",
+    "exEn": "On Sunday we cook together."
+   },
+   {
+    "w": "Küche",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈkʏçə",
+    "en": "kitchen",
+    "ex": "Die Küche riecht nach frischem Brot.",
+    "exEn": "The kitchen smells of fresh bread."
+   },
+   {
+    "w": "Rezept",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ʁeˈt͡sɛpt",
+    "en": "recipe",
+    "ex": "Das Rezept ist ganz einfach.",
+    "exEn": "The recipe is very simple."
+   },
+   {
+    "w": "Zwiebel",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈt͡sviːbl̩",
+    "en": "onion",
+    "ex": "Schneide die Zwiebel in kleine Stücke.",
+    "exEn": "Cut the onion into small pieces."
+   },
+   {
+    "w": "Knoblauch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈknoːblaʊ̯x",
+    "en": "garlic",
+    "ex": "Knoblauch gibt dem Gericht Geschmack.",
+    "exEn": "Garlic gives the dish flavour."
+   },
+   {
+    "w": "Kartoffel",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "kaʁˈtɔfl̩",
+    "en": "potato",
+    "ex": "Kartoffeln müssen geschält werden.",
+    "exEn": "Potatoes need to be peeled."
+   },
+   {
+    "w": "Tomate",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "toˈmaːtə",
+    "en": "tomato",
+    "ex": "Die Tomate ist reif und rot.",
+    "exEn": "The tomato is ripe and red."
+   },
+   {
+    "w": "Karotte",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "kaˈʁɔtə",
+    "en": "carrot",
+    "ex": "Karotten sind gut für die Augen.",
+    "exEn": "Carrots are good for your eyes."
+   },
+   {
+    "w": "Gemüse",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡəˈmyːzə",
+    "en": "vegetables",
+    "ex": "Frisches Gemüse ist gesund.",
+    "exEn": "Fresh vegetables are healthy."
+   },
+   {
+    "w": "Obst",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "oːpst",
+    "en": "fruit",
+    "ex": "Zum Nachtisch gibt es Obst.",
+    "exEn": "For dessert there is fruit."
+   },
+   {
+    "w": "Salz",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "zalt͡s",
+    "en": "salt",
+    "ex": "Gib noch etwas Salz dazu.",
+    "exEn": "Add a little more salt."
+   },
+   {
+    "w": "Pfeffer",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈpfɛfɐ",
+    "en": "pepper",
+    "ex": "Pfeffer macht das Essen würziger.",
+    "exEn": "Pepper makes food more seasoned."
+   },
+   {
+    "w": "Zucker",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈt͡sʊkɐ",
+    "en": "sugar",
+    "ex": "Wie viel Zucker nimmst du in den Tee?",
+    "exEn": "How much sugar do you take in your tea?"
+   },
+   {
+    "w": "Mehl",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "meːl",
+    "en": "flour",
+    "ex": "Für den Kuchen brauchen wir Mehl.",
+    "exEn": "For the cake we need flour."
+   },
+   {
+    "w": "Butter",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈbʊtɐ",
+    "en": "butter",
+    "ex": "Lass die Butter in der Pfanne schmelzen.",
+    "exEn": "Let the butter melt in the pan."
+   },
+   {
+    "w": "Öl",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "øːl",
+    "en": "oil",
+    "ex": "Erhitze das Öl in der Pfanne.",
+    "exEn": "Heat the oil in the pan."
+   },
+   {
+    "w": "Milch",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "mɪlç",
+    "en": "milk",
+    "ex": "Milch gehört in den Kühlschrank.",
+    "exEn": "Milk belongs in the fridge."
+   },
+   {
+    "w": "Käse",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkɛːzə",
+    "en": "cheese",
+    "ex": "Der Käse schmilzt auf der Pizza.",
+    "exEn": "The cheese melts on the pizza."
+   },
+   {
+    "w": "Ei",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "aɪ̯",
+    "en": "egg",
+    "ex": "Ein Ei zum Frühstück.",
+    "exEn": "An egg for breakfast."
+   },
+   {
+    "w": "Fleisch",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "flaɪ̯ʃ",
+    "en": "meat",
+    "ex": "Das Fleisch muss gut durch sein.",
+    "exEn": "The meat needs to be cooked through well."
+   },
+   {
+    "w": "Fisch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "fɪʃ",
+    "en": "fish",
+    "ex": "Frischer Fisch riecht nach Meer.",
+    "exEn": "Fresh fish smells of the sea."
+   },
+   {
+    "w": "Hühnchen",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈhyːnçən",
+    "en": "chicken (food)",
+    "ex": "Das Hühnchen brät im Ofen.",
+    "exEn": "The chicken is roasting in the oven."
+   },
+   {
+    "w": "Reis",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ʁaɪ̯s",
+    "en": "rice",
+    "ex": "Reis passt gut zu Gemüse.",
+    "exEn": "Rice goes well with vegetables."
+   },
+   {
+    "w": "Nudeln",
+    "a": "die",
+    "pos": "noun · feminine plural",
+    "ipa": "ˈnuːdl̩n",
+    "en": "pasta, noodles",
+    "ex": "Nudeln brauchen zehn Minuten.",
+    "exEn": "Pasta needs ten minutes."
+   },
+   {
+    "w": "Suppe",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈzʊpə",
+    "en": "soup",
+    "ex": "Die Suppe ist noch zu heiß.",
+    "exEn": "The soup is still too hot."
+   },
+   {
+    "w": "Pfanne",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈpfanə",
+    "en": "frying pan",
+    "ex": "Stell die Pfanne auf den Herd.",
+    "exEn": "Put the pan on the stove."
+   },
+   {
+    "w": "Topf",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "tɔpf",
+    "en": "pot",
+    "ex": "Der Topf steht auf dem Herd.",
+    "exEn": "The pot is on the stove."
+   },
+   {
+    "w": "Ofen",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈoːfn̩",
+    "en": "oven",
+    "ex": "Heize den Ofen auf 180 Grad vor.",
+    "exEn": "Preheat the oven to 180 degrees."
+   },
+   {
+    "w": "Messer",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈmɛsɐ",
+    "en": "knife",
+    "ex": "Das Messer ist sehr scharf.",
+    "exEn": "The knife is very sharp."
+   },
+   {
+    "w": "Löffel",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈlœfl̩",
+    "en": "spoon",
+    "ex": "Rühr die Suppe mit dem Löffel um.",
+    "exEn": "Stir the soup with the spoon."
+   },
+   {
+    "w": "Gabel",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈɡaːbl̩",
+    "en": "fork",
+    "ex": "Messer und Gabel liegen neben dem Teller.",
+    "exEn": "Knife and fork lie next to the plate."
+   },
+   {
+    "w": "Schüssel",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃʏsl̩",
+    "en": "bowl",
+    "ex": "Gib den Salat in eine große Schüssel.",
+    "exEn": "Put the salad in a large bowl."
+   },
+   {
+    "w": "Teller",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈtɛlɐ",
+    "en": "plate",
+    "ex": "Stell die Teller auf den Tisch.",
+    "exEn": "Put the plates on the table."
+   },
+   {
+    "w": "schneiden",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃnaɪ̯dn̩",
+    "en": "to cut",
+    "ex": "Schneide das Brot in Scheiben.",
+    "exEn": "Cut the bread into slices."
+   },
+   {
+    "w": "schälen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃɛːlən",
+    "en": "to peel",
+    "ex": "Schäl bitte die Kartoffeln.",
+    "exEn": "Please peel the potatoes."
+   },
+   {
+    "w": "rühren",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʁyːʁən",
+    "en": "to stir",
+    "ex": "Rühr die Soße langsam um.",
+    "exEn": "Stir the sauce slowly."
+   },
+   {
+    "w": "braten",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈbʁaːtn̩",
+    "en": "to fry, to roast",
+    "ex": "Brate das Fleisch in Öl.",
+    "exEn": "Fry the meat in oil."
+   },
+   {
+    "w": "backen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈbakn̩",
+    "en": "to bake",
+    "ex": "Wir backen heute einen Kuchen.",
+    "exEn": "We are baking a cake today."
+   },
+   {
+    "w": "würzen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvʏʁt͡sn̩",
+    "en": "to season, to spice",
+    "ex": "Würze die Suppe mit Salz und Pfeffer.",
+    "exEn": "Season the soup with salt and pepper."
+   },
+   {
+    "w": "probieren",
+    "a": "",
+    "pos": "verb",
+    "ipa": "pʁoˈbiːʁən",
+    "en": "to taste, to try",
+    "ex": "Probier mal, ob es genug Salz hat.",
+    "exEn": "Taste it and see if it has enough salt."
+   },
+   {
+    "w": "lecker",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈlɛkɐ",
+    "en": "tasty, delicious",
+    "ex": "Das Essen ist wirklich lecker.",
+    "exEn": "The food is really tasty."
+   },
+   {
+    "w": "scharf",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ʃaʁf",
+    "en": "spicy, sharp",
+    "ex": "Die Soße ist mir zu scharf.",
+    "exEn": "The sauce is too spicy for me."
+   },
+   {
+    "w": "Apfel",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈapfl̩",
+    "en": "apple",
+    "ex": "Ein Apfel am Tag hält den Doktor fern.",
+    "exEn": "An apple a day keeps the doctor away."
+   },
+   {
+    "w": "Wasser",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈvasɐ",
+    "en": "water",
+    "ex": "Ich trinke jeden Morgen ein Glas Wasser.",
+    "exEn": "I drink a glass of water every morning."
+   },
+   {
+    "w": "Zeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "t͡saɪ̯t",
+    "en": "time",
+    "ex": "Die Zeit vergeht so schnell.",
+    "exEn": "Time passes so quickly."
+   },
+   {
+    "w": "Weg",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "veːk",
+    "en": "way, path",
+    "ex": "Der Weg ist das Ziel.",
+    "exEn": "The journey is the destination."
+   },
+   {
+    "w": "Haus",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "haʊ̯s",
+    "en": "house",
+    "ex": "Unser Haus steht am Waldrand.",
+    "exEn": "Our house stands at the edge of the forest."
+   },
+   {
+    "w": "Liebe",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈliːbə",
+    "en": "love",
+    "ex": "Liebe kennt keine Grenzen.",
+    "exEn": "Love knows no borders."
+   },
+   {
+    "w": "Freund",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "fʁɔʏ̯nt",
+    "en": "friend (male)",
+    "ex": "Ein guter Freund hört immer zu.",
+    "exEn": "A good friend always listens."
+   },
+   {
+    "w": "Buch",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "buːx",
+    "en": "book",
+    "ex": "Dieses Buch habe ich in einer Nacht gelesen.",
+    "exEn": "I read this book in one night."
+   },
+   {
+    "w": "Stadt",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ʃtat",
+    "en": "city",
+    "ex": "Die Stadt schläft nie.",
+    "exEn": "The city never sleeps."
+   },
+   {
+    "w": "Hund",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "hʊnt",
+    "en": "dog",
+    "ex": "Der Hund wartet an der Tür.",
+    "exEn": "The dog is waiting at the door."
+   },
+   {
+    "w": "Katze",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈkat͡sə",
+    "en": "cat",
+    "ex": "Die Katze schläft auf dem Sofa.",
+    "exEn": "The cat is sleeping on the sofa."
+   },
+   {
+    "w": "Brot",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "bʁoːt",
+    "en": "bread",
+    "ex": "Frisches Brot riecht wunderbar.",
+    "exEn": "Fresh bread smells wonderful."
+   },
+   {
+    "w": "Morgen",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈmɔʁɡn̩",
+    "en": "morning",
+    "ex": "Der Morgen beginnt mit Kaffee.",
+    "exEn": "The morning begins with coffee."
+   },
+   {
+    "w": "Nacht",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "naxt",
+    "en": "night",
+    "ex": "Die Nacht war sternenklar.",
+    "exEn": "The night was starry and clear."
+   },
+   {
+    "w": "Herz",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "hɛʁt͡s",
+    "en": "heart",
+    "ex": "Sie hat ein großes Herz.",
+    "exEn": "She has a big heart."
+   },
+   {
+    "w": "Baum",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "baʊ̯m",
+    "en": "tree",
+    "ex": "Der alte Baum spendet Schatten.",
+    "exEn": "The old tree provides shade."
+   },
+   {
+    "w": "Blume",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈbluːmə",
+    "en": "flower",
+    "ex": "Jede Blume braucht Wasser und Licht.",
+    "exEn": "Every flower needs water and light."
+   },
+   {
+    "w": "Meer",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "meːɐ̯",
+    "en": "sea",
+    "ex": "Im Sommer fahren wir ans Meer.",
+    "exEn": "In summer we go to the seaside."
+   },
+   {
+    "w": "Berg",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "bɛʁk",
+    "en": "mountain",
+    "ex": "Von dem Berg hat man eine tolle Aussicht.",
+    "exEn": "From the mountain you have a great view."
+   },
+   {
+    "w": "Sonne",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈzɔnə",
+    "en": "sun",
+    "ex": "Die Sonne scheint heute den ganzen Tag.",
+    "exEn": "The sun is shining all day today."
+   },
+   {
+    "w": "Mond",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "moːnt",
+    "en": "moon",
+    "ex": "Der Mond leuchtet über dem See.",
+    "exEn": "The moon is shining over the lake."
+   },
+   {
+    "w": "Wetter",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈvɛtɐ",
+    "en": "weather",
+    "ex": "Das Wetter ändert sich ständig.",
+    "exEn": "The weather is constantly changing."
+   },
+   {
+    "w": "Regen",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈʁeːɡn̩",
+    "en": "rain",
+    "ex": "Der Regen hört bald auf.",
+    "exEn": "The rain will stop soon."
+   },
+   {
+    "w": "Tür",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "tyːɐ̯",
+    "en": "door",
+    "ex": "Bitte schließ die Tür.",
+    "exEn": "Please close the door."
+   },
+   {
+    "w": "Fenster",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈfɛnstɐ",
+    "en": "window",
+    "ex": "Sie öffnet das Fenster jeden Morgen.",
+    "exEn": "She opens the window every morning."
+   },
+   {
+    "w": "Tisch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "tɪʃ",
+    "en": "table",
+    "ex": "Das Abendessen steht auf dem Tisch.",
+    "exEn": "Dinner is on the table."
+   },
+   {
+    "w": "Schule",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃuːlə",
+    "en": "school",
+    "ex": "Die Schule beginnt um acht Uhr.",
+    "exEn": "School starts at eight o'clock."
+   },
+   {
+    "w": "Geld",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡɛlt",
+    "en": "money",
+    "ex": "Geld allein macht nicht glücklich.",
+    "exEn": "Money alone doesn't make you happy."
+   },
+   {
+    "w": "Arbeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈaʁbaɪ̯t",
+    "en": "work",
+    "ex": "Die Arbeit macht mir Spaß.",
+    "exEn": "I enjoy my work."
+   },
+   {
+    "w": "Kaffee",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkafeː",
+    "en": "coffee",
+    "ex": "Ein Kaffee am Morgen weckt mich auf.",
+    "exEn": "A coffee in the morning wakes me up."
+   },
+   {
+    "w": "Frühstück",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈfʁyːʃtʏk",
+    "en": "breakfast",
+    "ex": "Zum Frühstück gibt es Müsli und Obst.",
+    "exEn": "For breakfast there is muesli and fruit."
+   },
+   {
+    "w": "Reise",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʁaɪ̯zə",
+    "en": "journey, trip",
+    "ex": "Die Reise beginnt morgen früh.",
+    "exEn": "The journey begins tomorrow morning."
+   },
+   {
+    "w": "Zug",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "t͡suːk",
+    "en": "train",
+    "ex": "Der Zug kommt pünktlich an.",
+    "exEn": "The train arrives on time."
+   },
+   {
+    "w": "Auto",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈaʊ̯to",
+    "en": "car",
+    "ex": "Das Auto braucht eine Reparatur.",
+    "exEn": "The car needs a repair."
+   },
+   {
+    "w": "Straße",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃtʁaːsə",
+    "en": "street",
+    "ex": "Die Straße ist nachts ruhig.",
+    "exEn": "The street is quiet at night."
+   },
+   {
+    "w": "Garten",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈɡaʁtn̩",
+    "en": "garden",
+    "ex": "Im Garten wachsen Tomaten.",
+    "exEn": "Tomatoes are growing in the garden."
+   },
+   {
+    "w": "Kind",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "kɪnt",
+    "en": "child",
+    "ex": "Jedes Kind liebt Geschichten.",
+    "exEn": "Every child loves stories."
+   },
+   {
+    "w": "Musik",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "muˈziːk",
+    "en": "music",
+    "ex": "Musik macht alles leichter.",
+    "exEn": "Music makes everything easier."
+   },
+   {
+    "w": "Lied",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "liːt",
+    "en": "song",
+    "ex": "Dieses Lied höre ich jeden Tag.",
+    "exEn": "I listen to this song every day."
+   },
+   {
+    "w": "Traum",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "tʁaʊ̯m",
+    "en": "dream",
+    "ex": "Verfolge deinen Traum.",
+    "exEn": "Follow your dream."
+   },
+   {
+    "w": "Welt",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "vɛlt",
+    "en": "world",
+    "ex": "Die Welt ist voller Wunder.",
+    "exEn": "The world is full of wonders."
+   },
+   {
+    "w": "Leben",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈleːbn̩",
+    "en": "life",
+    "ex": "Das Leben ist ein Abenteuer.",
+    "exEn": "Life is an adventure."
+   },
+   {
+    "w": "Sommer",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈzɔmɐ",
+    "en": "summer",
+    "ex": "Der Sommer ist meine Lieblingsjahreszeit.",
+    "exEn": "Summer is my favourite season."
+   },
+   {
+    "w": "Winter",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈvɪntɐ",
+    "en": "winter",
+    "ex": "Im Winter fällt oft Schnee.",
+    "exEn": "In winter it often snows."
+   },
+   {
+    "w": "Frage",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈfʁaːɡə",
+    "en": "question",
+    "ex": "Ich habe eine Frage an dich.",
+    "exEn": "I have a question for you."
+   },
+   {
+    "w": "Antwort",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈantvɔʁt",
+    "en": "answer",
+    "ex": "Die Antwort ist ganz einfach.",
+    "exEn": "The answer is quite simple."
+   },
+   {
+    "w": "Glück",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡlʏk",
+    "en": "happiness, luck",
+    "ex": "Glück kann man nicht kaufen.",
+    "exEn": "You can't buy happiness."
+   },
+   {
+    "w": "Geduld",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɡəˈdʊlt",
+    "en": "patience",
+    "ex": "Geduld ist eine Tugend.",
+    "exEn": "Patience is a virtue."
+   },
+   {
+    "w": "Mut",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "muːt",
+    "en": "courage",
+    "ex": "Mut bedeutet, es trotzdem zu tun.",
+    "exEn": "Courage means doing it anyway."
+   },
+   {
+    "w": "Hoffnung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈhɔfnʊŋ",
+    "en": "hope",
+    "ex": "Die Hoffnung stirbt zuletzt.",
+    "exEn": "Hope dies last."
+   },
+   {
+    "w": "lernen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈlɛʁnən",
+    "en": "to learn",
+    "ex": "Ich lerne jeden Tag ein neues Wort.",
+    "exEn": "I learn a new word every day."
+   },
+   {
+    "w": "sprechen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃpʁɛçn̩",
+    "en": "to speak",
+    "ex": "Sie spricht drei Sprachen fließend.",
+    "exEn": "She speaks three languages fluently."
+   },
+   {
+    "w": "hören",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈhøːʁən",
+    "en": "to hear, to listen",
+    "ex": "Ich höre gern Musik am Abend.",
+    "exEn": "I like listening to music in the evening."
+   },
+   {
+    "w": "sehen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈzeːən",
+    "en": "to see",
+    "ex": "Kannst du den Berg sehen?",
+    "exEn": "Can you see the mountain?"
+   },
+   {
+    "w": "gehen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈɡeːən",
+    "en": "to go, to walk",
+    "ex": "Wir gehen zu Fuß zur Arbeit.",
+    "exEn": "We walk to work."
+   },
+   {
+    "w": "kommen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkɔmən",
+    "en": "to come",
+    "ex": "Wann kommst du nach Hause?",
+    "exEn": "When are you coming home?"
+   },
+   {
+    "w": "machen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈmaxn̩",
+    "en": "to do, to make",
+    "ex": "Was machst du am Wochenende?",
+    "exEn": "What are you doing this weekend?"
+   },
+   {
+    "w": "sagen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈzaːɡn̩",
+    "en": "to say",
+    "ex": "Er sagt immer die Wahrheit.",
+    "exEn": "He always tells the truth."
+   },
+   {
+    "w": "wissen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvɪsn̩",
+    "en": "to know (a fact)",
+    "ex": "Ich weiß es noch nicht.",
+    "exEn": "I don't know yet."
+   },
+   {
+    "w": "denken",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈdɛŋkn̩",
+    "en": "to think",
+    "ex": "Ich denke oft an dich.",
+    "exEn": "I often think of you."
+   },
+   {
+    "w": "finden",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈfɪndn̩",
+    "en": "to find",
+    "ex": "Ich kann meine Schlüssel nicht finden.",
+    "exEn": "I can't find my keys."
+   },
+   {
+    "w": "geben",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈɡeːbn̩",
+    "en": "to give",
+    "ex": "Gib mir bitte das Salz.",
+    "exEn": "Please pass me the salt."
+   },
+   {
+    "w": "nehmen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈneːmən",
+    "en": "to take",
+    "ex": "Nimm dir Zeit.",
+    "exEn": "Take your time."
+   },
+   {
+    "w": "arbeiten",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈaʁbaɪ̯tn̩",
+    "en": "to work",
+    "ex": "Sie arbeitet in einem Krankenhaus.",
+    "exEn": "She works in a hospital."
+   },
+   {
+    "w": "leben",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈleːbn̩",
+    "en": "to live",
+    "ex": "Er lebt in einer kleinen Stadt.",
+    "exEn": "He lives in a small town."
+   },
+   {
+    "w": "lieben",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈliːbn̩",
+    "en": "to love",
+    "ex": "Ich liebe den Frühling.",
+    "exEn": "I love spring."
+   },
+   {
+    "w": "glauben",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈɡlaʊ̯bn̩",
+    "en": "to believe",
+    "ex": "Ich glaube dir.",
+    "exEn": "I believe you."
+   },
+   {
+    "w": "helfen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈhɛlfn̩",
+    "en": "to help",
+    "ex": "Kannst du mir helfen?",
+    "exEn": "Can you help me?"
+   },
+   {
+    "w": "spielen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃpiːlən",
+    "en": "to play",
+    "ex": "Die Kinder spielen im Garten.",
+    "exEn": "The children are playing in the garden."
+   },
+   {
+    "w": "kaufen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkaʊ̯fn̩",
+    "en": "to buy",
+    "ex": "Wir kaufen frisches Gemüse auf dem Markt.",
+    "exEn": "We buy fresh vegetables at the market."
+   },
+   {
+    "w": "essen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈɛsn̩",
+    "en": "to eat",
+    "ex": "Wir essen heute Abend zusammen.",
+    "exEn": "We're eating together tonight."
+   },
+   {
+    "w": "trinken",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈtʁɪŋkn̩",
+    "en": "to drink",
+    "ex": "Er trinkt keinen Kaffee.",
+    "exEn": "He doesn't drink coffee."
+   },
+   {
+    "w": "schlafen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃlaːfn̩",
+    "en": "to sleep",
+    "ex": "Babys schlafen viel.",
+    "exEn": "Babies sleep a lot."
+   },
+   {
+    "w": "lachen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈlaxn̩",
+    "en": "to laugh",
+    "ex": "Sie lacht den ganzen Tag.",
+    "exEn": "She laughs all day long."
+   },
+   {
+    "w": "reisen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʁaɪ̯zn̩",
+    "en": "to travel",
+    "ex": "Wir reisen im Sommer nach Italien.",
+    "exEn": "We're travelling to Italy in the summer."
+   },
+   {
+    "w": "schön",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ʃøːn",
+    "en": "beautiful, lovely",
+    "ex": "Was für ein schöner Tag!",
+    "exEn": "What a beautiful day!"
+   },
+   {
+    "w": "wichtig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈvɪçtɪç",
+    "en": "important",
+    "ex": "Gesundheit ist wichtiger als Geld.",
+    "exEn": "Health is more important than money."
+   },
+   {
+    "w": "gemütlich",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ɡəˈmyːtlɪç",
+    "en": "cosy, comfortable",
+    "ex": "Das Café ist klein und gemütlich.",
+    "exEn": "The café is small and cosy."
+   },
+   {
+    "w": "schnell",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ʃnɛl",
+    "en": "fast, quickly",
+    "ex": "Der Zug ist sehr schnell.",
+    "exEn": "The train is very fast."
+   },
+   {
+    "w": "langsam",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ˈlaŋzaːm",
+    "en": "slow, slowly",
+    "ex": "Sprich bitte langsam.",
+    "exEn": "Please speak slowly."
+   },
+   {
+    "w": "glücklich",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈɡlʏklɪç",
+    "en": "happy",
+    "ex": "Sie ist heute besonders glücklich.",
+    "exEn": "She is especially happy today."
+   },
+   {
+    "w": "bereit",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "bəˈʁaɪ̯t",
+    "en": "ready",
+    "ex": "Bist du bereit?",
+    "exEn": "Are you ready?"
+   },
+   {
+    "w": "vielleicht",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "fiˈlaɪ̯çt",
+    "en": "maybe, perhaps",
+    "ex": "Vielleicht regnet es morgen.",
+    "exEn": "Maybe it will rain tomorrow."
+   },
+   {
+    "w": "immer",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "ˈɪmɐ",
+    "en": "always",
+    "ex": "Ich stehe immer früh auf.",
+    "exEn": "I always get up early."
+   },
+   {
+    "w": "heute",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "ˈhɔʏ̯tə",
+    "en": "today",
+    "ex": "Heute ist ein guter Tag.",
+    "exEn": "Today is a good day."
+   },
+   {
+    "w": "egal",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "eˈɡaːl",
+    "en": "does not matter, all the same",
+    "ex": "Mir ist das egal.",
+    "exEn": "I do not mind, it makes no difference to me."
+   },
+   {
+    "w": "genau",
+    "a": "",
+    "pos": "adverb / adjective",
+    "ipa": "ɡəˈnaʊ̯",
+    "en": "exactly, precisely",
+    "ex": "Genau das meine ich.",
+    "exEn": "That is exactly what I mean."
+   },
+   {
+    "w": "stimmen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃtɪmən",
+    "en": "to be right, to be correct",
+    "ex": "Das stimmt nicht ganz.",
+    "exEn": "That is not quite right."
+   },
+   {
+    "w": "passen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈpasn̩",
+    "en": "to fit, to suit, to work for someone",
+    "ex": "Passt dir Freitag?",
+    "exEn": "Does Friday work for you?"
+   },
+   {
+    "w": "überlegen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "yːbɐˈleːɡn̩",
+    "en": "to think over, to consider",
+    "ex": "Ich muss mir das noch überlegen.",
+    "exEn": "I still need to think that over."
+   },
+   {
+    "w": "anrufen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈanˌʁuːfn̩",
+    "en": "to phone, to call",
+    "ex": "Ruf mich bitte später an.",
+    "exEn": "Please call me later."
+   },
+   {
+    "w": "abholen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈapˌhoːlən",
+    "en": "to pick up, to collect",
+    "ex": "Ich hole dich am Bahnhof ab.",
+    "exEn": "I will pick you up at the station."
+   },
+   {
+    "w": "mitbringen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈmɪtˌbʁɪŋən",
+    "en": "to bring along",
+    "ex": "Bring bitte Brot mit.",
+    "exEn": "Please bring bread with you."
+   },
+   {
+    "w": "warten",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvaʁtn̩",
+    "en": "to wait",
+    "ex": "Wir warten auf den Bus.",
+    "exEn": "We are waiting for the bus."
+   },
+   {
+    "w": "suchen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈzuːxn̩",
+    "en": "to look for, to search",
+    "ex": "Ich suche meine Brille.",
+    "exEn": "I am looking for my glasses."
+   },
+   {
+    "w": "anstrengend",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈanˌʃtʁɛŋənt",
+    "en": "tiring, exhausting",
+    "ex": "Der Tag war wirklich anstrengend.",
+    "exEn": "The day was really tiring."
+   },
+   {
+    "w": "nervig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈnɛʁvɪç",
+    "en": "annoying",
+    "ex": "Das Geräusch ist total nervig.",
+    "exEn": "That noise is really annoying."
+   },
+   {
+    "w": "peinlich",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈpaɪ̯nlɪç",
+    "en": "embarrassing",
+    "ex": "Das war mir richtig peinlich.",
+    "exEn": "That was really embarrassing for me."
+   },
+   {
+    "w": "Familie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "faˈmiːli̯ə",
+    "en": "family",
+    "ex": "Meine Familie lebt in Berlin.",
+    "exEn": "My family lives in Berlin."
+   },
+   {
+    "w": "Mutter",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈmʊtɐ",
+    "en": "mother",
+    "ex": "Meine Mutter kocht sehr gut.",
+    "exEn": "My mother cooks very well."
+   },
+   {
+    "w": "Vater",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfaːtɐ",
+    "en": "father",
+    "ex": "Sein Vater arbeitet als Lehrer.",
+    "exEn": "His father works as a teacher."
+   },
+   {
+    "w": "Bruder",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈbʁuːdɐ",
+    "en": "brother",
+    "ex": "Mein Bruder ist zwei Jahre jünger.",
+    "exEn": "My brother is two years younger."
+   },
+   {
+    "w": "Schwester",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃvɛstɐ",
+    "en": "sister",
+    "ex": "Ihre Schwester wohnt in Hamburg.",
+    "exEn": "Her sister lives in Hamburg."
+   },
+   {
+    "w": "Frau",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fʁaʊ̯",
+    "en": "woman; wife; Mrs",
+    "ex": "Die Frau an der Kasse lächelt.",
+    "exEn": "The woman at the checkout smiles."
+   },
+   {
+    "w": "Mann",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "man",
+    "en": "man; husband",
+    "ex": "Der Mann wartet draußen.",
+    "exEn": "The man is waiting outside."
+   },
+   {
+    "w": "Mädchen",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈmɛːtçən",
+    "en": "girl",
+    "ex": "Das Mädchen liest ein Buch.",
+    "exEn": "The girl is reading a book."
+   },
+   {
+    "w": "Junge",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈjʊŋə",
+    "en": "boy",
+    "ex": "Der Junge spielt Fußball.",
+    "exEn": "The boy is playing football."
+   },
+   {
+    "w": "Freundin",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈfʁɔʏ̯ndɪn",
+    "en": "friend (female); girlfriend",
+    "ex": "Meine Freundin kommt morgen.",
+    "exEn": "My friend is coming tomorrow."
+   },
+   {
+    "w": "Nachbar",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈnaxbaːɐ̯",
+    "en": "neighbour (male)",
+    "ex": "Unser Nachbar ist sehr freundlich.",
+    "exEn": "Our neighbour is very friendly."
+   },
+   {
+    "w": "Lehrer",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈleːʁɐ",
+    "en": "teacher (male)",
+    "ex": "Der Lehrer erklärt es noch einmal.",
+    "exEn": "The teacher explains it again."
+   },
+   {
+    "w": "Arzt",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "aːɐ̯t͡st",
+    "en": "doctor (male)",
+    "ex": "Der Arzt sagt, ich soll mich ausruhen.",
+    "exEn": "The doctor says I should rest."
+   },
+   {
+    "w": "Krankenhaus",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈkʁaŋkn̩ˌhaʊ̯s",
+    "en": "hospital",
+    "ex": "Das Krankenhaus ist nicht weit.",
+    "exEn": "The hospital is not far."
+   },
+   {
+    "w": "Geschäft",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡəˈʃɛft",
+    "en": "shop; business",
+    "ex": "Das Geschäft schließt um acht.",
+    "exEn": "The shop closes at eight."
+   },
+   {
+    "w": "Markt",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "maʁkt",
+    "en": "market",
+    "ex": "Samstags ist Markt auf dem Platz.",
+    "exEn": "On Saturdays there is a market on the square."
+   },
+   {
+    "w": "Wohnung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvoːnʊŋ",
+    "en": "flat, apartment",
+    "ex": "Die Wohnung hat drei Zimmer.",
+    "exEn": "The flat has three rooms."
+   },
+   {
+    "w": "Zimmer",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈt͡sɪmɐ",
+    "en": "room",
+    "ex": "Dein Zimmer ist schön hell.",
+    "exEn": "Your room is nice and bright."
+   },
+   {
+    "w": "Bett",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "bɛt",
+    "en": "bed",
+    "ex": "Ich gehe früh ins Bett.",
+    "exEn": "I go to bed early."
+   },
+   {
+    "w": "Stuhl",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ʃtuːl",
+    "en": "chair",
+    "ex": "Stell den Stuhl an den Tisch.",
+    "exEn": "Put the chair at the table."
+   },
+   {
+    "w": "Uhr",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "uːɐ̯",
+    "en": "clock; watch; o'clock",
+    "ex": "Es ist schon drei Uhr.",
+    "exEn": "It is already three o'clock."
+   },
+   {
+    "w": "Handy",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈhɛndi",
+    "en": "mobile phone",
+    "ex": "Mein Handy ist fast leer.",
+    "exEn": "My phone is almost out of battery."
+   },
+   {
+    "w": "Computer",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "kɔmˈpjuːtɐ",
+    "en": "computer",
+    "ex": "Der Computer ist neu.",
+    "exEn": "The computer is new."
+   },
+   {
+    "w": "Zeitung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈt͡saɪ̯tʊŋ",
+    "en": "newspaper",
+    "ex": "Er liest jeden Morgen die Zeitung.",
+    "exEn": "He reads the newspaper every morning."
+   },
+   {
+    "w": "Brief",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "bʁiːf",
+    "en": "letter",
+    "ex": "Der Brief kam heute an.",
+    "exEn": "The letter arrived today."
+   },
+   {
+    "w": "Schlüssel",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈʃlʏsl̩",
+    "en": "key",
+    "ex": "Wo ist mein Schlüssel?",
+    "exEn": "Where is my key?"
+   },
+   {
+    "w": "Tasche",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈtaʃə",
+    "en": "bag; pocket",
+    "ex": "Die Tasche ist schwer.",
+    "exEn": "The bag is heavy."
+   },
+   {
+    "w": "Hose",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈhoːzə",
+    "en": "trousers",
+    "ex": "Die Hose passt perfekt.",
+    "exEn": "The trousers fit perfectly."
+   },
+   {
+    "w": "Jacke",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈjakə",
+    "en": "jacket",
+    "ex": "Nimm eine Jacke mit, es ist kalt.",
+    "exEn": "Take a jacket, it is cold."
+   },
+   {
+    "w": "Schuh",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ʃuː",
+    "en": "shoe",
+    "ex": "Die Schuhe sind bequem.",
+    "exEn": "The shoes are comfortable."
+   },
+   {
+    "w": "Brille",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈbʁɪlə",
+    "en": "glasses",
+    "ex": "Ohne Brille sehe ich nichts.",
+    "exEn": "Without glasses I cannot see anything."
+   },
+   {
+    "w": "Auge",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈaʊ̯ɡə",
+    "en": "eye",
+    "ex": "Sie hat blaue Augen.",
+    "exEn": "She has blue eyes."
+   },
+   {
+    "w": "Hand",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "hant",
+    "en": "hand",
+    "ex": "Wasch dir die Hände.",
+    "exEn": "Wash your hands."
+   },
+   {
+    "w": "Fuß",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "fuːs",
+    "en": "foot",
+    "ex": "Mein Fuß tut weh.",
+    "exEn": "My foot hurts."
+   },
+   {
+    "w": "Kopf",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "kɔpf",
+    "en": "head",
+    "ex": "Mir tut der Kopf weh.",
+    "exEn": "I have a headache."
+   },
+   {
+    "w": "Gesicht",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡəˈzɪçt",
+    "en": "face",
+    "ex": "Sie hat ein freundliches Gesicht.",
+    "exEn": "She has a friendly face."
+   },
+   {
+    "w": "Dorf",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "dɔʁf",
+    "en": "village",
+    "ex": "Das Dorf ist klein und ruhig.",
+    "exEn": "The village is small and quiet."
+   },
+   {
+    "w": "Land",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "lant",
+    "en": "country; land",
+    "ex": "Deutschland ist ein großes Land.",
+    "exEn": "Germany is a large country."
+   },
+   {
+    "w": "Fluss",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "flʊs",
+    "en": "river",
+    "ex": "Der Fluss fließt durch die Stadt.",
+    "exEn": "The river flows through the city."
+   },
+   {
+    "w": "See",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "zeː",
+    "en": "lake",
+    "ex": "Im Sommer schwimmen wir im See.",
+    "exEn": "In summer we swim in the lake."
+   },
+   {
+    "w": "Wald",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "valt",
+    "en": "forest",
+    "ex": "Im Wald ist es kühl.",
+    "exEn": "It is cool in the forest."
+   },
+   {
+    "w": "Himmel",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈhɪml̩",
+    "en": "sky; heaven",
+    "ex": "Der Himmel ist heute blau.",
+    "exEn": "The sky is blue today."
+   },
+   {
+    "w": "Stern",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ʃtɛʁn",
+    "en": "star",
+    "ex": "Man sieht die Sterne klar.",
+    "exEn": "You can see the stars clearly."
+   },
+   {
+    "w": "Wolke",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvɔlkə",
+    "en": "cloud",
+    "ex": "Keine Wolke am Himmel.",
+    "exEn": "Not a cloud in the sky."
+   },
+   {
+    "w": "Telefon",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈteːləfoːn",
+    "en": "telephone",
+    "ex": "Das Telefon klingelt.",
+    "exEn": "The telephone is ringing."
+   },
+   {
+    "w": "Fernseher",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfɛʁnˌzeːɐ",
+    "en": "television set",
+    "ex": "Der Fernseher ist aus.",
+    "exEn": "The TV is off."
+   },
+   {
+    "w": "Kleidung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈklaɪ̯dʊŋ",
+    "en": "clothing",
+    "ex": "Warme Kleidung ist wichtig im Winter.",
+    "exEn": "Warm clothing is important in winter."
+   },
+   {
+    "w": "Haar",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "haːɐ̯",
+    "en": "hair",
+    "ex": "Sie hat lange Haare.",
+    "exEn": "She has long hair."
+   },
+   {
+    "w": "Körper",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkœʁpɐ",
+    "en": "body",
+    "ex": "Bewegung ist gut für den Körper.",
+    "exEn": "Exercise is good for the body."
+   },
+   {
+    "w": "Lampe",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈlampə",
+    "en": "lamp",
+    "ex": "Mach bitte die Lampe an.",
+    "exEn": "Please turn the lamp on."
+   },
+   {
+    "w": "putzen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈpʊt͡sn̩",
+    "en": "to clean",
+    "ex": "Samstags putzen wir die Wohnung.",
+    "exEn": "On Saturdays we clean the flat."
+   },
+   {
+    "w": "waschen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvaʃn̩",
+    "en": "to wash",
+    "ex": "Wasch das Gemüse gut.",
+    "exEn": "Wash the vegetables well."
+   },
+   {
+    "w": "fahren",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈfaːʁən",
+    "en": "to drive, to ride",
+    "ex": "Wir fahren mit dem Zug.",
+    "exEn": "We are travelling by train."
+   },
+   {
+    "w": "fliegen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈfliːɡn̩",
+    "en": "to fly",
+    "ex": "Die Vögel fliegen nach Süden.",
+    "exEn": "The birds fly south."
+   },
+   {
+    "w": "schwimmen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃvɪmən",
+    "en": "to swim",
+    "ex": "Im Sommer schwimmen wir oft.",
+    "exEn": "In summer we swim often."
+   },
+   {
+    "w": "laufen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈlaʊ̯fn̩",
+    "en": "to run, to walk",
+    "ex": "Er läuft jeden Morgen.",
+    "exEn": "He runs every morning."
+   },
+   {
+    "w": "tanzen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈtant͡sn̩",
+    "en": "to dance",
+    "ex": "Sie tanzen die ganze Nacht.",
+    "exEn": "They dance all night."
+   },
+   {
+    "w": "singen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈzɪŋən",
+    "en": "to sing",
+    "ex": "Die Kinder singen ein Lied.",
+    "exEn": "The children sing a song."
+   },
+   {
+    "w": "lesen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈleːzn̩",
+    "en": "to read",
+    "ex": "Ich lese jeden Abend im Bett.",
+    "exEn": "I read in bed every evening."
+   },
+   {
+    "w": "schreiben",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃʁaɪ̯bn̩",
+    "en": "to write",
+    "ex": "Schreib mir bald zurück.",
+    "exEn": "Write back to me soon."
+   },
+   {
+    "w": "öffnen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈœfnən",
+    "en": "to open",
+    "ex": "Öffne bitte das Fenster.",
+    "exEn": "Please open the window."
+   },
+   {
+    "w": "schließen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃliːsn̩",
+    "en": "to close",
+    "ex": "Die Tür schließt leise.",
+    "exEn": "The door closes quietly."
+   },
+   {
+    "w": "beginnen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "bəˈɡɪnən",
+    "en": "to begin",
+    "ex": "Der Kurs beginnt im Oktober.",
+    "exEn": "The course begins in October."
+   },
+   {
+    "w": "aufhören",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈaʊ̯fˌhøːʁən",
+    "en": "to stop",
+    "ex": "Es hört bald auf zu regnen.",
+    "exEn": "It will soon stop raining."
+   },
+   {
+    "w": "gewinnen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ɡəˈvɪnən",
+    "en": "to win",
+    "ex": "Unsere Mannschaft gewinnt oft.",
+    "exEn": "Our team often wins."
+   },
+   {
+    "w": "verlieren",
+    "a": "",
+    "pos": "verb",
+    "ipa": "fɛɐ̯ˈliːʁən",
+    "en": "to lose",
+    "ex": "Verlier den Schlüssel nicht!",
+    "exEn": "Do not lose the key!"
+   },
+   {
+    "w": "vergessen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "fɛɐ̯ˈɡɛsn̩",
+    "en": "to forget",
+    "ex": "Ich habe den Termin vergessen.",
+    "exEn": "I forgot the appointment."
+   },
+   {
+    "w": "hoffen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈhɔfn̩",
+    "en": "to hope",
+    "ex": "Wir hoffen auf gutes Wetter.",
+    "exEn": "We hope for good weather."
+   },
+   {
+    "w": "wünschen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvʏnʃn̩",
+    "en": "to wish",
+    "ex": "Ich wünsche dir alles Gute.",
+    "exEn": "I wish you all the best."
+   },
+   {
+    "w": "brauchen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈbʁaʊ̯xn̩",
+    "en": "to need",
+    "ex": "Ich brauche mehr Zeit.",
+    "exEn": "I need more time."
+   },
+   {
+    "w": "wollen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvɔlən",
+    "en": "to want",
+    "ex": "Was willst du essen?",
+    "exEn": "What do you want to eat?"
+   },
+   {
+    "w": "können",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkœnən",
+    "en": "to be able to, can",
+    "ex": "Kannst du mir helfen?",
+    "exEn": "Can you help me?"
+   },
+   {
+    "w": "müssen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈmʏsn̩",
+    "en": "to have to, must",
+    "ex": "Ich muss morgen früh aufstehen.",
+    "exEn": "I have to get up early tomorrow."
+   },
+   {
+    "w": "dürfen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈdʏʁfn̩",
+    "en": "to be allowed to, may",
+    "ex": "Darf ich hier sitzen?",
+    "exEn": "May I sit here?"
+   },
+   {
+    "w": "mögen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈmøːɡn̩",
+    "en": "to like",
+    "ex": "Ich mag diesen Film sehr.",
+    "exEn": "I like this film a lot."
+   },
+   {
+    "w": "bleiben",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈblaɪ̯bn̩",
+    "en": "to stay, to remain",
+    "ex": "Bleib bitte noch ein bisschen.",
+    "exEn": "Please stay a little longer."
+   },
+   {
+    "w": "werden",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈveːɐ̯dn̩",
+    "en": "to become; will (future)",
+    "ex": "Es wird langsam dunkel.",
+    "exEn": "It is slowly getting dark."
+   },
+   {
+    "w": "heißen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈhaɪ̯sn̩",
+    "en": "to be called, to be named",
+    "ex": "Wie heißt du?",
+    "exEn": "What is your name?"
+   },
+   {
+    "w": "wohnen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvoːnən",
+    "en": "to live, to reside",
+    "ex": "Wo wohnst du?",
+    "exEn": "Where do you live?"
+   },
+   {
+    "w": "studieren",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ʃtuˈdiːʁən",
+    "en": "to study (at university)",
+    "ex": "Sie studiert Medizin.",
+    "exEn": "She studies medicine."
+   },
+   {
+    "w": "verdienen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "fɛɐ̯ˈdiːnən",
+    "en": "to earn",
+    "ex": "Er verdient gut in seinem Beruf.",
+    "exEn": "He earns well in his job."
+   },
+   {
+    "w": "bezahlen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "bəˈt͡saːlən",
+    "en": "to pay",
+    "ex": "Ich bezahle an der Kasse.",
+    "exEn": "I pay at the checkout."
+   },
+   {
+    "w": "kosten",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkɔstn̩",
+    "en": "to cost; to taste",
+    "ex": "Wie viel kostet das?",
+    "exEn": "How much does that cost?"
+   },
+   {
+    "w": "bestellen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "bəˈʃtɛlən",
+    "en": "to order",
+    "ex": "Wir bestellen Pizza heute Abend.",
+    "exEn": "We are ordering pizza tonight."
+   },
+   {
+    "w": "einladen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈaɪ̯nˌlaːdn̩",
+    "en": "to invite",
+    "ex": "Ich lade euch zum Essen ein.",
+    "exEn": "I invite you to dinner."
+   },
+   {
+    "w": "besuchen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "bəˈzuːxn̩",
+    "en": "to visit",
+    "ex": "Wir besuchen unsere Großeltern.",
+    "exEn": "We visit our grandparents."
+   },
+   {
+    "w": "treffen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈtʁɛfn̩",
+    "en": "to meet",
+    "ex": "Wir treffen uns um fünf.",
+    "exEn": "We meet at five."
+   },
+   {
+    "w": "heiraten",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈhaɪ̯ʁaːtn̩",
+    "en": "to marry",
+    "ex": "Sie heiraten im Sommer.",
+    "exEn": "They are getting married in summer."
+   },
+   {
+    "w": "wachsen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈvaksn̩",
+    "en": "to grow",
+    "ex": "Kinder wachsen schnell.",
+    "exEn": "Children grow quickly."
+   },
+   {
+    "w": "fallen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈfalən",
+    "en": "to fall",
+    "ex": "Die Blätter fallen im Herbst.",
+    "exEn": "The leaves fall in autumn."
+   },
+   {
+    "w": "sitzen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈzɪt͡sn̩",
+    "en": "to sit",
+    "ex": "Sie sitzt am Fenster.",
+    "exEn": "She sits at the window."
+   },
+   {
+    "w": "stehen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃteːən",
+    "en": "to stand",
+    "ex": "Er steht an der Tür.",
+    "exEn": "He stands at the door."
+   },
+   {
+    "w": "liegen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈliːɡn̩",
+    "en": "to lie, to be lying",
+    "ex": "Das Buch liegt auf dem Tisch.",
+    "exEn": "The book lies on the table."
+   },
+   {
+    "w": "zeichnen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈt͡saɪ̯çnən",
+    "en": "to draw",
+    "ex": "Sie zeichnet ein Bild vom Haus.",
+    "exEn": "She draws a picture of the house."
+   },
+   {
+    "w": "erinnern",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ɛɐ̯ˈʔɪnɐn",
+    "en": "to remind; sich erinnern, to remember",
+    "ex": "Ich erinnere mich gut daran.",
+    "exEn": "I remember it well."
+   },
+   {
+    "w": "freuen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈfʁɔʏ̯ən",
+    "en": "to be pleased; sich freuen, to look forward",
+    "ex": "Ich freue mich auf den Urlaub.",
+    "exEn": "I am looking forward to the holiday."
+   },
+   {
+    "w": "kennenlernen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkɛnənˌlɛʁnən",
+    "en": "to get to know, to meet for the first time",
+    "ex": "Freut mich, dich kennenzulernen.",
+    "exEn": "Pleased to meet you."
+   },
+   {
+    "w": "reservieren",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ʁezɛʁˈviːʁən",
+    "en": "to reserve, to book",
+    "ex": "Wir reservieren einen Tisch für zwei.",
+    "exEn": "We reserve a table for two."
+   },
+   {
+    "w": "sollen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈzɔlən",
+    "en": "to be supposed to, should",
+    "ex": "Du sollst mehr schlafen.",
+    "exEn": "You should sleep more."
+   },
+   {
+    "w": "steigen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃtaɪ̯ɡn̩",
+    "en": "to rise, to climb",
+    "ex": "Die Preise steigen weiter.",
+    "exEn": "Prices keep rising."
+   },
+   {
+    "w": "groß",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ɡʁoːs",
+    "en": "big, tall, great",
+    "ex": "Die Stadt ist sehr groß.",
+    "exEn": "The city is very big."
+   },
+   {
+    "w": "klein",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "klaɪ̯n",
+    "en": "small, little",
+    "ex": "Das Zimmer ist klein, aber gemütlich.",
+    "exEn": "The room is small but cosy."
+   },
+   {
+    "w": "alt",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "alt",
+    "en": "old",
+    "ex": "Das Haus ist über hundert Jahre alt.",
+    "exEn": "The house is over a hundred years old."
+   },
+   {
+    "w": "jung",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "jʊŋ",
+    "en": "young",
+    "ex": "Sie ist noch jung.",
+    "exEn": "She is still young."
+   },
+   {
+    "w": "neu",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "nɔʏ̯",
+    "en": "new",
+    "ex": "Das Auto ist ganz neu.",
+    "exEn": "The car is brand new."
+   },
+   {
+    "w": "gut",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ɡuːt",
+    "en": "good, well",
+    "ex": "Das hast du gut gemacht.",
+    "exEn": "You did that well."
+   },
+   {
+    "w": "schlecht",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ʃlɛçt",
+    "en": "bad, badly",
+    "ex": "Das Wetter ist heute schlecht.",
+    "exEn": "The weather is bad today."
+   },
+   {
+    "w": "heiß",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "haɪ̯s",
+    "en": "hot",
+    "ex": "Die Suppe ist noch heiß.",
+    "exEn": "The soup is still hot."
+   },
+   {
+    "w": "kalt",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "kalt",
+    "en": "cold",
+    "ex": "Im Winter ist es kalt.",
+    "exEn": "In winter it is cold."
+   },
+   {
+    "w": "warm",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "vaʁm",
+    "en": "warm",
+    "ex": "Heute ist es angenehm warm.",
+    "exEn": "Today it is pleasantly warm."
+   },
+   {
+    "w": "leicht",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "laɪ̯çt",
+    "en": "light; easy",
+    "ex": "Die Aufgabe war ganz leicht.",
+    "exEn": "The task was quite easy."
+   },
+   {
+    "w": "schwer",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ʃveːɐ̯",
+    "en": "heavy; difficult",
+    "ex": "Die Tasche ist zu schwer.",
+    "exEn": "The bag is too heavy."
+   },
+   {
+    "w": "teuer",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈtɔʏ̯ɐ",
+    "en": "expensive",
+    "ex": "Das Hotel war zu teuer.",
+    "exEn": "The hotel was too expensive."
+   },
+   {
+    "w": "günstig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈɡʏnstɪç",
+    "en": "good value, cheap in a good way",
+    "ex": "Das Angebot ist sehr günstig.",
+    "exEn": "That offer is very good value."
+   },
+   {
+    "w": "laut",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "laʊ̯t",
+    "en": "loud, loudly",
+    "ex": "Die Musik ist zu laut.",
+    "exEn": "The music is too loud."
+   },
+   {
+    "w": "leise",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ˈlaɪ̯zə",
+    "en": "quiet, quietly",
+    "ex": "Sprich bitte leise.",
+    "exEn": "Please speak quietly."
+   },
+   {
+    "w": "hell",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "hɛl",
+    "en": "bright, light",
+    "ex": "Im Sommer wird es früh hell.",
+    "exEn": "In summer it gets light early."
+   },
+   {
+    "w": "dunkel",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈdʊŋkl̩",
+    "en": "dark",
+    "ex": "Im Winter wird es früh dunkel.",
+    "exEn": "In winter it gets dark early."
+   },
+   {
+    "w": "voll",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "fɔl",
+    "en": "full",
+    "ex": "Der Zug war komplett voll.",
+    "exEn": "The train was completely full."
+   },
+   {
+    "w": "leer",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "leːɐ̯",
+    "en": "empty",
+    "ex": "Die Straße war leer.",
+    "exEn": "The street was empty."
+   },
+   {
+    "w": "müde",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈmyːdə",
+    "en": "tired",
+    "ex": "Nach der Arbeit bin ich müde.",
+    "exEn": "After work I am tired."
+   },
+   {
+    "w": "hungrig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈhʊŋʁɪç",
+    "en": "hungry",
+    "ex": "Die Kinder sind hungrig.",
+    "exEn": "The children are hungry."
+   },
+   {
+    "w": "krank",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "kʁaŋk",
+    "en": "ill, sick",
+    "ex": "Er ist heute krank zu Hause.",
+    "exEn": "He is at home ill today."
+   },
+   {
+    "w": "gesund",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ɡəˈzʊnt",
+    "en": "healthy",
+    "ex": "Gemüse ist gesund.",
+    "exEn": "Vegetables are healthy."
+   },
+   {
+    "w": "traurig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈtʁaʊ̯ʁɪç",
+    "en": "sad",
+    "ex": "Der Film war traurig.",
+    "exEn": "The film was sad."
+   },
+   {
+    "w": "wütend",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈvyːtn̩t",
+    "en": "angry, furious",
+    "ex": "Sie war wütend über den Fehler.",
+    "exEn": "She was angry about the mistake."
+   },
+   {
+    "w": "stolz",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ʃtɔlt͡s",
+    "en": "proud",
+    "ex": "Ich bin stolz auf dich.",
+    "exEn": "I am proud of you."
+   },
+   {
+    "w": "freundlich",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈfʁɔʏ̯ntlɪç",
+    "en": "friendly",
+    "ex": "Alle hier sind sehr freundlich.",
+    "exEn": "Everyone here is very friendly."
+   },
+   {
+    "w": "interessant",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ɪntəʁɛˈsant",
+    "en": "interesting",
+    "ex": "Das Buch ist wirklich interessant.",
+    "exEn": "The book is really interesting."
+   },
+   {
+    "w": "langweilig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈlaŋˌvaɪ̯lɪç",
+    "en": "boring",
+    "ex": "Der Vortrag war langweilig.",
+    "exEn": "The lecture was boring."
+   },
+   {
+    "w": "gefährlich",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ɡəˈfɛːɐ̯lɪç",
+    "en": "dangerous",
+    "ex": "Die Straße ist bei Eis gefährlich.",
+    "exEn": "The road is dangerous in ice."
+   },
+   {
+    "w": "sicher",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ˈzɪçɐ",
+    "en": "safe; certain, certainly",
+    "ex": "Bist du dir sicher?",
+    "exEn": "Are you sure?"
+   },
+   {
+    "w": "möglich",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈmøːklɪç",
+    "en": "possible",
+    "ex": "Alles ist möglich.",
+    "exEn": "Everything is possible."
+   },
+   {
+    "w": "fertig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈfɛʁtɪç",
+    "en": "finished, ready, done",
+    "ex": "Das Essen ist fertig.",
+    "exEn": "The food is ready."
+   },
+   {
+    "w": "allein",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "aˈlaɪ̯n",
+    "en": "alone",
+    "ex": "Sie wohnt allein.",
+    "exEn": "She lives alone."
+   },
+   {
+    "w": "gestern",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "ˈɡɛstɐn",
+    "en": "yesterday",
+    "ex": "Gestern war es sonnig.",
+    "exEn": "Yesterday it was sunny."
+   },
+   {
+    "w": "Abend",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈaːbn̩t",
+    "en": "evening",
+    "ex": "Am Abend lesen wir zusammen.",
+    "exEn": "In the evening we read together."
+   },
+   {
+    "w": "Woche",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvɔxə",
+    "en": "week",
+    "ex": "Nächste Woche habe ich Urlaub.",
+    "exEn": "Next week I am on holiday."
+   },
+   {
+    "w": "Monat",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈmoːnat",
+    "en": "month",
+    "ex": "Der Monat vergeht schnell.",
+    "exEn": "The month passes quickly."
+   },
+   {
+    "w": "Jahr",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "jaːɐ̯",
+    "en": "year",
+    "ex": "Ein Jahr hat zwölf Monate.",
+    "exEn": "A year has twelve months."
+   },
+   {
+    "w": "Tag",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "taːk",
+    "en": "day",
+    "ex": "Jeder Tag bringt etwas Neues.",
+    "exEn": "Every day brings something new."
+   },
+   {
+    "w": "Stunde",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃtʊndə",
+    "en": "hour",
+    "ex": "Wir warten schon eine Stunde.",
+    "exEn": "We have been waiting an hour already."
+   },
+   {
+    "w": "Frühling",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfʁyːlɪŋ",
+    "en": "spring",
+    "ex": "Im Frühling blühen die Blumen.",
+    "exEn": "In spring the flowers bloom."
+   },
+   {
+    "w": "Herbst",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "hɛʁpst",
+    "en": "autumn, fall",
+    "ex": "Im Herbst fallen die Blätter.",
+    "exEn": "In autumn the leaves fall."
+   },
+   {
+    "w": "Geburtstag",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ɡəˈbuːɐ̯t͡sˌtaːk",
+    "en": "birthday",
+    "ex": "Alles Gute zum Geburtstag!",
+    "exEn": "Happy birthday!"
+   },
+   {
+    "w": "Urlaub",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈuːɐ̯laʊ̯p",
+    "en": "holiday, vacation",
+    "ex": "Im Urlaub fahren wir ans Meer.",
+    "exEn": "On holiday we go to the seaside."
+   },
+   {
+    "w": "Wochenende",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈvɔxn̩ˌʔɛndə",
+    "en": "weekend",
+    "ex": "Schönes Wochenende!",
+    "exEn": "Have a nice weekend!"
+   },
+   {
+    "w": "Beruf",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "bəˈʁuːf",
+    "en": "profession, job",
+    "ex": "Was bist du von Beruf?",
+    "exEn": "What do you do for a living?"
+   },
+   {
+    "w": "Büro",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "byˈʁoː",
+    "en": "office",
+    "ex": "Das Büro ist im zweiten Stock.",
+    "exEn": "The office is on the second floor."
+   },
+   {
+    "w": "Termin",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "tɛʁˈmiːn",
+    "en": "appointment; deadline",
+    "ex": "Ich habe morgen einen Termin beim Arzt.",
+    "exEn": "I have a doctor appointment tomorrow."
+   },
+   {
+    "w": "Pause",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈpaʊ̯zə",
+    "en": "break, pause",
+    "ex": "Mach mal eine Pause.",
+    "exEn": "Take a break."
+   },
+   {
+    "w": "Schnee",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ʃneː",
+    "en": "snow",
+    "ex": "Im Winter liegt Schnee auf den Bergen.",
+    "exEn": "In winter there is snow on the mountains."
+   },
+   {
+    "w": "Wind",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "vɪnt",
+    "en": "wind",
+    "ex": "Der Wind ist heute stark.",
+    "exEn": "The wind is strong today."
+   },
+   {
+    "w": "Eis",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "aɪ̯s",
+    "en": "ice; ice cream",
+    "ex": "Im Sommer essen wir Eis.",
+    "exEn": "In summer we eat ice cream."
+   },
+   {
+    "w": "Feuer",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈfɔʏ̯ɐ",
+    "en": "fire",
+    "ex": "Das Feuer im Kamin ist warm.",
+    "exEn": "The fire in the fireplace is warm."
+   },
+   {
+    "w": "Licht",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "lɪçt",
+    "en": "light",
+    "ex": "Mach bitte das Licht aus.",
+    "exEn": "Please turn the light off."
+   },
+   {
+    "w": "Farbe",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈfaʁbə",
+    "en": "colour; paint",
+    "ex": "Welche Farbe magst du am liebsten?",
+    "exEn": "Which colour do you like best?"
+   },
+   {
+    "w": "Sprache",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃpʁaːxə",
+    "en": "language",
+    "ex": "Deutsch ist eine schöne Sprache.",
+    "exEn": "German is a beautiful language."
+   },
+   {
+    "w": "Wort",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "vɔʁt",
+    "en": "word",
+    "ex": "Jeden Tag ein neues Wort.",
+    "exEn": "A new word every day."
+   },
+   {
+    "w": "Geschichte",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɡəˈʃɪçtə",
+    "en": "story; history",
+    "ex": "Erzähl mir eine Geschichte.",
+    "exEn": "Tell me a story."
+   },
+   {
+    "w": "Hunger",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈhʊŋɐ",
+    "en": "hunger",
+    "ex": "Ich habe großen Hunger.",
+    "exEn": "I am very hungry."
+   },
+   {
+    "w": "Durst",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "dʊʁst",
+    "en": "thirst",
+    "ex": "Nach dem Laufen habe ich Durst.",
+    "exEn": "After running I am thirsty."
+   },
+   {
+    "w": "Mittagessen",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈmɪtaːkˌʔɛsn̩",
+    "en": "lunch",
+    "ex": "Zum Mittagessen gibt es Suppe.",
+    "exEn": "For lunch there is soup."
+   },
+   {
+    "w": "Abendessen",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈaːbn̩tˌʔɛsn̩",
+    "en": "dinner, evening meal",
+    "ex": "Das Abendessen ist um sieben fertig.",
+    "exEn": "Dinner is ready at seven."
+   },
+   {
+    "w": "Kuchen",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkuːxn̩",
+    "en": "cake",
+    "ex": "Der Kuchen schmeckt nach Zitrone.",
+    "exEn": "The cake tastes of lemon."
+   },
+   {
+    "w": "Salat",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "zaˈlaːt",
+    "en": "salad; lettuce",
+    "ex": "Ein frischer Salat passt dazu.",
+    "exEn": "A fresh salad goes well with it."
+   },
+   {
+    "w": "Soße",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈzoːsə",
+    "en": "sauce",
+    "ex": "Die Soße braucht noch Salz.",
+    "exEn": "The sauce needs more salt."
+   },
+   {
+    "w": "Herd",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "heːɐ̯t",
+    "en": "stove, cooker",
+    "ex": "Stell den Topf auf den Herd.",
+    "exEn": "Put the pot on the stove."
+   },
+   {
+    "w": "Kühlschrank",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkyːlˌʃʁaŋk",
+    "en": "fridge, refrigerator",
+    "ex": "Die Milch steht im Kühlschrank.",
+    "exEn": "The milk is in the fridge."
+   },
+   {
+    "w": "schmecken",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃmɛkn̩",
+    "en": "to taste (good)",
+    "ex": "Das Essen schmeckt wunderbar.",
+    "exEn": "The food tastes wonderful."
+   },
+   {
+    "w": "süß",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "zyːs",
+    "en": "sweet",
+    "ex": "Der Kuchen ist mir zu süß.",
+    "exEn": "The cake is too sweet for me."
+   },
+   {
+    "w": "sauer",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈzaʊ̯ɐ",
+    "en": "sour; annoyed",
+    "ex": "Die Zitrone ist sauer.",
+    "exEn": "The lemon is sour."
+   },
+   {
+    "w": "salzig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈzalt͡sɪç",
+    "en": "salty",
+    "ex": "Die Suppe ist zu salzig.",
+    "exEn": "The soup is too salty."
+   }
+  ],
+  "2": [
+   {
+    "w": "taugen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈtaʊ̯ɡn̩",
+    "en": "to be good for something, to be of use, to suit",
+    "ex": "",
+    "exEn": ""
+   },
+   {
+    "w": "Fernweh",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈfɛʁnˌveː",
+    "en": "longing for faraway places",
+    "ex": "Im Winter bekomme ich Fernweh.",
+    "exEn": "In winter I get a longing for faraway places."
+   },
+   {
+    "w": "Heimweh",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈhaɪ̯mˌveː",
+    "en": "homesickness",
+    "ex": "Nach zwei Wochen hatte er Heimweh.",
+    "exEn": "After two weeks he was homesick."
+   },
+   {
+    "w": "Schadenfreude",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃaːdn̩ˌfʁɔʏ̯də",
+    "en": "joy at someone else's misfortune",
+    "ex": "Ein bisschen Schadenfreude ist menschlich.",
+    "exEn": "A little schadenfreude is human."
+   },
+   {
+    "w": "Feierabend",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfaɪ̯ɐˌʔaːbn̩t",
+    "en": "the end of the working day",
+    "ex": "Nach dem Feierabend gehen wir spazieren.",
+    "exEn": "After work we go for a walk."
+   },
+   {
+    "w": "Gemütlichkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɡəˈmyːtlɪçkaɪ̯t",
+    "en": "cosiness, warm comfort",
+    "ex": "Bei Kerzenlicht herrscht Gemütlichkeit.",
+    "exEn": "By candlelight there is a feeling of cosiness."
+   },
+   {
+    "w": "Augenblick",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈaʊ̯ɡn̩ˌblɪk",
+    "en": "a moment, the blink of an eye",
+    "ex": "Warte einen Augenblick!",
+    "exEn": "Wait a moment!"
+   },
+   {
+    "w": "Wanderlust",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvandɐˌlʊst",
+    "en": "the urge to wander and travel",
+    "ex": "Ihre Wanderlust führte sie um die Welt.",
+    "exEn": "Her wanderlust took her around the world."
+   },
+   {
+    "w": "Kummerspeck",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkʊmɐˌʃpɛk",
+    "en": "weight gained from emotional eating",
+    "ex": "Nach der Trennung kam der Kummerspeck.",
+    "exEn": "After the breakup came the comfort-eating weight."
+   },
+   {
+    "w": "Vorfreude",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈfoːɐ̯ˌfʁɔʏ̯də",
+    "en": "joyful anticipation",
+    "ex": "Die Vorfreude auf den Urlaub ist groß.",
+    "exEn": "The anticipation of the holiday is great."
+   },
+   {
+    "w": "Bauchgefühl",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈbaʊ̯xɡəˌfyːl",
+    "en": "gut feeling, intuition",
+    "ex": "Hör auf dein Bauchgefühl.",
+    "exEn": "Listen to your gut feeling."
+   },
+   {
+    "w": "Zeitgeist",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈt͡saɪ̯tˌɡaɪ̯st",
+    "en": "the spirit of the times",
+    "ex": "Der Film trifft den Zeitgeist.",
+    "exEn": "The film captures the spirit of the times."
+   },
+   {
+    "w": "Ohrwurm",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈoːɐ̯ˌvʊʁm",
+    "en": "a catchy tune stuck in your head",
+    "ex": "Ich habe seit Tagen einen Ohrwurm.",
+    "exEn": "I've had a song stuck in my head for days."
+   },
+   {
+    "w": "Fingerspitzengefühl",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈfɪŋɐˌʃpɪt͡sn̩ɡəˌfyːl",
+    "en": "tact, fingertip intuition",
+    "ex": "Dafür braucht man Fingerspitzengefühl.",
+    "exEn": "That requires real tact and intuition."
+   },
+   {
+    "w": "Sehnsucht",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈzeːnˌzʊxt",
+    "en": "deep longing, yearning",
+    "ex": "Sehnsucht ist ein starkes Gefühl.",
+    "exEn": "Longing is a powerful feeling."
+   },
+   {
+    "w": "Weltschmerz",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈvɛltˌʃmɛʁt͡s",
+    "en": "world-weariness, sorrow over the state of the world",
+    "ex": "Manchmal überkommt mich Weltschmerz.",
+    "exEn": "Sometimes a world-weariness comes over me."
+   },
+   {
+    "w": "doch",
+    "a": "",
+    "pos": "particle",
+    "ipa": "dɔx",
+    "en": "yes it is / but of course (contradicts a no)",
+    "ex": "Das stimmt doch!",
+    "exEn": "But that is true!"
+   },
+   {
+    "w": "halt",
+    "a": "",
+    "pos": "particle",
+    "ipa": "halt",
+    "en": "just, simply (that is how it is)",
+    "ex": "Das ist halt so.",
+    "exEn": "That is just how it is."
+   },
+   {
+    "w": "eben",
+    "a": "",
+    "pos": "particle",
+    "ipa": "ˈeːbn̩",
+    "en": "exactly / just (that is how it is)",
+    "ex": "Das habe ich eben gesagt.",
+    "exEn": "That is exactly what I said."
+   },
+   {
+    "w": "mal",
+    "a": "",
+    "pos": "particle",
+    "ipa": "maːl",
+    "en": "just, for a moment (softens a request)",
+    "ex": "Schau mal her!",
+    "exEn": "Just take a look here!"
+   },
+   {
+    "w": "schon",
+    "a": "",
+    "pos": "particle / adverb",
+    "ipa": "ʃoːn",
+    "en": "already; admittedly; go ahead",
+    "ex": "Das wird schon klappen.",
+    "exEn": "That will work out, you will see."
+   },
+   {
+    "w": "denn",
+    "a": "",
+    "pos": "particle",
+    "ipa": "dɛn",
+    "en": "then (in questions, adds interest)",
+    "ex": "Was machst du denn heute?",
+    "exEn": "So what are you doing today?"
+   },
+   {
+    "w": "eigentlich",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "ˈaɪ̯ɡn̩tlɪç",
+    "en": "actually, really",
+    "ex": "Eigentlich wollte ich früher gehen.",
+    "exEn": "Actually I wanted to leave earlier."
+   },
+   {
+    "w": "überhaupt",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "yːbɐˈhaʊ̯pt",
+    "en": "at all; in general",
+    "ex": "Das stimmt überhaupt nicht.",
+    "exEn": "That is not true at all."
+   },
+   {
+    "w": "sowieso",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "ˈzoːvizoː",
+    "en": "anyway, in any case",
+    "ex": "Ich komme sowieso zu spät.",
+    "exEn": "I will be late anyway."
+   },
+   {
+    "w": "Quatsch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "kvatʃ",
+    "en": "nonsense, rubbish",
+    "ex": "Das ist doch Quatsch!",
+    "exEn": "That is nonsense!"
+   },
+   {
+    "w": "Mist",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "mɪst",
+    "en": "damn!; dung, rubbish",
+    "ex": "Mist, ich habe den Zug verpasst!",
+    "exEn": "Damn, I missed the train!"
+   },
+   {
+    "w": "vorhin",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "foːɐ̯ˈhɪn",
+    "en": "a moment ago, earlier",
+    "ex": "Vorhin war er noch hier.",
+    "exEn": "He was still here a moment ago."
+   },
+   {
+    "w": "nachher",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "ˈnaːxheːɐ̯",
+    "en": "later, afterwards (today)",
+    "ex": "Das machen wir nachher.",
+    "exEn": "We will do that later."
+   },
+   {
+    "w": "zwischendurch",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "t͡svɪʃn̩ˈdʊʁç",
+    "en": "in between, now and then",
+    "ex": "Zwischendurch brauche ich eine Pause.",
+    "exEn": "In between I need a break."
+   },
+   {
+    "w": "demnächst",
+    "a": "",
+    "pos": "adverb",
+    "ipa": "deːmˈnɛːçst",
+    "en": "soon, in the near future",
+    "ex": "Wir sehen uns demnächst.",
+    "exEn": "We will see each other soon."
+   },
+   {
+    "w": "ruhig",
+    "a": "",
+    "pos": "adverb / adjective",
+    "ipa": "ˈʁuːɪç",
+    "en": "calmly; feel free to",
+    "ex": "Du kannst ruhig fragen.",
+    "exEn": "Feel free to ask."
+   },
+   {
+    "w": "klappen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈklapn̩",
+    "en": "to work out, to succeed",
+    "ex": "Hoffentlich klappt alles morgen.",
+    "exEn": "Hopefully everything works out tomorrow."
+   },
+   {
+    "w": "hinkriegen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈhɪnˌkʁiːɡn̩",
+    "en": "to manage, to get something sorted",
+    "ex": "Wir kriegen das schon hin.",
+    "exEn": "We will manage it, do not worry."
+   },
+   {
+    "w": "ausmachen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈaʊ̯sˌmaxn̩",
+    "en": "to matter, to bother; to turn off",
+    "ex": "Macht es dir etwas aus?",
+    "exEn": "Does it bother you? Do you mind?"
+   },
+   {
+    "w": "erledigen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ɛɐ̯ˈleːdɪɡn̩",
+    "en": "to get done, to take care of",
+    "ex": "Ich muss noch Einkäufe erledigen.",
+    "exEn": "I still have to do the shopping."
+   },
+   {
+    "w": "gönnen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈɡœnən",
+    "en": "to treat yourself; to not begrudge",
+    "ex": "Gönn dir eine Pause.",
+    "exEn": "Treat yourself to a break."
+   },
+   {
+    "w": "quatschen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈkvatʃn̩",
+    "en": "to chat, to natter",
+    "ex": "Wir haben stundenlang gequatscht.",
+    "exEn": "We chatted for hours."
+   },
+   {
+    "w": "meckern",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈmɛkɐn",
+    "en": "to moan, to complain",
+    "ex": "Hör auf zu meckern!",
+    "exEn": "Stop moaning!"
+   },
+   {
+    "w": "jammern",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈjamɐn",
+    "en": "to whine, to lament",
+    "ex": "Er jammert über das Wetter.",
+    "exEn": "He is whining about the weather."
+   },
+   {
+    "w": "aufpassen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈaʊ̯fˌpasn̩",
+    "en": "to watch out, to pay attention",
+    "ex": "Pass auf die Stufe auf!",
+    "exEn": "Watch out for the step!"
+   },
+   {
+    "w": "zocken",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈt͡sɔkn̩",
+    "en": "to play games, to gamble",
+    "ex": "Die Jungs zocken den ganzen Abend.",
+    "exEn": "The lads are gaming all evening."
+   },
+   {
+    "w": "abhängen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈapˌhɛŋən",
+    "en": "to hang out; to depend on",
+    "ex": "Wir hängen am See ab.",
+    "exEn": "We are hanging out at the lake."
+   },
+   {
+    "w": "schaffen",
+    "a": "",
+    "pos": "verb",
+    "ipa": "ˈʃafn̩",
+    "en": "to manage, to accomplish",
+    "ex": "Du schaffst das!",
+    "exEn": "You can do it! You will manage it!"
+   },
+   {
+    "w": "Bescheid",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "bəˈʃaɪ̯t",
+    "en": "notice, word (in: Bescheid geben, let someone know)",
+    "ex": "Gib mir bitte Bescheid.",
+    "exEn": "Please let me know."
+   },
+   {
+    "w": "ordentlich",
+    "a": "",
+    "pos": "adjective / adverb",
+    "ipa": "ˈɔʁdn̩tlɪç",
+    "en": "tidy; proper, a decent amount",
+    "ex": "Iss mal ordentlich!",
+    "exEn": "Eat properly, have a decent amount!"
+   },
+   {
+    "w": "krass",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "kʁas",
+    "en": "intense, extreme, wow",
+    "ex": "Das ist ja krass!",
+    "exEn": "That is intense! Wow!"
+   },
+   {
+    "w": "Wahnsinn",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈvaːnˌzɪn",
+    "en": "madness; unbelievable (as an exclamation)",
+    "ex": "Wahnsinn, das ist ja unglaublich!",
+    "exEn": "Unbelievable, that is incredible!"
+   },
+   {
+    "w": "lästig",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈlɛstɪç",
+    "en": "annoying, a nuisance",
+    "ex": "Die Fliegen sind lästig.",
+    "exEn": "The flies are a nuisance."
+   },
+   {
+    "w": "bloß",
+    "a": "",
+    "pos": "particle / adverb",
+    "ipa": "bloːs",
+    "en": "only; whatever you do (in warnings)",
+    "ex": "Fass das bloß nicht an!",
+    "exEn": "Whatever you do, do not touch that!"
+   },
+   {
+    "w": "wohl",
+    "a": "",
+    "pos": "particle / adverb",
+    "ipa": "voːl",
+    "en": "probably; well",
+    "ex": "Er kommt wohl später.",
+    "exEn": "He will probably come later."
+   },
+   {
+    "w": "ja",
+    "a": "",
+    "pos": "particle",
+    "ipa": "jaː",
+    "en": "yes; as you know (as a particle)",
+    "ex": "Das weißt du ja.",
+    "exEn": "You know that, as you know."
+   }
+  ],
+  "3": [
+   {
+    "w": "Nießbrauch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈniːsbʁaʊ̯x",
+    "en": "usufruct, the right to use and enjoy another's property",
+    "ex": "Der Nießbrauch, den Döpfner in Anspruch nehmen kann, gilt beachtliche 40 Jahre.",
+    "exEn": "The usufruct Döpfner can claim lasts a remarkable 40 years."
+   },
+   {
+    "w": "Willenserklärung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvɪlənsʔɛɐ̯ˌklɛːʁʊŋ",
+    "en": "declaration of intent, a legally binding expression of will",
+    "ex": "Der Notar sagte zum Kaufinteressenten: „Wir brauchen dafür eine schriftliche Willenserklärung des Veräußerers.“",
+    "exEn": "The notary told the prospective buyer: 'We need a written declaration of intent from the seller for that.'"
+   },
+   {
+    "w": "Verjährung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɛɐ̯ˈjɛːʁʊŋ",
+    "en": "limitation, expiry of a claim after a statutory period",
+    "ex": "Der Täter konnte wegen Verjährung seiner Delikte nicht mehr bestraft werden.",
+    "exEn": "The perpetrator could no longer be punished for his offences because the time limit for prosecution had expired."
+   },
+   {
+    "w": "Rechtskraft",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʁɛçt͡sˌkʁaft",
+    "en": "legal force, finality of a court decision",
+    "ex": "Ein Prozessurteil ist nur der formellen Rechtskraft fähig.",
+    "exEn": "A court judgment in a trial can only acquire formal legal force."
+   },
+   {
+    "w": "Anfechtung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈanˌfɛçtʊŋ",
+    "en": "contestation, legal challenge to a declaration or decision",
+    "ex": "In den §§ 119 ff. BGB sind verschiedene Gründe normiert, die eine Anfechtung ermöglichen.",
+    "exEn": "Sections 119 and following of the German Civil Code set out various grounds that allow a contract to be contested."
+   },
+   {
+    "w": "Rechtsbehelf",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈʁɛçt͡sbəˌhɛlf",
+    "en": "legal remedy, application to review an official or court decision",
+    "ex": "Jeder hat Anspruch auf einen wirksamen Rechtsbehelf bei den zuständigen innerstaatlichen Gerichten gegen Handlungen, durch die seine ihm nach der Verfassung oder nach dem Gesetz zustehenden Grundrechte verletzt werden.",
+    "exEn": "Everyone is entitled to an effective remedy before the competent national courts against acts that violate the fundamental rights granted to them by the constitution or by law."
+   },
+   {
+    "w": "Dienstbarkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈdiːnstbaːɐ̯kaɪ̯t",
+    "en": "easement, a right over another person's land",
+    "ex": "Dienstbarkeiten werden im Lastenblatt vermerkt.",
+    "exEn": "Easements are recorded in the schedule of encumbrances."
+   },
+   {
+    "w": "Auflassung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈaʊ̯flasʊŋ",
+    "en": "conveyance, the formal agreement to transfer land ownership",
+    "ex": "Bei der Auflassung (Paragraf 925 BGB) einigen sich Käufer und Verkäufer unter Anwesenheit eines Notars über die Grundstücksübertragung.",
+    "exEn": "In the conveyance (section 925 of the German Civil Code), buyer and seller agree on the transfer of the property in the presence of a notary."
+   },
+   {
+    "w": "Zession",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "t͡sɛˈsi̯oːn",
+    "en": "assignment, transfer of a claim to a new creditor",
+    "ex": "Für bestimmte Zessionen gibt es eine Offenlegungspflicht.",
+    "exEn": "Certain assignments of claims are subject to a duty of disclosure."
+   },
+   {
+    "w": "Hypothek",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "hypoˈteːk",
+    "en": "mortgage, a charge on real property",
+    "ex": "Zur Besicherung des Kredits hat das Unternehmen der Bank eine Hypothek auf seine Werkhalle eingeräumt.",
+    "exEn": "To secure the loan, the company granted the bank a mortgage on its factory building."
+   },
+   {
+    "w": "Abtretung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈapˌtʁeːtʊŋ",
+    "en": "assignment, transfer of a right or claim",
+    "ex": "Nach der Abtretung der Herzogtümer Lothringen-Bar beauftragte Franz Stephan von Lothringen (1708-1765) Saint-Urbain mit der Übersiedlung des lothringischen Münz- und Medaillienkabinetts nach Wien, das mit der bestehenden Sammlung Karls VI. vereint wurde.",
+    "exEn": "After the cession of the duchies of Lorraine-Bar, Franz Stephan of Lorraine (1708-1765) commissioned Saint-Urbain to move the Lorraine coin and medal collection to Vienna, where it was merged with the existing collection of Charles VI."
+   },
+   {
+    "w": "Verfassungsbeschwerde",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɛɐ̯ˈfasʊŋsbəˌʃveːɐ̯də",
+    "en": "constitutional complaint to the Federal Constitutional Court",
+    "ex": "Verfassungsbeschwerden sind am Aktenzeichen „BvR“ zu erkennen. Es handelt sich bei Weitem um die häufigste Verfahrensart beim Bundesverfassungsgericht.",
+    "exEn": "Constitutional complaints can be recognised by the file reference 'BvR'. It is by far the most common type of proceedings before the Federal Constitutional Court."
+   },
+   {
+    "w": "Vollstreckung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɔlˈʃtʁɛkʊŋ",
+    "en": "enforcement, execution of a judgment",
+    "ex": "Die Vollstreckung des Todesurteils blieb bis zuletzt umstritten.",
+    "exEn": "The execution of the death sentence remained controversial until the end."
+   },
+   {
+    "w": "Anamnese",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "anamˈneːzə",
+    "en": "medical history, a patient's history taken by a doctor",
+    "ex": "Die Anamnese ist ein wichtiger Bestandteil der Diagnosefindung.",
+    "exEn": "Taking the medical history is an important part of reaching a diagnosis."
+   },
+   {
+    "w": "Ätiologie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɛti̯oloˈɡiː",
+    "en": "aetiology, the study of the causes of disease",
+    "ex": "Die Ätiologie wird vor allem in der Medizin angewandt.",
+    "exEn": "Aetiology is used above all in medicine."
+   },
+   {
+    "w": "Pathogenese",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "patoɡeˈneːzə",
+    "en": "pathogenesis, how a disease develops",
+    "ex": "Die Pathogenese der Schizophrenie, einer komplexen psychiatrischen Erkrankung, ist noch ungeklärt.",
+    "exEn": "The pathogenesis of schizophrenia, a complex psychiatric illness, is still unexplained."
+   },
+   {
+    "w": "Letalität",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "letaliˈtɛːt",
+    "en": "case fatality rate, lethality of a disease",
+    "ex": "Dieser Typ der Hirnblutung hat eine Letalität von 50-80%.",
+    "exEn": "This type of brain haemorrhage has a case fatality rate of 50 to 80 percent."
+   },
+   {
+    "w": "Prävalenz",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "pʁɛvaˈlɛnt͡s",
+    "en": "prevalence, share of a population with a disease",
+    "ex": "Die Prävalenz des Typ 1-Diabetes nimmt generell zu, und die Kinder sind bei der Erstmanifestation immer jünger.",
+    "exEn": "The prevalence of type 1 diabetes is generally rising, and children are ever younger when it first appears."
+   },
+   {
+    "w": "Pharmakologie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "faʁmakoloˈɡiː",
+    "en": "pharmacology, the study of drugs and their effects",
+    "ex": "In der experimentellen Pharmakologie wird anhand von Modellsystemen versucht, die pharmakologischen Eigenschaften eines (potenziellen) Arzneistoffs oder einer Arzneimittelzubereitung zu simulieren.",
+    "exEn": "In experimental pharmacology, model systems are used to try to simulate the pharmacological properties of a (potential) drug or medicinal preparation."
+   },
+   {
+    "w": "Toxikologie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "tɔksikoloˈɡiː",
+    "en": "toxicology, the science of poisons",
+    "ex": "Die Habersche Regel ist eine in der Toxikologie verwendete mathematische Beziehung zwischen der Konzentration eines Giftstoffes und der Dauer der Verabreichung, beziehungsweise Exposition, dieses Giftes.",
+    "exEn": "Haber's rule is a mathematical relationship used in toxicology between the concentration of a poison and the duration of its administration or exposure."
+   },
+   {
+    "w": "nosokomial",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "nozokoˈmi̯aːl",
+    "en": "nosocomial, acquired in hospital",
+    "ex": "Laut Definition des Centers for Desease Control and Prevention (CDC) gelten alle im Krankenhaus sowie in anderen medizinischen Einrichtungen erworbenen Infektionen als nosokomial.",
+    "exEn": "According to the definition of the Centers for Disease Control and Prevention (CDC), all infections acquired in hospital or in other medical facilities count as nosocomial."
+   },
+   {
+    "w": "Drehmoment",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈdʁeːmoˌmɛnt",
+    "en": "torque, turning force",
+    "ex": "Der bei Automobilen verwendete Begriff ‚maximales Drehmoment eines Verbrennungsmotors bei einer bestimmten Drehzahl‘ bezeichnet das maximale vom Motor an der Kurbelwelle abgegebene Drehmoment.",
+    "exEn": "In cars, the term 'maximum torque of a combustion engine at a given speed' denotes the maximum torque the engine delivers at the crankshaft."
+   },
+   {
+    "w": "Resonanz",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ʁezoˈnant͡s",
+    "en": "resonance, vibration set off by an outside impulse",
+    "ex": "Bei der Kernspintomographie kommt es zur Resonanz der Atomkerne durch ein starkes Magnetfeld.",
+    "exEn": "In magnetic resonance imaging, the atomic nuclei are brought into resonance by a strong magnetic field."
+   },
+   {
+    "w": "Wirkungsgrad",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈvɪʁkʊŋsˌɡʁaːt",
+    "en": "efficiency, ratio of useful output to input",
+    "ex": "Der Wirkungsgrad η ist eine dimensionslose Größe, welche die Effektivität eines Prozesses angibt.",
+    "exEn": "Efficiency η is a dimensionless quantity that indicates how effective a process is."
+   },
+   {
+    "w": "Getriebe",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡəˈtʁiːbə",
+    "en": "gearbox, transmission",
+    "ex": "Mein Fahrrad hat ein Getriebe mit drei Gängen.",
+    "exEn": "My bicycle has a gearbox with three gears."
+   },
+   {
+    "w": "Elastizität",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "elastit͡siˈtɛːt",
+    "en": "elasticity, the ability to return to shape",
+    "ex": "Gummi hat eine starke Elastizität.",
+    "exEn": "Rubber is highly elastic."
+   },
+   {
+    "w": "Steifigkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃtaɪ̯fɪçkaɪ̯t",
+    "en": "stiffness, resistance to elastic deformation",
+    "ex": "Die Steifigkeit eines Körpers ist von dessen Werkstoff sowie der Geometrie abhängig.",
+    "exEn": "The stiffness of a body depends on its material and its geometry."
+   },
+   {
+    "w": "Härte",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈhɛʁtə",
+    "en": "hardness, resistance to being scratched or dented",
+    "ex": "Stahl besitzt eine große Härte.",
+    "exEn": "Steel is very hard."
+   },
+   {
+    "w": "Ermüdung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɛɐ̯ˈmyːdʊŋ",
+    "en": "fatigue, weakening of a material under repeated load",
+    "ex": "Am Ende des Kongresses war eine allgemeine Ermüdung festzustellen.",
+    "exEn": "By the end of the congress, general fatigue was noticeable."
+   },
+   {
+    "w": "Osmose",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌɔsˈmoːzə",
+    "en": "osmosis, diffusion through a membrane",
+    "ex": "Durch Osmose werden Konzentrationsunterschiede von Flüssigkeiten, die durch Membranen getrennt sind, ausgeglichen.",
+    "exEn": "Osmosis equalises differences in concentration between liquids separated by membranes."
+   },
+   {
+    "w": "Entropie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɛntʁoˈpiː",
+    "en": "entropy, a measure of disorder",
+    "ex": "Die Entropie des Weltalls ist nicht berechenbar.",
+    "exEn": "The entropy of the universe cannot be calculated."
+   },
+   {
+    "w": "Isotop",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "izoˈtoːp",
+    "en": "isotope, an atom variant of an element",
+    "ex": "Das Element Wasserstoff (H) hat drei Isotope: 1H (Protium) ohne Neutron, Deuterium mit einem Neutron und Tritium mit zwei Neutronen, jeweils mit einem Proton.",
+    "exEn": "The element hydrogen (H) has three isotopes: 1H (protium) with no neutron, deuterium with one neutron and tritium with two neutrons, each with one proton."
+   },
+   {
+    "w": "Katalysator",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "katalyˈzaːtoːɐ̯",
+    "en": "catalyst, a substance that speeds up a reaction",
+    "ex": "Bei vielen chemischen Reaktionen werden Katalysatoren zur Reaktionsbeschleunigung verwendet.",
+    "exEn": "Catalysts are used in many chemical reactions to speed them up."
+   },
+   {
+    "w": "Chromosom",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "kʁomoˈzoːm",
+    "en": "chromosome, carrier of genetic information",
+    "ex": "Der Mensch hat 46 Chromosomen.",
+    "exEn": "Humans have 46 chromosomes."
+   },
+   {
+    "w": "Genotyp",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ɡenoˈtyːp",
+    "en": "genotype, the sum of an organism's genes",
+    "ex": "Die Genotypen der beiden Generationen unterscheiden sich signifikant.",
+    "exEn": "The genotypes of the two generations differ significantly."
+   },
+   {
+    "w": "Phänotyp",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfɛːnoˌtyːp",
+    "en": "phenotype, the visible traits of an organism",
+    "ex": "Die Phänotypen der beiden Schwesterarten unterscheiden sich deutlich voneinander.",
+    "exEn": "The phenotypes of the two sister species differ clearly from each other."
+   },
+   {
+    "w": "Taxonomie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌtaksonoˈmiː",
+    "en": "taxonomy, the classification of organisms",
+    "ex": "Die Taxonomie der Reptilien befindet sich gerade im Umbruch.",
+    "exEn": "The taxonomy of reptiles is currently in upheaval."
+   },
+   {
+    "w": "Supraleitung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈzuːpʁaˌlaɪ̯tʊŋ",
+    "en": "superconductivity, zero electrical resistance at low temperature",
+    "ex": "Am Quecksilber wurde vom niederländischen Physiker Heike Kamerlingh Onnes im Jahre 1911 das erste Mal das Phänomen der Supraleitung entdeckt.",
+    "exEn": "The phenomenon of superconductivity was first discovered in mercury by the Dutch physicist Heike Kamerlingh Onnes in 1911."
+   },
+   {
+    "w": "Dasein",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈdaːˌzaɪ̯n",
+    "en": "existence, being in the world",
+    "ex": "Sie freuten sich ihres Daseins.",
+    "exEn": "They rejoiced in their existence."
+   },
+   {
+    "w": "Weltanschauung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvɛltʔanˌʃaʊ̯ʊŋ",
+    "en": "worldview, a system of ideas about the world",
+    "ex": "Es gibt mehrere unterschiedliche Weltanschauungen.",
+    "exEn": "There are several different worldviews."
+   },
+   {
+    "w": "Aufhebung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈaʊ̯fˌheːbʊŋ",
+    "en": "sublation, abolition that also preserves and lifts up",
+    "ex": "Die Aufhebung des Jesuitenordens erfolgte 1773 durch Papst Clemens XIV. auf Druck der Könige von Frankreich, Spanien und Portugal.",
+    "exEn": "The suppression of the Jesuit order took place in 1773 by Pope Clement XIV under pressure from the kings of France, Spain and Portugal."
+   },
+   {
+    "w": "Ontologie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌɔntoloˈɡiː",
+    "en": "ontology, the study of being and existence",
+    "ex": "Die Frage nach dem Seienden und dem Sein, […] ist die Kernfrage der Ontologie und die schwierigste und abstrakteste Frage der ganzen Philosophie überhaupt.",
+    "exEn": "The question of beings and of Being is the central question of ontology and the most difficult and abstract question in all of philosophy."
+   },
+   {
+    "w": "Phänomenologie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɛnomenoloˈɡiː",
+    "en": "phenomenology, the study of phenomena as experienced",
+    "ex": "Da Wissenschaft an sich eine Lehre der Erscheinungen und ihrer Zusammenhänge ist, bezeichnet Phänomenologie eine Methodik, die die deskriptiven Aspekte der Wissenschaft gegen die experimentellen und theoretischen Methoden abgrenzt.",
+    "exEn": "Since science in itself is the study of appearances and their connections, phenomenology denotes a method that sets the descriptive aspects of science apart from experimental and theoretical methods."
+   },
+   {
+    "w": "Hermeneutik",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌhɛʁmeˈnɔɪ̯tɪk",
+    "en": "hermeneutics, the art of interpretation",
+    "ex": "Hermeneutik dient dem Verstehen einer Sache, die nicht wie beim „Erklären“ als unabhängiger, beliebiger Gegenstand dem Verstand äußerlich bleibt, sondern selbst als von individuellen und kollektiven, bleibenden und geschichtlichen Momenten durchdrungene Substanz der Erfahrung intersubjektiven Einverständnisses zugehört und entspricht.",
+    "exEn": "Hermeneutics serves to understand something that, unlike in 'explaining', does not remain external to the mind as an independent, arbitrary object, but belongs to and corresponds with the substance of experience of intersubjective agreement, permeated by individual and collective, lasting and historical moments."
+   },
+   {
+    "w": "Solipsismus",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "zolɪˈpsɪsmʊs",
+    "en": "solipsism, the view that only one's own mind exists",
+    "ex": "Und natürlich ist der Solipsismus auch nie als ernsthafte Überzeugung von einem gesunden Menschen vertreten worden (wem gegenüber auch?); er gehört vielmehr ausschließlich ins philosophische Denklabor und wird dort gelegentlich als eine rein methodische Fiktion herangezogen, […]",
+    "exEn": "And of course solipsism has never been held as a serious conviction by a sane person (held against whom?); it belongs exclusively in the philosophical thought laboratory, where it is occasionally used as a purely methodological fiction."
+   },
+   {
+    "w": "Dialektik",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "diaˈlɛktɪk",
+    "en": "dialectic, reasoning through thesis and antithesis",
+    "ex": "Zum ersten Mal findet sich der Ausdruck Dialektik bei Platon.",
+    "exEn": "The term dialectic is found for the first time in Plato."
+   },
+   {
+    "w": "Transzendenz",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "tʁanst͡sɛnˈdɛnt͡s",
+    "en": "transcendence, what lies beyond experience",
+    "ex": "Als methodologisch ist Transzendenz dort zu bestimmen, wo sie – wie besonders bei Heidegger und Jaspers – ein Überschreiten aller Gegenständlichkeit als Charakteristikum wirklichen Philosophierens meint.",
+    "exEn": "Methodologically, transcendence is to be located where, as especially in Heidegger and Jaspers, it means going beyond all objectivity as the hallmark of genuine philosophising."
+   },
+   {
+    "w": "Erkenntnistheorie",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɛɐ̯ˈkɛntnɪsteoˌʁiː",
+    "en": "epistemology, the theory of knowledge",
+    "ex": "Die Erkenntnistheorie sichert die Wahrheitsbefähigung unseres Geistes, der das Seiende erfassen kann.",
+    "exEn": "Epistemology secures our mind's capacity for truth, which can grasp what is."
+   },
+   {
+    "w": "Metaphysik",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈmeːtafyˌziːk",
+    "en": "metaphysics, the study of first principles",
+    "ex": "Immanuel Kant kritisierte die Metaphysik aufgrund ihres vermeintlich fehlenden intersubjektiv überprüfbaren Erfahrungsbezuges.",
+    "exEn": "Immanuel Kant criticised metaphysics for its supposedly lacking intersubjectively verifiable relation to experience."
+   },
+   {
+    "w": "Nihilismus",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˌnihiˈlɪsmʊs",
+    "en": "nihilism, denial of objective meaning or values",
+    "ex": "Nicht nur der Nihilismus, sondern auch der religiöse Fanatismus, der heute oft als Fundamentalismus bezeichnet wird, kann terroristische Vorhaben und Handlungen inspirieren […].",
+    "exEn": "Not only nihilism but also religious fanaticism, today often called fundamentalism, can inspire terrorist plans and actions."
+   },
+   {
+    "w": "Existenzialismus",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ɛksɪstɛnt͡si̯aˈlɪsmʊs",
+    "en": "existentialism, existence before essence",
+    "ex": "Eine der grundlegenden Annahmen des Existenzialismus und seiner Vertreter ist der Glaube an die Freiheit des menschlichen Individuums.",
+    "exEn": "One of the basic assumptions of existentialism and its proponents is the belief in the freedom of the human individual."
+   },
+   {
+    "w": "Vernunft",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɛɐ̯ˈnʊnft",
+    "en": "reason, the faculty of rational thought",
+    "ex": "Nur der Mensch ist zur Vernunft fähig.",
+    "exEn": "Only humans are capable of reason."
+   },
+   {
+    "w": "Verdrängung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɛɐ̯ˈdʁɛŋʊŋ",
+    "en": "repression, pushing unpleasant thoughts out of mind",
+    "ex": "Die Verdrängung des eigenen Todes ist bei uns üblich.",
+    "exEn": "Repressing the thought of one's own death is common among us."
+   },
+   {
+    "w": "Fehlleistung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈfeːlˌlaɪ̯stʊŋ",
+    "en": "slip, an unintended faulty action or utterance",
+    "ex": "Vergessen, Verlesen sind Fehlleistungen.",
+    "exEn": "Forgetting and misreading are slips."
+   },
+   {
+    "w": "Projektion",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "pʁojɛkˈt͡si̯oːn",
+    "en": "projection, attributing one's own feelings to others",
+    "ex": "Projektion bedeutet, eigene Anteile an sich nicht zu sehen, sondern sie auf den anderen zu transferieren und dort zu bekämpfen.",
+    "exEn": "Projection means not seeing parts of oneself, but transferring them onto the other person and fighting them there."
+   },
+   {
+    "w": "Dissoziation",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "dɪsot͡si̯aˈt͡si̯oːn",
+    "en": "dissociation, a break in the integration of consciousness",
+    "ex": "Bei der Patientin löst dieser Gegenstand eine Dissoziation aus.",
+    "exEn": "In this patient, the object triggers a dissociation."
+   },
+   {
+    "w": "Narzissmus",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "naʁˈt͡sɪsmʊs",
+    "en": "narcissism, excessive self-love",
+    "ex": "Narzissmus ist nicht nur Selbstliebe, denn er geht Hand in Hand mit mangelndem Mitgefühl für und fehlender Solidarität mit anderen.",
+    "exEn": "Narcissism is not only self-love, for it goes hand in hand with a lack of empathy for and solidarity with others."
+   },
+   {
+    "w": "Archetyp",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˌaʁçeˈtyːp",
+    "en": "archetype, an original pattern or model",
+    "ex": "Holden Caulfield, in seiner spöttischen Verweigerung und Rebellion, wurde zum Archetyp für Generationen von Jugendlichen, denen das Buch bald als Schullektüre begegnete.",
+    "exEn": "Holden Caulfield, in his mocking refusal and rebellion, became the archetype for generations of young people who soon met the book as school reading."
+   },
+   {
+    "w": "Konditionierung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "kɔndit͡si̯oˈniːʁʊŋ",
+    "en": "conditioning, learning through repeated stimulus",
+    "ex": "Ein unkonditionierter Stimulus (UCS für unconditioned stimuli) ist ein Reiz, der ohne Konditionierung, also ohne Lernen eine Reaktion / einen Reflex auslöst.",
+    "exEn": "An unconditioned stimulus (UCS) is a stimulus that triggers a reaction or reflex without conditioning, that is, without learning."
+   },
+   {
+    "w": "Kognition",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌkɔɡniˈt͡si̯oːn",
+    "en": "cognition, mental processes of knowing",
+    "ex": "Kognitionen sind zum Beispiel Meinungen, Einstellungen, Wünsche und Absichten eines Menschen.",
+    "exEn": "Cognitions are, for example, a person's opinions, attitudes, wishes and intentions."
+   },
+   {
+    "w": "Trieb",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "tʁiːp",
+    "en": "drive, an inner urge or instinct",
+    "ex": "Man kann es drehen und wenden, wie man will, der Sexualtrieb ist eindeutig der stärkste und rücksichtsloseste Trieb überhaupt.",
+    "exEn": "Turn it how you will, the sexual drive is clearly the strongest and most ruthless drive of all."
+   },
+   {
+    "w": "Libido",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈliːbido",
+    "en": "libido, sexual drive",
+    "ex": "Diese Lebensmittel sollen die Libido steigern.",
+    "exEn": "These foods are said to increase the libido."
+   },
+   {
+    "w": "Resilienz",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ʁeziˈli̯ɛnt͡s",
+    "en": "resilience, the ability to bounce back",
+    "ex": "Ein anschauliches Beispiel für Resilienz im engeren Sinn ist die Fähigkeit von Stehaufmännchen, sich aus jeder beliebigen Lage wieder aufzurichten.",
+    "exEn": "A vivid example of resilience in the narrower sense is the ability of a roly-poly toy to right itself from any position."
+   },
+   {
+    "w": "Komplex",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "kɔmˈplɛks",
+    "en": "complex, a repressed group of ideas that causes unease",
+    "ex": "Er steckt so voller Komplexe, dass er sich kaum unter Menschen zu gehen traut.",
+    "exEn": "He is so full of complexes that he hardly dares to go out among people."
+   },
+   {
+    "w": "Mittelstand",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈmɪtl̩ˌʃtant",
+    "en": "Mittelstand, Germany's small and medium-sized firms",
+    "ex": "Dieser alte Handwerksbetrieb gehört zum Mittelstand.",
+    "exEn": "This old craft business is part of the Mittelstand."
+   },
+   {
+    "w": "Mitbestimmung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈmɪtbəˌʃtɪmʊŋ",
+    "en": "co-determination, workers' say in company decisions",
+    "ex": "Den Arbeitern wurde ein Recht auf Mitbestimmung eingeräumt.",
+    "exEn": "The workers were granted a right of co-determination."
+   },
+   {
+    "w": "Schuldenbremse",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃʊldn̩ˌbʁɛmzə",
+    "en": "debt brake, constitutional limit on state borrowing",
+    "ex": "Die Schweizer Schuldenbremse funktioniert nach dem Prinzip von Grossmutters Haushaltsbüchlein. Der Staat darf über die Dauer nicht mehr ausgeben, als er einnimmt.",
+    "exEn": "The Swiss debt brake works on the principle of grandmother's household ledger. Over time, the state may not spend more than it takes in."
+   },
+   {
+    "w": "Konjunktur",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "kɔnjʊŋkˈtuːɐ̯",
+    "en": "the economy, the state of business activity",
+    "ex": "Die gute Konjunktur sorgt für mehr Arbeitsplätze.",
+    "exEn": "The strong economy creates more jobs."
+   },
+   {
+    "w": "Bruttoinlandsprodukt",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˌbʁʊtoˈʔɪnlant͡spʁoˌdʊkt",
+    "en": "gross domestic product (GDP)",
+    "ex": "Das Bruttoinlandsprodukt stieg von Juli bis September um 0,5 Prozent im Vergleich zum Frühjahr, teilte das Statistische Bundesamt mit.",
+    "exEn": "Gross domestic product rose by 0.5 percent from July to September compared with the spring, the Federal Statistical Office announced."
+   },
+   {
+    "w": "Zahlungsbilanz",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈt͡saːlʊŋsbiˌlant͡s",
+    "en": "balance of payments",
+    "ex": "Die Zahlungsbilanz ist aktiv, wenn ein Zahlungsrest des Auslands an das Inland, passiv, wenn ein Zahlungsrest des Inlands an das Ausland verbleibt.",
+    "exEn": "The balance of payments is in surplus when a payment balance remains owed by foreign countries to the home country, and in deficit when the reverse holds."
+   },
+   {
+    "w": "Inflation",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɪnflaˈt͡si̯oːn",
+    "en": "inflation, sustained rise in prices",
+    "ex": "Die Inflation in Deutschland ist 2022 so hoch ausgefallen wie noch nie. Die Verbraucherpreise erhöhten sich um durchschnittlich 7,9 Prozent [...].",
+    "exEn": "Inflation in Germany in 2022 was higher than ever before. Consumer prices rose by an average of 7.9 percent."
+   },
+   {
+    "w": "Rezession",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ʁet͡sɛˈsi̯oːn",
+    "en": "recession, a period of shrinking output",
+    "ex": "Eine Rezession liegt vor, wenn das Bruttoinlandsprodukt in zwei aufeinanderfolgenden Quartalen abnimmt.",
+    "exEn": "A recession exists when gross domestic product falls in two consecutive quarters."
+   },
+   {
+    "w": "Leitzins",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈlaɪ̯tˌt͡sɪns",
+    "en": "key interest rate set by a central bank",
+    "ex": "Die Zentralbank senkte erneut den Leitzins.",
+    "exEn": "The central bank lowered the key interest rate again."
+   },
+   {
+    "w": "Wechselkurs",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈvɛksl̩ˌkʊʁs",
+    "en": "exchange rate",
+    "ex": "Wechselkurse zu beobachten ist nicht nur etwas für Börsenspekulanten, es kann sich auch für Urlauber auszahlen.",
+    "exEn": "Watching exchange rates is not only for stock market speculators; it can also pay off for holidaymakers."
+   },
+   {
+    "w": "Handelsbilanz",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈhandl̩sbiˌlant͡s",
+    "en": "trade balance, exports set against imports",
+    "ex": "Übersteigt die Summe der Ausfuhren die Summe der Einfuhren, so spricht man von einer aktiven (bzw. positiven) Handelsbilanz, im umgekehrten Fall, also wenn die Importe die Exporte übersteigen, von einer passiven (bzw. negativen) Handelsbilanz.",
+    "exEn": "If exports exceed imports, one speaks of an active (positive) trade balance; in the opposite case, when imports exceed exports, of a passive (negative) trade balance."
+   },
+   {
+    "w": "Gewerkschaft",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɡəˈvɛʁkʃaft",
+    "en": "trade union",
+    "ex": "Die Gewerkschaften riefen einen Streik aus.",
+    "exEn": "The trade unions called a strike."
+   },
+   {
+    "w": "Betriebsrat",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "bəˈtʁiːpsˌʁaːt",
+    "en": "works council, elected staff representatives",
+    "ex": "Ob sie denn keinen Betriebsrat hätten, wollte Marga wissen.",
+    "exEn": "'Don't you have a works council?' Marga wanted to know."
+   },
+   {
+    "w": "Streik",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ʃtʁaɪ̯k",
+    "en": "strike, collective stoppage of work",
+    "ex": "Die Erfolgsaussichten dieses Streiks waren von vornherein schlecht.",
+    "exEn": "This strike's chances of success were poor from the outset."
+   },
+   {
+    "w": "Tarifvertrag",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "taˈʁiːffɛɐ̯ˌtʁaːk",
+    "en": "collective agreement on pay and conditions",
+    "ex": "Ursprünglich wollten die Fluglotsen am Donnerstag von 6 bis 12 Uhr bundesweit die Arbeit niederlegen, nachdem sich die Gewerkschaft nicht mit der DFS auf einen neuen Tarifvertrag einigen konnte.",
+    "exEn": "The air traffic controllers had originally planned to stop work nationwide on Thursday from 6 a.m. to noon after the union failed to agree a new collective agreement with DFS."
+   },
+   {
+    "w": "Fachwerk",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈfaxˌvɛʁk",
+    "en": "half-timbering, timber-frame construction",
+    "ex": "Alte Städte zieren sich oft noch mit viel Fachwerk.",
+    "exEn": "Old towns still often adorn themselves with much half-timbering."
+   },
+   {
+    "w": "Zunft",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "t͡sʊnft",
+    "en": "guild, medieval craft association",
+    "ex": "Die Gesellen, die ihre Meisterprüfung ablegen wollten, hatten je nach Stadt, Zunft und historischer Zeit verschiedene Bedingungen zu erfüllen.",
+    "exEn": "Journeymen who wanted to take their master craftsman's examination had to meet different conditions depending on the town, the guild and the historical period."
+   },
+   {
+    "w": "Schraubstock",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈʃʁaʊ̯pˌʃtɔk",
+    "en": "vice, a clamping tool",
+    "ex": "Ein Schraubstock besteht aus einer beweglichen und einer unbeweglichen Backe.",
+    "exEn": "A vice consists of a movable and a fixed jaw."
+   },
+   {
+    "w": "Hobel",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈhoːbl̩",
+    "en": "plane, a woodworking tool",
+    "ex": "Der Hobel ist das wichtigste Werkzeug des Schreiners.",
+    "exEn": "The plane is the joiner's most important tool."
+   },
+   {
+    "w": "Lehrling",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈleːɐ̯lɪŋ",
+    "en": "apprentice",
+    "ex": "Als ich Lehrling war, musste ich meist die ganze Halle fegen.",
+    "exEn": "When I was an apprentice, I usually had to sweep the whole hall."
+   },
+   {
+    "w": "Geselle",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ɡəˈzɛlə",
+    "en": "journeyman, a qualified craftsman",
+    "ex": "Aufgrund seiner guten Prüfung wurde der Geselle im Betrieb übernommen.",
+    "exEn": "Because of his good examination, the journeyman was taken on permanently by the firm."
+   },
+   {
+    "w": "Werkstück",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈvɛʁkˌʃtʏk",
+    "en": "workpiece, a part being machined",
+    "ex": "Laut DIN 8580 ist ein Werkstück ein Einzelteil eines technischen Gebildes in der Fertigung.",
+    "exEn": "According to DIN 8580, a workpiece is an individual part of a technical product in manufacturing."
+   },
+   {
+    "w": "Schmiede",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈʃmiːdə",
+    "en": "forge, a smithy",
+    "ex": "Den Besuchern schlagen das Dröhnen der Schmieden und der Gestank von Tausend Misthaufen entgegen.",
+    "exEn": "Visitors are met by the roar of the forges and the stench of a thousand dung heaps."
+   },
+   {
+    "w": "Zimmermann",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈt͡sɪmɐˌman",
+    "en": "carpenter, a timber construction worker",
+    "ex": "Dachdecker, Zimmermänner und alle sonstigen Berufsgruppen, die sich auf Baustellen herumtummeln, sollten sich mit den Fachbegriffen rund ums Dach auskennen.",
+    "exEn": "Roofers, carpenters and all other trades found on building sites should know the technical terms for roofs."
+   },
+   {
+    "w": "Tischler",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈtɪʃlɐ",
+    "en": "joiner, a furniture maker",
+    "ex": "Den Schrank haben wir uns vom Tischler machen lassen.",
+    "exEn": "We had the cupboard made by the joiner."
+   },
+   {
+    "w": "Habilitation",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "habilitaˈt͡si̯oːn",
+    "en": "habilitation, the highest academic qualification",
+    "ex": "Die Fakultät befürwortete die Habilitation, und im Wintersemester 1908/09 erhielt Einstein die venia legendi.",
+    "exEn": "The faculty approved the habilitation, and in the winter semester of 1908/09 Einstein received the venia legendi (the right to teach)."
+   },
+   {
+    "w": "Lehrstuhl",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈleːɐ̯ˌʃtuːl",
+    "en": "professorial chair",
+    "ex": "So habe das universitäre Fach Germanistik im Jahre 1949 nur noch in Budapest existiert, während die entsprechenden Lehrstühle in Szeged, Debrecen und Pécs aufgelöst worden seien.",
+    "exEn": "The university subject of German studies is said to have existed in 1949 only in Budapest, while the corresponding chairs in Szeged, Debrecen and Pécs had been dissolved."
+   },
+   {
+    "w": "Dissertation",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "dɪsɛʁtaˈt͡si̯oːn",
+    "en": "doctoral thesis",
+    "ex": "Er wird beeinflusst von seinem Lehrer, dem Philosophen Jacob Thomasius und erwirbt bei ihm 1663 mit der Dissertation „De principio individui“ den untersten akademischen Grad eines Bakkalaureus.",
+    "exEn": "Influenced by his teacher, the philosopher Jacob Thomasius, he earned the lowest academic degree of bachelor with the dissertation 'De principio individui' in 1663."
+   },
+   {
+    "w": "Immatrikulation",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɪmatʁikulaˈt͡si̯oːn",
+    "en": "enrolment at a university",
+    "ex": "Ich studiere ab Oktober Medizin, die Immatrikulation ist aber Mitte September.",
+    "exEn": "I start studying medicine in October, but enrolment is in mid-September."
+   },
+   {
+    "w": "Exmatrikulation",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɛksmatʁikulaˈt͡si̯oːn",
+    "en": "leaving the university register",
+    "ex": "Die Exmatrikulation trete ex lege ohne einen neuerlich die Exmatrikulation verfügenden Verwaltungsakt ein.",
+    "exEn": "Exmatriculation takes effect by operation of law, without a further administrative act ordering it."
+   },
+   {
+    "w": "Promotion",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌpʁomoˈt͡si̯oːn",
+    "en": "doctorate, gaining the doctoral degree",
+    "ex": "Nach seiner Promotion ging er in die USA.",
+    "exEn": "After his doctorate he went to the USA."
+   },
+   {
+    "w": "Fakultät",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fakʊlˈtɛːt",
+    "en": "faculty, a university department",
+    "ex": "Der Dekan begrüßt jedes Semester als Vorsteher der medizinischen Fakultät die neuen Studenten der Medizin.",
+    "exEn": "As head of the medical faculty, the dean welcomes the new medical students every semester."
+   },
+   {
+    "w": "Dekan",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "deˈkaːn",
+    "en": "dean, head of a faculty",
+    "ex": "Dekane werden nur für eine begrenzte Zeit gewählt.",
+    "exEn": "Deans are elected for a limited term only."
+   },
+   {
+    "w": "Rektor",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈʁɛktoːɐ̯",
+    "en": "rector, head of a university or school",
+    "ex": "Der Rektor hält eine Rede zum Schuljahresbeginn.",
+    "exEn": "The headteacher gives a speech at the start of the school year."
+   },
+   {
+    "w": "Vorlesung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈfoːɐ̯ˌleːzʊŋ",
+    "en": "lecture at a university",
+    "ex": "Zu den Vorlesungen komme ich immer pünktlich.",
+    "exEn": "I am always on time for lectures."
+   },
+   {
+    "w": "Seminar",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "zemiˈnaːɐ̯",
+    "en": "seminar, a participatory university class",
+    "ex": "Im letzten Semester habe ich ein Seminar über Spieltheorie besucht.",
+    "exEn": "Last semester I attended a seminar on game theory."
+   },
+   {
+    "w": "Staatsexamen",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈʃtaːt͡sʔɛˌksaːmən",
+    "en": "state examination",
+    "ex": "Beim ersten Staatsexamen fällt ein Drittel der Studenten durch, beim zweiten noch einmal ein Fünftel.",
+    "exEn": "A third of students fail the first state examination, and another fifth fail the second."
+   },
+   {
+    "w": "Doktorvater",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈdɔktoːɐ̯ˌfaːtɐ",
+    "en": "doctoral supervisor",
+    "ex": "Ich habe meinen Doktorvater konsultiert.",
+    "exEn": "I consulted my doctoral supervisor."
+   },
+   {
+    "w": "Verwaltungsakt",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "fɛɐ̯ˈvaltʊŋsˌʔakt",
+    "en": "administrative act, an official decision",
+    "ex": "Der Widerspruch ist ein Rechtsbehelf gegen jede Art von Verwaltungsakten, der zunächst bei der Behörde, die den Verwaltungsakt erlassen hat, oder bei der nächsthöheren Behörde einzulegen ist, erst dann vor dem Verwaltungsgericht.",
+    "exEn": "An objection is a legal remedy against any kind of administrative act; it must first be lodged with the authority that issued the administrative act, or with the next higher authority, and only then before the administrative court."
+   },
+   {
+    "w": "Dienstweg",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈdiːnstˌveːk",
+    "en": "official channels, the prescribed route through authorities",
+    "ex": "Der Major, ein aktiver Offizier aus Karlsruhe, mit gutmütigem aufgeschwemmtem Trinkergesicht, sieht mich erstaunt an, ich habe den Dienstweg übersprungen, er müßte mich einsperren.",
+    "exEn": "The major, an active officer from Karlsruhe with a good-natured, bloated drinker's face, looks at me in astonishment; I have skipped the official channels, he would have to lock me up."
+   },
+   {
+    "w": "Meldepflicht",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈmɛldəˌp͡flɪçt",
+    "en": "duty to report, mandatory notification",
+    "ex": "Tollwut unterliegt der Meldepflicht.",
+    "exEn": "Rabies is a notifiable disease."
+   },
+   {
+    "w": "Verhältnismäßigkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "fɛɐ̯ˈhɛltnɪsˌmɛːsɪçkaɪ̯t",
+    "en": "proportionality, the proper balance of means",
+    "ex": "In jedem Fall sollte die Verhältnismäßigkeit der Mittel gewahrt bleiben.",
+    "exEn": "In every case, the proportionality of the means should be preserved."
+   },
+   {
+    "w": "Widerspruch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈviːdɐˌʃpʁʊx",
+    "en": "contradiction, formal objection",
+    "ex": "Der Artikel hat im dritten Absatz einen Widerspruch.",
+    "exEn": "The article contains a contradiction in its third paragraph."
+   },
+   {
+    "w": "Bußgeld",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈbuːsˌɡɛlt",
+    "en": "fine for a minor offence",
+    "ex": "Weil ich mich versehentlich in die erste Klasse gesetzt hatte, musste ich ein Bußgeld in Höhe von 40 Euro zahlen.",
+    "exEn": "Because I had accidentally sat in first class, I had to pay a fine of 40 euros."
+   },
+   {
+    "w": "Ordnungswidrigkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈɔʁdnʊŋsˌviːdʁɪçkaɪ̯t",
+    "en": "regulatory offence, minor breach of the law",
+    "ex": "Das Fahren mit dem Fahrrad auf der linken Straßenseite stellt eine Ordnungswidrigkeit dar und kann mit einem Bußgeld geahndet werden.",
+    "exEn": "Riding a bicycle on the left-hand side of the road is a regulatory offence and can be punished with a fine."
+   },
+   {
+    "w": "Verwaltungsgericht",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "fɛɐ̯ˈvaltʊŋsɡəˌʁɪçt",
+    "en": "administrative court",
+    "ex": "Das Verwaltungsgericht Köln hat am 8. März entschieden, dass das Bundesamt für den Verfassungsschutz die AfD als Verdachtsfall einstufen darf. […] Es gebe ausreichend Anhaltspunkte für verfassungsfeindliche Bestrebungen, befanden die Richter.",
+    "exEn": "On 8 March, the Cologne Administrative Court ruled that the Federal Office for the Protection of the Constitution may classify the AfD as a suspected case. The judges found there was sufficient evidence of anti-constitutional activities."
+   },
+   {
+    "w": "Zuständigkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈt͡suːˌʃtɛndɪçkaɪ̯t",
+    "en": "jurisdiction, responsibility",
+    "ex": "Also fällt der Unfallort in seine Zuständigkeit.",
+    "exEn": "So the accident site falls within his jurisdiction."
+   },
+   {
+    "w": "Besoldung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "bəˈzɔldʊŋ",
+    "en": "pay for civil servants",
+    "ex": "Die Besoldung hält mit der Inflationsrate nicht mehr Schritt.",
+    "exEn": "Pay is no longer keeping pace with inflation."
+   },
+   {
+    "w": "Leitmotiv",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈlaɪ̯tmoˌtiːf",
+    "en": "leitmotif, a recurring musical theme",
+    "ex": "Der Begriff des Leitmotivs tauchte erstmals 1871 in Friedrich Wilhelm Jähns’ Verzeichnis der Werke Carl Maria von Webers auf.",
+    "exEn": "The term leitmotif first appeared in 1871 in Friedrich Wilhelm Jähns' catalogue of the works of Carl Maria von Weber."
+   },
+   {
+    "w": "Bildungsroman",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈbɪldʊŋsʁoˌmaːn",
+    "en": "novel of formation, a coming-of-age novel",
+    "ex": "Goethes „Wilhelm Meisters Lehrjahre“ gilt als erster Bildungsroman.",
+    "exEn": "Goethe's 'Wilhelm Meister's Apprenticeship' is considered the first novel of formation."
+   },
+   {
+    "w": "Kontrapunkt",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkɔntʁapʊŋkt",
+    "en": "counterpoint, independent voices in music",
+    "ex": "Der Kontrapunkt als Kompositionstechnik unterlag in der Musikgeschichte sich wandelnden Regeln, die von der wechselnden Bewertung von Konsonanzen und Dissonanzen abhingen.",
+    "exEn": "As a compositional technique, counterpoint was subject to changing rules in music history, depending on how consonances and dissonances were valued."
+   },
+   {
+    "w": "Libretto",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "liˈbʁɛto",
+    "en": "libretto, the text of an opera",
+    "ex": "Die Pianistin und Komponistin Clara Schumann bat sie, das Libretto für eine Oper ihres Mannes Robert zu schreiben.",
+    "exEn": "The pianist and composer Clara Schumann asked her to write the libretto for an opera by her husband Robert."
+   },
+   {
+    "w": "Expressionismus",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ɛkspʁɛsi̯oˈnɪsmʊs",
+    "en": "Expressionism, early 20th-century art movement",
+    "ex": "Insbesondere junge Literaten des Expressionismus machten ihrem Verdruß über die verknöcherte Gesellschaft durch Herbeirufen der Apokalypse Luft.",
+    "exEn": "Young writers of Expressionism in particular vented their annoyance at ossified society by invoking the apocalypse."
+   },
+   {
+    "w": "Jugendstil",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈjuːɡn̩tˌʃtiːl",
+    "en": "Art Nouveau, the style of around 1900",
+    "ex": "Der Tscheche Alphonse Mucha und der Österreicher Gustav Klimt sind hervorragende Repräsentanten des Jugendstiles.",
+    "exEn": "The Czech Alphonse Mucha and the Austrian Gustav Klimt are outstanding representatives of Art Nouveau."
+   },
+   {
+    "w": "Atonalität",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˌatonaliˈtɛːt",
+    "en": "atonality, music without a tonal centre",
+    "ex": "Arnold Schönbergs (1874–1951) Form von neuer Musik – Atonalität und daraus folgend die Zwölftontechnik – zerbricht jede Harmonie, löst jede tonale Bindung auf, so wie sich in der Malerei das Gegenständliche auflöst.",
+    "exEn": "Arnold Schoenberg's (1874-1951) form of new music, atonality and the twelve-tone technique that followed from it, shatters all harmony and dissolves every tonal bond, just as representational subject matter dissolves in painting."
+   },
+   {
+    "w": "Minne",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈmɪnə",
+    "en": "courtly love, medieval love",
+    "ex": "Die Minne ist ein häufig in der Literatur des Mittelalters anzutreffendes Thema.",
+    "exEn": "Courtly love is a theme frequently found in medieval literature."
+   },
+   {
+    "w": "Buhle",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈbuːlə",
+    "en": "lover, sweetheart (archaic)",
+    "ex": "Sie hat sich doch tatsächlich einen Grafen zum Buhlen genommen.",
+    "exEn": "She really has taken a count as her lover."
+   },
+   {
+    "w": "Hagestolz",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈhaːɡəˌʃtɔlt͡s",
+    "en": "confirmed bachelor (archaic)",
+    "ex": "Da er sich nie zur Heirat entschließen konnte, war aus ihm schließlich ein Hagestolz geworden.",
+    "exEn": "Since he could never bring himself to marry, he had finally become a confirmed bachelor."
+   },
+   {
+    "w": "Oheim",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈoːhaɪ̯m",
+    "en": "uncle, mother's brother (archaic)",
+    "ex": "Eines Sonntags – es war am 24. Mai 1863 – kehrte mein Oheim, Professor Lidenbrock, in aller Eile in sein kleines Haus in der Königstraße Nr. 19, einer der ältesten Straßen Alt-Hamburgs, zurück.",
+    "exEn": "One Sunday, it was 24 May 1863, my uncle, Professor Lidenbrock, returned in great haste to his small house at Königstraße No. 19, one of the oldest streets in old Hamburg."
+   },
+   {
+    "w": "Muhme",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈmuːmə",
+    "en": "aunt, mother's sister (archaic)",
+    "ex": "Heute kommt die Muhme zu Besuch.",
+    "exEn": "My aunt is coming to visit today."
+   },
+   {
+    "w": "Gevatter",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ɡəˈfatɐ",
+    "en": "godfather, close companion (archaic)",
+    "ex": "Er legte sich ins Gras, schloss die Augen und sah in der Ferne Gevatter Tod, der es eilig hatte.",
+    "exEn": "He lay down in the grass, closed his eyes and saw in the distance Godfather Death, who was in a hurry."
+   },
+   {
+    "w": "Mamsell",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "mamˈzɛl",
+    "en": "housekeeper, unmarried lady (archaic)",
+    "ex": "Die Mägde waren der Mamsell unterstellt.",
+    "exEn": "The maids were under the housekeeper's authority."
+   },
+   {
+    "w": "Gesinde",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ɡəˈzɪndə",
+    "en": "servants of a household or estate (archaic)",
+    "ex": "Das Gesinde bekam seinen Lohn und wechselte den Dienstherren.",
+    "exEn": "The servants received their wages and changed employers."
+   },
+   {
+    "w": "Kemenate",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "kemeˈnaːtə",
+    "en": "heated chamber in a castle (archaic)",
+    "ex": "Er liebte es, in seiner stillen Kemenate zu sitzen.",
+    "exEn": "He loved sitting in his quiet little chamber."
+   },
+   {
+    "w": "hold",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "hɔlt",
+    "en": "lovely, gracious (archaic)",
+    "ex": "Sie war eine holde Maid.",
+    "exEn": "She was a lovely maiden."
+   },
+   {
+    "w": "wacker",
+    "a": "",
+    "pos": "adjective",
+    "ipa": "ˈvakɐ",
+    "en": "brave, stout, valiant (archaic)",
+    "ex": "Sie hat wacker durchgehalten.",
+    "exEn": "She held out bravely."
+   },
+   {
+    "w": "Knecht",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "knɛçt",
+    "en": "farmhand, manservant (archaic)",
+    "ex": "Es ist noch früh, hauptsächlich sind Knechte und Mägde da.",
+    "exEn": "It is still early; mainly farmhands and maids are about."
+   },
+   {
+    "w": "Lehen",
+    "a": "das",
+    "pos": "noun · neuter",
+    "ipa": "ˈleːən",
+    "en": "fief, land granted by a lord (archaic)",
+    "ex": "Der Kaiser vergab an seinen treuen Gefolgsmann ein Lehen.",
+    "exEn": "The emperor granted a fief to his loyal follower."
+   },
+   {
+    "w": "Gaukler",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈɡaʊ̯klɐ",
+    "en": "juggler, travelling performer (archaic)",
+    "ex": "Dichter trugen Poeme vor, Gaukler zeigten ihre Geschicklichkeit, Händler boten Waren an, Bier wurde ausgeschenkt.",
+    "exEn": "Poets recited poems, jugglers showed off their skill, traders offered goods, beer was served."
+   },
+   {
+    "w": "Vetter",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfɛtɐ",
+    "en": "cousin, originally father's brother's son (archaic)",
+    "ex": "Der Vetter aus München ist letztes Jahr verstorben.",
+    "exEn": "The cousin from Munich died last year."
+   },
+   {
+    "w": "Kerker",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈkɛʁkɐ",
+    "en": "dungeon, prison (archaic)",
+    "ex": "Sie hielten ihn im Kerker gefangen.",
+    "exEn": "They held him prisoner in the dungeon."
+   }
+  ]
+ }
+}

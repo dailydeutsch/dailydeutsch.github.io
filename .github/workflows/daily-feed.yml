@@ -1,0 +1,31 @@
+name: Daily word feed
+
+on:
+  schedule:
+    - cron: "5 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Regenerate words.json and today.json
+        run: node tools/make-feed.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "daily-feed"
+          git config user.email "actions@github.com"
+          git add words.json today.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Daily feed $(date -u +%F)"
+            git push
+          fi

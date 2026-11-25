@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home screen widget · Täglich Wort · Daily Deutsch</title>
+<meta name="description" content="Put the German word of the day on your iPhone or Android home screen with the free Täglich Wort widget for Scriptable and KWGT." />
+<link rel="icon" type="image/png" sizes="64x64" href="./favicon-64.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#F3F0EB; --surface:#f7f4ee; --ink:#35322b; --ink-soft:#6f695d; --ink-faint:#a29a8b; --line:#ddd7c9; --accent-deep:#6f6350; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#23201b; --surface:#2d2921; --ink:#eae5d9; --ink-soft:#b3ab9b; --ink-faint:#7f7768; --line:#403a30; --accent-deep:#c9bc9f; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 20px 64px; }
+  h1 { font-family:Vollkorn,serif; font-size:2rem; margin:0 0 8px; }
+  h2 { font-family:Vollkorn,serif; font-size:1.35rem; margin:36px 0 8px; }
+  p, li { line-height:1.65; color:var(--ink-soft); }
+  .lead { font-size:1.05rem; }
+  ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+  code { background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:1px 6px; font-size:.88em; overflow-wrap:anywhere; }
+  pre { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 16px; overflow-x:auto; }
+  pre code { background:none; border:none; padding:0; }
+  a { color:var(--accent-deep); font-weight:600; }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin-top:14px; }
+  .back { display:inline-block; margin-bottom:22px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">Back to today's word</a>
+  <h1>The word of the day, on your home screen</h1>
+  <p class="lead">Täglich Wort is a web app, and web apps cannot ship their own phone widgets. These two free workarounds use widget apps you install once. Both read the same daily feed as the app, so the widget always shows the same word, on the same day, at your level.</p>
+
+  <h2>iPhone: Scriptable</h2>
+  <div class="card">
+    <ol>
+      <li>Install <a href="https://apps.apple.com/app/scriptable/id1405459188">Scriptable</a> from the App Store (free).</li>
+      <li>Open this file, select all and copy it: <a href="./widget/TaeglichWort.js">TaeglichWort.js</a></li>
+      <li>In Scriptable, tap + and paste. Name the script <code>TaeglichWort</code>.</li>
+      <li>Long-press your home screen, add a Scriptable widget (medium looks best), then tap the widget to edit it: Script = <code>TaeglichWort</code>, Parameter = your level: <code>1</code>, <code>2</code> or <code>3</code>.</li>
+      <li>Tap the widget any time to open the full word in the app.</li>
+    </ol>
+    <p>The widget refreshes itself shortly after midnight and works offline from its last download.</p>
+  </div>
+
+  <h2>Android: KWGT</h2>
+  <div class="card">
+    <p>KWGT can read the daily feed at <code>https://dailydeutsch.github.io/today.json</code>. In a KWGT text item, use Web Get formulas like these (change the level number 1 to 2 or 3 if you want another level):</p>
+    <pre><code>Word:    $wg("https://dailydeutsch.github.io/today.json", json, .levels.1.entry.w)$
+Article: $wg("https://dailydeutsch.github.io/today.json", json, .levels.1.entry.a)$
+Meaning: $wg("https://dailydeutsch.github.io/today.json", json, .levels.1.entry.en)$
+Example: $wg("https://dailydeutsch.github.io/today.json", json, .levels.1.entry.ex)$</code></pre>
+    <p>Set the widget's update interval to daily, and give the widget a touch action that opens <code>https://dailydeutsch.github.io/</code>. The feed is regenerated every night (UTC), so the Android widget follows the UTC day.</p>
+  </div>
+
+  <h2>For developers</h2>
+  <p>Two open feeds, no key, CORS enabled by GitHub Pages: <a href="./words.json">words.json</a> (every word, grouped by level, with the day rule: day 1 was 21 November 2026, index cycles through each level's pool) and <a href="./today.json">today.json</a> (today's word per level).</p>
+</main>
+</body>
+</html>

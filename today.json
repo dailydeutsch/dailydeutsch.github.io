@@ -1,0 +1,44 @@
+{
+ "date": "2026-11-25",
+ "levels": {
+  "1": {
+   "day": 5,
+   "of": 313,
+   "entry": {
+    "w": "Knoblauch",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈknoːblaʊ̯x",
+    "en": "garlic",
+    "ex": "Knoblauch gibt dem Gericht Geschmack.",
+    "exEn": "Garlic gives the dish flavour."
+   }
+  },
+  "2": {
+   "day": 5,
+   "of": 52,
+   "entry": {
+    "w": "Feierabend",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈfaɪ̯ɐˌʔaːbn̩t",
+    "en": "the end of the working day",
+    "ex": "Nach dem Feierabend gehen wir spazieren.",
+    "exEn": "After work we go for a walk."
+   }
+  },
+  "3": {
+   "day": 5,
+   "of": 135,
+   "entry": {
+    "w": "Anfechtung",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈanˌfɛçtʊŋ",
+    "en": "contestation, legal challenge to a declaration or decision",
+    "ex": "In den §§ 119 ff. BGB sind verschiedene Gründe normiert, die eine Anfechtung ermöglichen.",
+    "exEn": "Sections 119 and following of the German Civil Code set out various grounds that allow a contract to be contested."
+   }
+  }
+ }
+}
