@@ -1,43 +1,43 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-26",
  "levels": {
   "1": {
-   "day": 5,
+   "day": 6,
    "of": 313,
    "entry": {
-    "w": "Knoblauch",
-    "a": "der",
-    "pos": "noun · masculine",
-    "ipa": "ˈknoːblaʊ̯x",
-    "en": "garlic",
-    "ex": "Knoblauch gibt dem Gericht Geschmack.",
-    "exEn": "Garlic gives the dish flavour."
+    "w": "Kartoffel",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "kaʁˈtɔfl̩",
+    "en": "potato",
+    "ex": "Kartoffeln müssen geschält werden.",
+    "exEn": "Potatoes need to be peeled."
    }
   },
   "2": {
-   "day": 5,
+   "day": 6,
    "of": 52,
    "entry": {
-    "w": "Feierabend",
-    "a": "der",
-    "pos": "noun · masculine",
-    "ipa": "ˈfaɪ̯ɐˌʔaːbn̩t",
-    "en": "the end of the working day",
-    "ex": "Nach dem Feierabend gehen wir spazieren.",
-    "exEn": "After work we go for a walk."
+    "w": "Gemütlichkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ɡəˈmyːtlɪçkaɪ̯t",
+    "en": "cosiness, warm comfort",
+    "ex": "Bei Kerzenlicht herrscht Gemütlichkeit.",
+    "exEn": "By candlelight there is a feeling of cosiness."
    }
   },
   "3": {
-   "day": 5,
+   "day": 6,
    "of": 135,
    "entry": {
-    "w": "Anfechtung",
-    "a": "die",
-    "pos": "noun · feminine",
-    "ipa": "ˈanˌfɛçtʊŋ",
-    "en": "contestation, legal challenge to a declaration or decision",
-    "ex": "In den §§ 119 ff. BGB sind verschiedene Gründe normiert, die eine Anfechtung ermöglichen.",
-    "exEn": "Sections 119 and following of the German Civil Code set out various grounds that allow a contract to be contested."
+    "w": "Rechtsbehelf",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈʁɛçt͡sbəˌhɛlf",
+    "en": "legal remedy, application to review an official or court decision",
+    "ex": "Jeder hat Anspruch auf einen wirksamen Rechtsbehelf bei den zuständigen innerstaatlichen Gerichten gegen Handlungen, durch die seine ihm nach der Verfassung oder nach dem Gesetz zustehenden Grundrechte verletzt werden.",
+    "exEn": "Everyone is entitled to an effective remedy before the competent national courts against acts that violate the fundamental rights granted to them by the constitution or by law."
    }
   }
  }
