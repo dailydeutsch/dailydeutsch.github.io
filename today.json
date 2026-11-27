@@ -1,43 +1,43 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "levels": {
   "1": {
-   "day": 6,
+   "day": 7,
    "of": 313,
    "entry": {
-    "w": "Kartoffel",
+    "w": "Tomate",
     "a": "die",
     "pos": "noun · feminine",
-    "ipa": "kaʁˈtɔfl̩",
-    "en": "potato",
-    "ex": "Kartoffeln müssen geschält werden.",
-    "exEn": "Potatoes need to be peeled."
+    "ipa": "toˈmaːtə",
+    "en": "tomato",
+    "ex": "Die Tomate ist reif und rot.",
+    "exEn": "The tomato is ripe and red."
    }
   },
   "2": {
-   "day": 6,
+   "day": 7,
    "of": 52,
    "entry": {
-    "w": "Gemütlichkeit",
-    "a": "die",
-    "pos": "noun · feminine",
-    "ipa": "ɡəˈmyːtlɪçkaɪ̯t",
-    "en": "cosiness, warm comfort",
-    "ex": "Bei Kerzenlicht herrscht Gemütlichkeit.",
-    "exEn": "By candlelight there is a feeling of cosiness."
+    "w": "Augenblick",
+    "a": "der",
+    "pos": "noun · masculine",
+    "ipa": "ˈaʊ̯ɡn̩ˌblɪk",
+    "en": "a moment, the blink of an eye",
+    "ex": "Warte einen Augenblick!",
+    "exEn": "Wait a moment!"
    }
   },
   "3": {
-   "day": 6,
+   "day": 7,
    "of": 135,
    "entry": {
-    "w": "Rechtsbehelf",
-    "a": "der",
-    "pos": "noun · masculine",
-    "ipa": "ˈʁɛçt͡sbəˌhɛlf",
-    "en": "legal remedy, application to review an official or court decision",
-    "ex": "Jeder hat Anspruch auf einen wirksamen Rechtsbehelf bei den zuständigen innerstaatlichen Gerichten gegen Handlungen, durch die seine ihm nach der Verfassung oder nach dem Gesetz zustehenden Grundrechte verletzt werden.",
-    "exEn": "Everyone is entitled to an effective remedy before the competent national courts against acts that violate the fundamental rights granted to them by the constitution or by law."
+    "w": "Dienstbarkeit",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈdiːnstbaːɐ̯kaɪ̯t",
+    "en": "easement, a right over another person's land",
+    "ex": "Dienstbarkeiten werden im Lastenblatt vermerkt.",
+    "exEn": "Easements are recorded in the schedule of encumbrances."
    }
   }
  }
