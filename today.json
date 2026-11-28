@@ -1,43 +1,43 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "levels": {
   "1": {
-   "day": 7,
+   "day": 8,
    "of": 313,
    "entry": {
-    "w": "Tomate",
+    "w": "Karotte",
     "a": "die",
     "pos": "noun · feminine",
-    "ipa": "toˈmaːtə",
-    "en": "tomato",
-    "ex": "Die Tomate ist reif und rot.",
-    "exEn": "The tomato is ripe and red."
+    "ipa": "kaˈʁɔtə",
+    "en": "carrot",
+    "ex": "Karotten sind gut für die Augen.",
+    "exEn": "Carrots are good for your eyes."
    }
   },
   "2": {
-   "day": 7,
+   "day": 8,
    "of": 52,
    "entry": {
-    "w": "Augenblick",
-    "a": "der",
-    "pos": "noun · masculine",
-    "ipa": "ˈaʊ̯ɡn̩ˌblɪk",
-    "en": "a moment, the blink of an eye",
-    "ex": "Warte einen Augenblick!",
-    "exEn": "Wait a moment!"
+    "w": "Wanderlust",
+    "a": "die",
+    "pos": "noun · feminine",
+    "ipa": "ˈvandɐˌlʊst",
+    "en": "the urge to wander and travel",
+    "ex": "Ihre Wanderlust führte sie um die Welt.",
+    "exEn": "Her wanderlust took her around the world."
    }
   },
   "3": {
-   "day": 7,
+   "day": 8,
    "of": 135,
    "entry": {
-    "w": "Dienstbarkeit",
+    "w": "Auflassung",
     "a": "die",
     "pos": "noun · feminine",
-    "ipa": "ˈdiːnstbaːɐ̯kaɪ̯t",
-    "en": "easement, a right over another person's land",
-    "ex": "Dienstbarkeiten werden im Lastenblatt vermerkt.",
-    "exEn": "Easements are recorded in the schedule of encumbrances."
+    "ipa": "ˈaʊ̯flasʊŋ",
+    "en": "conveyance, the formal agreement to transfer land ownership",
+    "ex": "Bei der Auflassung (Paragraf 925 BGB) einigen sich Käufer und Verkäufer unter Anwesenheit eines Notars über die Grundstücksübertragung.",
+    "exEn": "In the conveyance (section 925 of the German Civil Code), buyer and seller agree on the transfer of the property in the presence of a notary."
    }
   }
  }
